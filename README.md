@@ -1,16 +1,15 @@
-## Hi there 👋
+# PGPune
 
-<!--
-**pgdaypune/pgdaypune** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### Add new meetups
 
-Here are some ideas to get you started:
+```sh
+hugo new content content/meetups/3.md
+```
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Add new speakers
+
+```sh
+hugo new content content/speakers/full-name.md
+```
+
+TODO: Document the setup in verbose

@@ -1,0 +1,109 @@
+<div class="profile">
+    {{- with site.Params.profileMode }}
+    <div class="profile_inner">
+        {{- if .imageUrl -}}
+        {{- $img := "" }}
+        {{- if not (urls.Parse .imageUrl).IsAbs }}
+            {{- $img = resources.Get .imageUrl }}
+        {{- end }}
+        {{- if $img }}
+            {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+            {{- if hugo.IsExtended -}}
+                {{- $processableFormats = $processableFormats | append "webp" -}}
+            {{- end -}}
+            {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+                {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
+                    {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
+                {{- else if .imageHeight }}
+                    {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
+                {{ else if .imageWidth }}
+                    {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
+                {{ else }}
+                    {{- $img = $img.Resize "150x150" }}
+                {{- end }}
+            {{- end }}
+            <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+        {{- else }}
+        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+        {{- end }}
+        {{- end }}
+        <h1>{{ .title | default site.Title | markdownify }}</h1>
+        {{- if .eventDate -}}
+            <h3>{{ .eventDate }}</h3>
+        {{- end }}
+        {{- if .venue -}}
+            <div class="venue">
+                <b>Venue:</b> {{ .venue }}
+            </div>
+        {{- end }}
+        <span>{{ .subtitle | markdownify }}</span>
+        {{- partial "social_icons.html" -}}
+
+        {{- with .buttons }}
+        <div class="buttons">
+            {{- range . }}
+            <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
+                <span class="button-inner">
+                    {{ .name }}
+                    {{- if (findRE "://" .url) }}&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                    {{- end }}
+                </span>
+            </a>
+            {{- end }}
+        </div>
+        {{- end }}
+        {{- if .countdown -}}
+            <h3>Countdown to Meetup</h3>
+            <div id="countdown"></div>
+
+            <script>
+            // Set the date we're counting down to
+            var d = "{{ trim .countdown " " }}";
+            var countDownDate = new Date(d).getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+                
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+                
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+            // Output the result in an element with id="demo"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+                
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+            }, 1000);
+            </script>
+        {{- end }}
+        {{- if .venue -}}
+            <div class="venue">
+                <b>Venue: </b>{{ .venue }}
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.8521005560597!2d73.9134704!3d18.5355845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c19ada453107%3A0x3d68320f038a8e0d!2sGoogle%20Pune!5e0!3m2!1sen!2sin!4v1741641911668!5m2!1sen!2sin" width="1650" height="250" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        {{- end }}
+    </div>
+    {{- end}}
+</div>

@@ -1,0 +1,145 @@
+baseURL: https://pgpune.in
+languageCode: en-us
+title: PgPune
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: PgPune
+  description: "PgPune description"
+  keywords: [Blog, Portfolio, PaperMod]
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "<link / abs url>"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: |
+      ## PgPune - Meetup #2
+    eventDate: "25th April, 2025"
+    countdown: "Apr 25, 2025 09:00:00"
+    Venue: "Google INC, Koregaon Park"
+    subtitle: |
+      We are excited to invite you to the second event of the PGDay Pune!
+
+      PGDay Pune is proudly hosted by the Pune PostgreSQL User Group, with a mission to grow and strengthen the PostgreSQL community across India.
+      
+      This event is designed to promote PostgreSQL awareness and adoption through engaging talks, insightful round-table discussions, and dynamic networking sessions.
+    imageUrl: "pgpune.png"
+    imageWidth: 150
+    imageHeight: 150
+    imageTitle: "PgPune"
+    imageAlt: "PgPune"
+    buttons:
+      - name: Register
+        url: register
+      - name: Submit paper
+        url: cfp
+
+  socialIcons:
+    - name: linkedin
+      url: "https://www.linkedin.com/groups/9884249/"
+    - name: youtube
+      url: "https://youtube.com/pgdaypune"
+    - name: email
+      url: "mailto:pgdaypune@gmail.com"
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: false
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    findAllMatches: true
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: speakers
+      name: Speakers
+      url: /speakers/
+      weight: 30
+    - identifier: meetups
+      name: Meetups
+      url: /meetups/
+      weight: 20
+    - identifier: members
+      name: About
+      url: /about/
+      weight: 110
+    - identifier: register
+      name: Register
+      url: /register/
+      weight: 80
+    - identifier: cfp
+      name: Call for Papers
+      url: https://google.com
+      weight: 90
+    - name: "\U0001F50D"
+      url: search
+      weight: 100
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
