@@ -22,6 +22,7 @@ Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our
 - Sakshi Rajput
 - Khushboo Vashi (EnterpriseDB)
 
-### Web:
+### Website contribution:
  
- - [Abc](https://linkedin.com/avva)
+- Khushboo Vashi (EnterpriseDB)
+- Yogesh Jain (EnterpriseDB)
