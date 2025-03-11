@@ -81,7 +81,7 @@ params:
       - name: Register
         url: register
       - name: Submit paper
-        url: cfp
+        url: call-for-papers
 
   socialIcons:
     - name: linkedin
@@ -125,9 +125,9 @@ menu:
       name: Register
       url: /register/
       weight: 80
-    - identifier: cfp
+    - identifier: call-for-papers
       name: Call for Papers
-      url: https://google.com
+      url: /call-for-papers/
       weight: 90
     - name: "\U0001F50D"
       url: search
