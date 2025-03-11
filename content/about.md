@@ -3,6 +3,7 @@ title: "About"
 layout: "page"
 summary: "About"
 ---
+
 ## Meet Our Community
 
 Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our incredible team and community members. From organizers to volunteers and participants, every individual plays a vital role in fostering growth and collaboration.

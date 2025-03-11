@@ -1,5 +1,17 @@
 # PGPune
 
+### Local dev setup
+
+Install hugo https://gohugo.io/installation/
+
+`brew install hugo`
+
+**Run Locally**
+
+`hugo server`
+
+And visit http://localhost:1313/
+
 ### Add new meetups
 
 ```sh

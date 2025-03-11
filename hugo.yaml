@@ -1,4 +1,4 @@
-baseURL: https://pgpune.in
+baseURL: https://pgdaypune.github.io
 languageCode: en-us
 title: PgPune
 theme: PaperMod
@@ -21,12 +21,11 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: PgPune
-  description: "PgPune description"
-  keywords: [Blog, Portfolio, PaperMod]
-  # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  description: "PGDay Pune is proudly hosted by the Pune PostgreSQL User Group, with a mission to grow and strengthen the PostgreSQL community across India."
+  keywords: [Postgres, Pune, Postgresql, PgPune, PGDay, PostgreSQL User Group, Pune PostgreSQL User Group, India, Community, Meetup, Conference, Event, Database, Open Source]
+  images: ["https://pgdaypune.github.io/images/pgpune.png"]
+  DateFormat: "March 11, 2025"
+  defaultTheme: auto
   disableThemeToggle: false
 
   ShowReadingTime: false
@@ -48,7 +47,7 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
+    favicon: "/favico.ico"
     favicon16x16: "<link / abs url>"
     favicon32x32: "<link / abs url>"
     apple_touch_icon: "<link / abs url>"
@@ -56,7 +55,7 @@ params:
 
   label:
     text: "Home"
-    icon: /apple-touch-icon.png
+    icon: /pgpune.png
     iconHeight: 35
 
   # profile-mode
@@ -132,7 +131,7 @@ menu:
       weight: 90
     - name: "\U0001F50D"
       url: search
-      weight: 100
+      weight: 1
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
