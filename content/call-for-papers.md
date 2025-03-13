@@ -18,7 +18,13 @@ Are you passionate about PostgreSQL and eager to share your knowledge, experienc
 
 We’re excited to see the ideas and insights you’ll bring to PgPune Meetup.
 
-## [`Submit Paper`](https://workspace.google.com/intl/en_in/products/docs/)
+<h2>
+    <a class="button" href="https://workspace.google.com/intl/en_in/products/docs/" rel="noopener" title="Submit Paper" target="_blank">
+    <span class="button-inner">
+        Submit Paper
+    </span>
+    </a>
+</h2>
 
 ### Topics of interest:
 

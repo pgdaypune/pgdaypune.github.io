@@ -32,11 +32,11 @@
         {{- end }}
         <h1>{{ .title | default site.Title | markdownify }}</h1>
         {{- if .eventDate -}}
-            <h3>{{ .eventDate }}</h3>
+            <h3>{{ .eventDate | markdownify}}</h3>
         {{- end }}
         {{- if .venue -}}
             <div class="venue">
-                <b>Venue:</b> {{ .venue }}
+                <b>Venue:</b> {{ .venue | markdownify  }}
             </div>
         {{- end }}
         <span>{{ .subtitle | markdownify }}</span>
@@ -99,7 +99,7 @@
         {{- end }}
         {{- if .venue -}}
             <div class="venue">
-                <b>Venue: </b>{{ .venue }}
+                <b>Venue: </b>{{ .venue  | markdownify }}
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.8521005560597!2d73.9134704!3d18.5355845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c19ada453107%3A0x3d68320f038a8e0d!2sGoogle%20Pune!5e0!3m2!1sen!2sin!4v1741641911668!5m2!1sen!2sin" width="1650" height="250" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>

@@ -6,7 +6,7 @@ summary: "Register for PG Day Pune Meetup#2"
 
 |                    |                                                             |
 | ------------------ | ----------------------------------------------------------- |
-| **Event Date:**    | Friday, April 25<sup>th</sup>, 2025                         |
+| **Event Date:**    | <mark>Friday, April 25<sup>th</sup>, 2025</mark>            |
 | **Event Timings:** | 3:30 PM to 7:00 PM                                          |
 | **Event Venue:**   | [Google INC, Koregaon Park, Pune](https://g.co/kgs/VsN3gmP) |
 | **Entry Fee:**     | Free                                                        |
@@ -25,4 +25,10 @@ As this is a free event, seats are limited, so please register early to secure y
 
 > Please note that for security and venue access purposes, the names of all registered participants will be shared with our venue sponsor to ensure a safe and secure experience for everyone.
 
-## [`RSVP`](https://workspace.google.com/intl/en_in/products/docs/)
+<h2>
+    <a class="button" href="https://workspace.google.com/intl/en_in/products/docs/" rel="noopener" title="RSVP" target="_blank">
+    <span class="button-inner">
+        RSVP
+    </span>
+    </a>
+</h2>

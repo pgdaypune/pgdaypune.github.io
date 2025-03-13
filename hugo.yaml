@@ -10,11 +10,15 @@ buildExpired: false
 
 minify:
   disableXML: true
-  minifyOutput: true
+  # minifyOutput: true
+
 markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    noClasses: false
+
 outputs:
   home:
     - HTML
@@ -66,9 +70,11 @@ params:
     enabled: true # needs to be explicitly set
     title: |
       ## PgPune - Meetup #2
-    eventDate: "25th April, 2025"
+    eventDate: |
+      <mark>25<sup>th</sup> April, 2025</mark>
     countdown: "Apr 25, 2025 15:30:00"
-    Venue: "Google INC, Koregaon Park"
+    Venue: |
+      [Google INC, Koregaon Park](https://g.co/kgs/VsN3gmP)
     subtitle: |
       We are excited to invite you to the second event of the PGDay Pune!
 
@@ -131,13 +137,3 @@ menu:
       name: About
       url: /about/
       weight: 100
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-pygmentsUseClasses: true
-markup:
-  highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
