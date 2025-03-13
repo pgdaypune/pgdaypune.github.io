@@ -14,5 +14,4 @@ title: 'Sachin Khanna'
 
 Add speaker contact links
 
-- Linkedin
-- Github
+- [Linkedin](https://www.linkedin.com/in/sachinkhanna43/)

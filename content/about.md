@@ -26,4 +26,4 @@ Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our
 ### Website contribution:
  
 - [Khushboo Vashi](https://www.linkedin.com/in/khushboo-vashi-b8303012/)
-- Yogesh Jain
+- [Yogesh Jain](https://www.linkedin.com/in/yogeshjain96/)

@@ -12,7 +12,4 @@ title: 'Tanvi Kamble'
 
 ### Contact
 
-Add speaker contact links
-
-- Linkedin
-- Github
+- [Linkedin](https://www.linkedin.com/in/tanvi-kamble/)

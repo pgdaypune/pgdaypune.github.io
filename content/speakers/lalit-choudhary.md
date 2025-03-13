@@ -4,15 +4,12 @@ title: 'Lalit Choudhary'
 
 ### About
 
-TODO add speaker details
+Lalit Choudhary
 
 ### Talks given
 
-- talk1
+- [Meetup #1](/meetups/1)
 
 ### Contact
 
-Add speaker contact links
-
-- Linkedin
-- Github
+- [Linkedin](https://www.linkedin.com/in/lalit-choudhary-8116ba77/)

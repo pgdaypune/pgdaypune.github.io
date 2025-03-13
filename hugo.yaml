@@ -112,18 +112,13 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: speakers
-      name: Speakers
-      url: /speakers/
-      weight: 30
+    - name: "\U0001F50D"
+      url: search
+      weight: 1
     - identifier: meetups
       name: Meetups
       url: /meetups/
       weight: 20
-    - identifier: members
-      name: About
-      url: /about/
-      weight: 110
     - identifier: register
       name: Register
       url: /register/
@@ -132,9 +127,10 @@ menu:
       name: Call for Papers
       url: /call-for-papers/
       weight: 90
-    - name: "\U0001F50D"
-      url: search
-      weight: 1
+    - identifier: members
+      name: About
+      url: /about/
+      weight: 100
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:

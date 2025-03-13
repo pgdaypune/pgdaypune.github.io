@@ -12,7 +12,4 @@ title: 'Amul Sul'
 
 ### Contact
 
-Add speaker contact links
-
-- Linkedin
-- Github
+- [Linkedin](https://www.linkedin.com/in/sulamul/)
