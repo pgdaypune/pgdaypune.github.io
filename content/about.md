@@ -1,7 +1,7 @@
 ---
 title: "About"
 layout: "page"
-summary: "About"
+summary: "Meet Our PgPune Community"
 ---
 
 ## Meet Our Community
@@ -11,19 +11,19 @@ Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our
 
 ### Organizers: 
 
-- Ashish Mehra (Percona)
-- Sachin Kotwal Ghosh (Amazon)
-- Sagar Jadhav (Percona)
-- Rushabh Lathia (EnterpriseDB)
-- Yogesh Jadhav (Yugabyte)
+- [Ashish Mehra](https://www.linkedin.com/in/ashishkmehra/)
+- Sachin Kotwal Ghosh
+- [Sagar Jadhav](https://www.linkedin.com/in/sagar-jadhav-42440a84/)
+- [Rushabh Lathia](https://www.linkedin.com/in/rushabh-lathia-3bb8616/)
+- [Yogesh Jadhav](https://www.linkedin.com/in/pgyogesh/)
 
 ### Volunteers:
 
-- Ajit Awekar (EnterpriseDB)
+- [Ajit Awekar](https://www.linkedin.com/in/ajit-awekar-6780648/)
 - Sakshi Rajput
-- Khushboo Vashi (EnterpriseDB)
+- [Khushboo Vashi](https://www.linkedin.com/in/khushboo-vashi-b8303012/)
 
 ### Website contribution:
  
-- Khushboo Vashi (EnterpriseDB)
-- Yogesh Jain (EnterpriseDB)
+- [Khushboo Vashi](https://www.linkedin.com/in/khushboo-vashi-b8303012/)
+- Yogesh Jain

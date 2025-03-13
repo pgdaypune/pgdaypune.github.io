@@ -11,7 +11,10 @@ buildExpired: false
 minify:
   disableXML: true
   minifyOutput: true
-
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 outputs:
   home:
     - HTML
@@ -64,7 +67,7 @@ params:
     title: |
       ## PgPune - Meetup #2
     eventDate: "25th April, 2025"
-    countdown: "Apr 25, 2025 09:00:00"
+    countdown: "Apr 25, 2025 15:30:00"
     Venue: "Google INC, Koregaon Park"
     subtitle: |
       We are excited to invite you to the second event of the PGDay Pune!
