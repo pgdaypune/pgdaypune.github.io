@@ -12,7 +12,7 @@ Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our
 ### Organizers: 
 
 - [Ashish Mehra](https://www.linkedin.com/in/ashishkmehra/)
-- Sachin Kotwal Ghosh
+- [Sachin Kotwal](https://www.linkedin.com/in/sachindkotwal88/)
 - [Sagar Jadhav](https://www.linkedin.com/in/sagar-jadhav-42440a84/)
 - [Rushabh Lathia](https://www.linkedin.com/in/rushabh-lathia-3bb8616/)
 - [Yogesh Jadhav](https://www.linkedin.com/in/pgyogesh/)
@@ -21,7 +21,6 @@ Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our
 
 - [Ajit Awekar](https://www.linkedin.com/in/ajit-awekar-6780648/)
 - Sakshi Rajput
-- [Khushboo Vashi](https://www.linkedin.com/in/khushboo-vashi-b8303012/)
 
 ### Website contribution:
  
