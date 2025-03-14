@@ -26,7 +26,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: PgPune
+  title: Postgres Pune
   description: "PGDay Pune is proudly hosted by the Pune PostgreSQL User Group, with a mission to grow and strengthen the PostgreSQL community across India."
   keywords: [Postgres, Pune, Postgresql, PgPune, PGDay, PostgreSQL User Group, Pune PostgreSQL User Group, India, Community, Meetup, Conference, Event, Database, Open Source]
   images: ["https://pgdaypune.github.io/images/pgpune.png"]
@@ -57,10 +57,9 @@ params:
     favicon16x16: "/images/favicon-16x16.png"
     favicon32x32: "/images/favicon-32x32.png"
     apple_touch_icon: "/images/apple-touch-icon.png"
-    safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "PgPune"
+    text: "Postgres Pune"
 
   profileMode:
     enabled: true
