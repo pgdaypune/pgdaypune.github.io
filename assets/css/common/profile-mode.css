@@ -23,7 +23,8 @@
 }
 
 .button {
-    background: var(--tertiary);
+    background: #336791;
+    color: #FFFFFF;
     border-radius: var(--radius);
     margin: 8px;
     padding: 6px;
