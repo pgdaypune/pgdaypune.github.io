@@ -1,6 +1,5 @@
 .buttons,
 .main .profile {
-    display: flex;
     justify-content: center;
 }
 
@@ -37,4 +36,12 @@
 
 .button:active {
     transform: scale(0.96);
+}
+
+.subtitle {
+    margin: 8px 0;
+    color: var(--secondary);
+    font-size: 16px;
+    font-family: monospace;
+    line-height: 1.6;
 }

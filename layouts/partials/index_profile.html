@@ -39,7 +39,9 @@
                 <b>Venue:</b> {{ .venue | markdownify  }}
             </div>
         {{- end }}
-        <span>{{ .subtitle | markdownify }}</span>
+        <div class="subtitle">
+            {{ .subtitle | markdownify }}
+        </div>
         {{- partial "social_icons.html" -}}
 
         {{- with .buttons }}

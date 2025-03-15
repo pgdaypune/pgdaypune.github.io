@@ -77,9 +77,7 @@ params:
       width="1650" height="250" style="border:1;" title="Google Pune"></iframe>
     subtitle: |
       We are excited to invite you to the second event of the PGDay Pune!
-
-      PGDay Pune is proudly hosted by the Pune PostgreSQL User Group, with a mission to grow and strengthen the PostgreSQL community across India.
-      
+      PGDay Pune is proudly hosted by the [**Pune PostgreSQL User Group**](https://www.linkedin.com/groups/9884249/), with a mission to grow and strengthen the PostgreSQL community across India.
       This event is designed to promote PostgreSQL awareness and adoption through engaging talks, insightful round-table discussions, and dynamic networking sessions.
     imageUrl: "pgpune.png"
     imageWidth: 150
