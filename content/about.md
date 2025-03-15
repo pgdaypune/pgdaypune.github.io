@@ -26,3 +26,5 @@ Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our
  
 - [Khushboo Vashi](https://www.linkedin.com/in/khushboo-vashi-b8303012/)
 - [Yogesh Jain](https://www.linkedin.com/in/yogeshjain96/)
+
+> If you have any questions, please email us at `pgdaypune[at]gmail.com`. Thank you!
