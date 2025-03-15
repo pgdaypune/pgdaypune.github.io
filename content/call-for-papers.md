@@ -19,7 +19,8 @@ Are you passionate about PostgreSQL and eager to share your knowledge, experienc
 We’re excited to see the ideas and insights you’ll bring to PgPune Meetup.
 
 <h2>
-    <a class="button" href="https://workspace.google.com/intl/en_in/products/docs/" rel="noopener" title="Submit Paper" target="_blank">
+    <!-- <a class="button" href="https://workspace.google.com/intl/en_in/products/docs/" rel="noopener" title="Submit Paper" target="_blank"> -->
+    <a class="button" href="#" onclick="alert('Paper submissions are yet to open. Check back soon!'); return false;">
     <span class="button-inner">
         Submit Paper
     </span>

@@ -26,7 +26,8 @@ As this is a free event, seats are limited, so please register early to secure y
 > Please note that for security and venue access purposes, the names of all registered participants will be shared with our venue sponsor to ensure a safe and secure experience for everyone.
 
 <h2>
-    <a class="button" href="https://workspace.google.com/intl/en_in/products/docs/" rel="noopener" title="RSVP" target="_blank">
+    <!-- <a class="button" href="https://workspace.google.com/intl/en_in/products/docs/" rel="noopener" title="RSVP" target="_blank"> -->
+    <a class="button" href="#" onclick="alert('RSVP is not open yet. Check back soon!'); return false;">
     <span class="button-inner">
         RSVP
     </span>
