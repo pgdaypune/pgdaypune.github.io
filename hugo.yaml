@@ -29,7 +29,7 @@ params:
   title: Postgres Pune
   description: "PGDay Pune is proudly hosted by the Pune PostgreSQL User Group, with a mission to grow and strengthen the PostgreSQL community across India."
   keywords: [Postgres, Pune, Postgresql, PgPune, PGDay, PostgreSQL User Group, Pune PostgreSQL User Group, India, Community, Meetup, Conference, Event, Database, Open Source]
-  images: ["https://pgdaypune.github.io/images/pgpune.png"]
+  images: ["https://pgpune.in/images/pgpune.png"]
   DateFormat: "March 11, 2025"
   defaultTheme: light
   disableThemeToggle: false
@@ -69,7 +69,7 @@ params:
       <mark>Friday, 25<sup>th</sup> April, 2025</mark>
     countdown: "Apr 25, 2025 15:30:00"
     Venue: |
-      <u><a href="https://g.co/kgs/VsN3gmP" target="_blank" rel="noopener noreferrer">
+      <u><a href="https://maps.app.goo.gl/Qbshut8zxfvBKSsv7" target="_blank" rel="noopener noreferrer">
         Google INC, Koregaon Park
       </a></u>
     VenueIframe: |

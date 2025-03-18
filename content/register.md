@@ -4,12 +4,12 @@ layout: "page"
 summary: "Register for PG Day Pune Meetup#2"
 ---
 
-|                    |                                                             |
-| ------------------ | ----------------------------------------------------------- |
-| **Event Date:**    | <mark>Friday, April 25<sup>th</sup>, 2025</mark>            |
-| **Event Timings:** | 3:30 PM to 7:00 PM                                          |
-| **Event Venue:**   | [Google INC, Koregaon Park, Pune](https://g.co/kgs/VsN3gmP) |
-| **Entry Fee:**     | Free                                                        |
+|                    |                                                                              |
+| ------------------ | ---------------------------------------------------------------------------- |
+| **Event Date:**    | <mark>Friday, April 25<sup>th</sup>, 2025</mark>                             |
+| **Event Timings:** | 3:30 PM to 7:00 PM                                                           |
+| **Event Venue:**   | [Google INC, Koregaon Park, Pune](https://maps.app.goo.gl/Qbshut8zxfvBKSsv7) |
+| **Entry Fee:**     | Free                                                                         |
 
 ### Why Attend Postgres Pune Meetup?
 
