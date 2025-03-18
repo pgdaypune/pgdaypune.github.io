@@ -19,6 +19,15 @@ summary: "Register for PG Day Pune Meetup#2"
 
 This event is a unique platform to expand your knowledge of PostgreSQL and stay up-to-date on the latest trends in database technology!
 
+### Venue Address
+
+```
+Floor number 11,
+Google IT Services India Private Limited,
+AP 81, 11th Floor, B Wing, North Main Road
+Mundhwa,Pune, Maharashtra, 411036 ⁠
+```
+
 ## Registration
 
 As this is a free event, seats are limited, so please register early to secure your spot.
