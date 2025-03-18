@@ -8,8 +8,9 @@ summary: "PG Pune Meetup#2 | CFP | Last date - Friday, March 28th, 2025"
 
 |                                 |                                                             |
 | ------------------------------- | ----------------------------------------------------------- |
-| **Last Date for submission:**   | <mark>Friday, March 28<sup>th</sup>, 2025 </mark>           |
-| **Notification of Acceptance:** | Wed, April 02<sup>th</sup>, 2025                            |
+| **Submission open date:**       | <mark>Thursday, March 20<sup>th</sup>, 2025 </mark>         |
+| **Last Date for submission:**   | <mark>Tuesday, April 01<sup>st</sup>, 2025 </mark>          |
+| **Notification of Acceptance:** | Thursday, April 03<sup>th</sup>, 2025                       |
 | **Event Date:**                 | Friday, April 25<sup>th</sup>, 2025                         |
 | **Event Timings:**              | 3:30 PM to 7:00 PM                                          |
 | **Event Venue:**                | [Google INC, Koregaon Park, Pune](https://g.co/kgs/VsN3gmP) |
@@ -20,7 +21,7 @@ We’re excited to see the ideas and insights you’ll bring to PgPune Meetup.
 
 <h2>
     <!-- <a class="button" href="https://workspace.google.com/intl/en_in/products/docs/" rel="noopener" title="Submit Paper" target="_blank"> -->
-    <a class="button" href="#" onclick="alert('Paper submissions are yet to open. Check back soon!'); return false;">
+    <a class="button" href="#" onclick="alert('Paper submissions will be open on March 20, 2025!'); return false;">
     <span class="button-inner">
         Submit Paper
     </span>

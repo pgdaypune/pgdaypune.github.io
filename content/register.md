@@ -27,7 +27,7 @@ As this is a free event, seats are limited, so please register early to secure y
 
 <h2>
     <!-- <a class="button" href="https://workspace.google.com/intl/en_in/products/docs/" rel="noopener" title="RSVP" target="_blank"> -->
-    <a class="button" href="#" onclick="alert('RSVP is not open yet. Check back soon!'); return false;">
+    <a class="button" href="#" onclick="alert('RSVP will open on 1st April, 2025!'); return false;">
     <span class="button-inner">
         RSVP
     </span>
