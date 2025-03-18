@@ -15,7 +15,7 @@ summary: "PG Pune Meetup#2 | CFP | Last date - Friday, March 28th, 2025"
 | **Event Timings:**              | 3:30 PM to 7:00 PM                                          |
 | **Event Venue:**                | [Google INC, Koregaon Park, Pune](https://g.co/kgs/VsN3gmP) |
 
-Are you passionate about PostgreSQL and eager to share your knowledge, experiences, and insights with fellow enthusiasts? We're excited to announce the call for papers for the upcoming PostgreSQL Meetup-4 in Bangalore. This is your opportunity to contribute to our vibrant community and showcase your expertise!
+Are you passionate about PostgreSQL and eager to share your knowledge, experiences, and insights with fellow enthusiasts? We're excited to announce the call for papers for the upcoming PostgreSQL Meetup-2 in Pune. This is your opportunity to contribute to our vibrant community and showcase your expertise!
 
 We’re excited to see the ideas and insights you’ll bring to PgPune Meetup.
 
