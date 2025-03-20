@@ -20,8 +20,8 @@ Are you passionate about PostgreSQL and eager to share your knowledge, experienc
 We’re excited to see the ideas and insights you’ll bring to PgPune Meetup.
 
 <h2>
-    <!-- <a class="button" href="https://workspace.google.com/intl/en_in/products/docs/" rel="noopener" title="Submit Paper" target="_blank"> -->
-    <a class="button" href="#" onclick="alert('Paper submissions will be open on March 20, 2025!'); return false;">
+    <a class="button" href="https://docs.google.com/forms/d/16ga-t_XrP3NBCpXMFql7Bq05YCX6MVGc7V9VjuDYhMs/edit" rel="noopener" title="Submit Paper" target="_blank">
+    <!-- <a class="button" href="#" onclick="alert('Paper submissions will be open on March 20, 2025!'); return false;"> -->
     <span class="button-inner">
         Submit Paper
     </span>
