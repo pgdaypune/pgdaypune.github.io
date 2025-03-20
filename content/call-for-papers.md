@@ -1,14 +1,14 @@
 ---
 title: "Call for Papers"
 layout: "page"
-summary: "PG Pune Meetup#2 | CFP | Last date - Friday, March 28th, 2025"
+summary: "PG Pune Meetup#2 | CFP | Last date - Tuesday, April 01st, 2025"
 ---
 
 ### Paper Submission Details
 
 |                                 |                                                             |
 | ------------------------------- | ----------------------------------------------------------- |
-| **Submission open date:**       | <mark>Thursday, March 20<sup>th</sup>, 2025 </mark>         |
+| **Submission open date:**       | Thursday, March 20<sup>th</sup>, 2025         |
 | **Last Date for submission:**   | <mark>Tuesday, April 01<sup>st</sup>, 2025 </mark>          |
 | **Notification of Acceptance:** | Thursday, April 03<sup>th</sup>, 2025                       |
 | **Event Date:**                 | Friday, April 25<sup>th</sup>, 2025                         |
