@@ -10,7 +10,7 @@ I have been with EDB since 2008, bringing over 17 years of experience. As a pass
 
 I hold a Master’s degree (M.Tech) in Information Technology from IIT Bombay.
 
-![Jeevan Chalke](/images/speakers/jeevan-chalke.jpg)
+<img src="/images/speakers/jeevan-chalke.jpg" alt="Jeevan Chalke" aria-label="Jeevan Chalke" height="100%" width="40%">
 
 ### Contact
 

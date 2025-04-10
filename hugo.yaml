@@ -129,8 +129,8 @@ params:
     - time: "06:00 PM - 07:00 PM"
       events:
         - |
-          ### Lunch Break + Networking
-          `Lunch` `Networking`
+          ### Networking + Hi-Tea
+          `Networking` `Hi-Tea`
 
   cover:
     hidden: true # hide everywhere but not in structured data

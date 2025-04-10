@@ -15,7 +15,7 @@ of database architectures and commitment to innovation has made him a
 trusted advisor to numerous enterprises undertaking cloud
 transformation journeys.
 
-![Rajkumar Raghuwanshi](/images/speakers/rajkumar-raghuwanshi.jpeg)
+<img src="/images/speakers/rajkumar-raghuwanshi.jpeg" alt="Rajkumar Raghuwanshi" aria-label="Rajkumar Raghuwanshi" height="100%" width="40%">
 
 ### Contact
 

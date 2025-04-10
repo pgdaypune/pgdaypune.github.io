@@ -8,7 +8,7 @@ Mr. Sachin D. Kotwal having over 12+ years of experience in the IT industry, est
 
 Mr. Kotwal's extensive background encompasses a deep understanding of database architectures and a commitment to delivering innovative solutions that empower organizations to leverage the full potential of cloud computing. His dedication to excellence and passion for technology have made him a trusted advisor in the field.
 
-![Sachin D Kotwal](/images/speakers/sachin-d-kotwal.jpeg)
+<img src="/images/speakers/sachin-d-kotwal.jpeg" alt="Sachin D Kotwal" aria-label="Sachin D Kotwal" height="100%" width="40%">
 
 ### Contact
 
