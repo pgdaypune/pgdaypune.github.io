@@ -85,10 +85,12 @@ params:
     imageTitle: "PgPune"
     imageAlt: "PgPune"
     buttons:
+      # - name: Submit paper
+      #   url: call-for-papers
       - name: Register
         url: register
-      - name: Submit paper
-        url: call-for-papers
+      - name: Schedule
+        url: schedule
 
   socialIcons:
     - name: linkedin
@@ -96,49 +98,40 @@ params:
     - name: email
       url: "mailto:pgdaypune@gmail.com"
   schedule:
-    - time: "10:00 AM - 10:45 AM"
+    - time: "03:30 PM - 03:45 PM"
       events:
         - |
-          ### Registration + Networking
-          `Registration` `Networking`
-    - time: "11:00 AM - 11:15 AM"
+          ### Registration at Google reception
+
+    - time: "03:45 PM - 04:00 PM"
       events:
         - |
-          ### Welcome note by PgPune Team & YugaByteDB
-          **`Speaker:`** `Lalit Choudhary`
-    - time: "11:15 AM - 11:50 AM"
+          ### Welcome & Word from Sponsor
+
+    - time: "04:00 PM - 04:35 PM"
       events:
         - |
-          ### Ultra Resilient Postgres with YugabyteDB
-          **`Speaker:`** `Yogi Rampuria`
-    - time: "11:55 AM - 12:30 PM"
+          ### EXPLAIN Explained: Making Sense of PostgreSQL Query Plans
+          **`Speaker:`** [Jeevan Chalke](/speakers/jeevan-chalke)
+
+    - time: "04:40 PM - 05:15 PM"
       events:
         - |
-          ### Introduction to PostgreSQL Architecture
-          **`Speaker:`** `Amul Sul`
-    - time: "12:35 PM - 12:50 PM"
+          ### Major Version Upgrades of PostgreSQL deployed in Containerized Environment
+          **`Speaker:`** [Tarun Abichandani](/speakers/tarun-abichandani) [Ujjwal Lanjewar](/speakers/ujjwal-lanjewar)
+
+    - time: "05:20 PM - 05:55 PM"
       events:
         - |
-          ### Unlocking Performance: Exploring PostgreSQL 17's Latest Enhancements
-          **`Speaker:`** `Sachin Khanna`
-    - time: "12:50 PM - 1:30 PM"
+          ### All important but hidden information about your table and table data
+          **`Speaker:`** [Sachin D. Kotwal](/speakers/sachin-d-kotwal) [Rajkumar Raghuwanshi](/speakers/rajkumar-raghuwanshi)
+
+    - time: "06:00 PM - 07:00 PM"
       events:
         - |
-          ### Lunch Break
-    - time: "01:30 PM - 02:05 PM"
-      events:
-        - |
-          ### PGVector Overview & Demo
-          **`Speakers:`** `Pushkar Khadilkar` `Tanvi Kamble`
-    - time: "02:10 PM - 02:45 PM"
-      events:
-        - |
-          ### Deep Dive into PostgreSQL HA
-          **`Speaker:`** `Lalit Choudhary`
-    - time: "02:45 PM - 02:55 PM"
-      events:
-        - |
-          ### Closing remarks by PgPune Team
+          ### Lunch Break + Networking
+          `Lunch` `Networking`
+
   cover:
     hidden: true # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
@@ -170,9 +163,13 @@ menu:
       url: /register/
       weight: 80
     - identifier: call-for-papers
-      name: Call for Papers
+      name: CFP
       url: /call-for-papers/
       weight: 90
+    - identifier: schedule
+      name: Schedule
+      url: /schedule/
+      weight: 99
     - identifier: members
       name: About
       url: /about/
