@@ -32,8 +32,8 @@ As this is a free event, seats are limited, so please register early to secure y
 > Please note that for security and venue access purposes, the names of all registered participants will be shared with our venue sponsor to ensure a safe and secure experience for everyone.
 
 <h2>
-    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd8J466lGFnWsmKGzP77-qeqDKU-ycmaxvi3qa2bFkdIWOLsA/viewform" rel="noopener" title="RSVP" target="_blank">
-    <!-- <a class="button" href="#" onclick="alert('RSVP will open on 1st April, 2025!'); return false;"> -->
+    <!-- <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd8J466lGFnWsmKGzP77-qeqDKU-ycmaxvi3qa2bFkdIWOLsA/viewform" rel="noopener" title="RSVP" target="_blank"> -->
+    <a class="button" href="#" onclick="alert('RSVP not open yet!'); return false;">
     <span class="button-inner">
         RSVP
     </span>
