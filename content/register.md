@@ -1,15 +1,15 @@
 ---
 title: "Register"
 layout: "page"
-summary: "Register for PG Day Pune Meetup#2"
+summary: "Register for PG Day Pune Meetups"
 ---
 
-|                    |                                                                              |
-| ------------------ | ---------------------------------------------------------------------------- |
-| **Event Date:**    | <mark>Friday, April 25<sup>th</sup>, 2025</mark>                             |
-| **Event Timings:** | 3:30 PM to 7:00 PM                                                           |
-| **Event Venue:**   | [Google INC, Koregaon Park, Pune](https://maps.app.goo.gl/Qbshut8zxfvBKSsv7) |
-| **Entry Fee:**     | Free                                                                         |
+|                    |      |
+| ------------------ | ---- |
+| **Event Date:**    | TBD  |
+| **Event Timings:** | TBD  |
+| **Event Venue:**   | TBD  |
+| **Entry Fee:**     | Free |
 
 ### Why Attend Postgres Pune Meetup?
 
@@ -22,10 +22,7 @@ This event is a unique platform to expand your knowledge of PostgreSQL and stay 
 ### Venue Address
 
 ```
-Floor number 11,
-Google IT Services India Private Limited,
-AP 81, 11th Floor, B Wing, North Main Road
-Mundhwa,Pune, Maharashtra, 411036 ⁠
+TBD
 ```
 
 ## Registration

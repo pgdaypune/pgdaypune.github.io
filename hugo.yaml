@@ -64,19 +64,17 @@ params:
   profileMode:
     enabled: true
     title: |
-      ## PgPune - Meetup #2
+      ## PgPune - Meetup #3
     eventDate: |
-      <mark>Friday, 25<sup>th</sup> April, 2025</mark>
-    countdown: "Apr 25, 2025 15:30:00"
+      <mark>Comming soon</mark>
+    # countdown: "Apr 25, 2025 15:30:00"
     Venue: |
-      <u><a href="https://maps.app.goo.gl/Qbshut8zxfvBKSsv7" target="_blank" rel="noopener noreferrer">
-        Google INC, Koregaon Park
-      </a></u>
+      TBD
     VenueIframe: |
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.8521005560597!2d73.9134704!3d18.5355845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c19ada453107%3A0x3d68320f038a8e0d!2sGoogle%20Pune!5e0!3m2!1sen!2sin!4v1741641911668!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
       width="1650" height="250" style="border:1;" title="Google Pune"></iframe>
     subtitle: |
-      We are excited to invite you to the second event of the PGDay Pune!
+      We are excited to invite you to the next event of the PGDay Pune!
       PGDay Pune is proudly hosted by the [**Pune PostgreSQL User Group**](https://www.linkedin.com/groups/9884249/), with a mission to grow and strengthen the PostgreSQL community across India.
       This event is designed to promote PostgreSQL awareness and adoption through engaging talks, insightful round-table discussions, and dynamic networking sessions.
     imageUrl: "/images/pgpune.png"
@@ -85,12 +83,12 @@ params:
     imageTitle: "PgPune"
     imageAlt: "PgPune"
     buttons:
-      # - name: Submit paper
-      #   url: call-for-papers
+      - name: Submit paper
+        url: call-for-papers
       - name: Register
         url: register
-      - name: Schedule
-        url: schedule
+      # - name: Schedule
+      #   url: schedule
 
   socialIcons:
     - name: linkedin
@@ -166,10 +164,10 @@ menu:
       name: CFP
       url: /call-for-papers/
       weight: 90
-    - identifier: schedule
-      name: Schedule
-      url: /schedule/
-      weight: 99
+    # - identifier: schedule
+    #   name: Schedule
+    #   url: /schedule/
+    #   weight: 99
     - identifier: members
       name: About
       url: /about/

@@ -1,19 +1,19 @@
 ---
 title: "Call for Papers"
 layout: "page"
-summary: "PG Pune Meetup#2 | CFP | Last date - Tuesday, April 01st, 2025"
+summary: "PG Pune Meetup"
 ---
 
 ### Paper Submission Details
 
-|                                 |                                                             |
-| ------------------------------- | ----------------------------------------------------------- |
-| **Submission open date:**       | Thursday, March 20<sup>th</sup>, 2025         |
-| **Last Date for submission:**   | <mark>Tuesday, April 01<sup>st</sup>, 2025 </mark>          |
-| **Notification of Acceptance:** | Thursday, April 03<sup>th</sup>, 2025                       |
-| **Event Date:**                 | Friday, April 25<sup>th</sup>, 2025                         |
-| **Event Timings:**              | 3:30 PM to 7:00 PM                                          |
-| **Event Venue:**                | [Google INC, Koregaon Park, Pune](https://g.co/kgs/VsN3gmP) |
+|                                 |     |
+| ------------------------------- | --- |
+| **Submission open date:**       | TBD |
+| **Last Date for submission:**   | TBD |
+| **Notification of Acceptance:** | TBD |
+| **Event Date:**                 | TBD |
+| **Event Timings:**              | TBD |
+| **Event Venue:**                | TBD |
 
 Are you passionate about PostgreSQL and eager to share your knowledge, experiences, and insights with fellow enthusiasts? We're excited to announce the call for papers for the upcoming PostgreSQL Meetup-2 in Pune. This is your opportunity to contribute to our vibrant community and showcase your expertise!
 
