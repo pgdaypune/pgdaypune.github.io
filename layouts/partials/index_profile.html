@@ -89,9 +89,14 @@
 
         {{- end }}
         {{- if .VenueIframe -}}
-            <div class="venue-iframe">
+            <div class="flexible-div">
                 {{ .VenueIframe  | markdownify }}
             </div>
+        {{- end }}
+        {{- if .GroupPic -}}
+        <div class="flexible-div">
+            {{ .GroupPic  | markdownify }}
+        </div>
         {{- end }}
     </div>
     {{- end}}
