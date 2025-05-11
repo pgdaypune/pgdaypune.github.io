@@ -88,16 +88,14 @@
             </script>
 
         {{- end }}
+        {{ partial "carousel.html" (dict "context" . "items" "1" "height" "60" "unit" "%" "duration" "5000") }}
         {{- if .VenueIframe -}}
             <div class="flexible-div">
                 {{ .VenueIframe  | markdownify }}
             </div>
         {{- end }}
-        {{- if .GroupPic -}}
-        <div class="flexible-div">
-            {{ .GroupPic  | markdownify }}
-        </div>
-        {{- end }}
     </div>
     {{- end}}
 </div>
+{{ partial "carousel.html" (dict "context" . "items" "1" "height" "60" "unit" "%" "duration" "5000") }}
+<script type="text/javascript" src="{{ .Site.BaseURL }}js/carousel.js"></script>
