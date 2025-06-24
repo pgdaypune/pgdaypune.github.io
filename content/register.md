@@ -1,15 +1,16 @@
 ---
 title: "Register"
 layout: "page"
-summary: "Register for PG Day Pune Meetups"
+summary: "Register for PG Day Pune Meetup#3"
 ---
 
-|                    |      |
-| ------------------ | ---- |
-| **Event Date:**    | TBD  |
-| **Event Timings:** | TBD  |
-| **Event Venue:**   | TBD  |
-| **Entry Fee:**     | Free |
+|                              |                                                                             |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| **Registration Start Date:** | Monday, July 14<sup>th</sup>, 2025                                          |
+| **Event Date:**              | Saturday, August 02<sup>nd</sup>, 2025                                      |
+| **Event Timings:**           | TBD                                                                         |
+| **Event Venue:**             | [Nutanix Office, Balewadi, Pune](https://maps.app.goo.gl/47idmr8tDfAjgp9r5) |
+| **Entry Fee:**               | Free                                                                        |
 
 ### Why Attend Postgres Pune Meetup?
 
@@ -22,7 +23,10 @@ This event is a unique platform to expand your knowledge of PostgreSQL and stay 
 ### Venue Address
 
 ```
-TBD
+Nutanix Technologies India Pvt Ltd,
+4th Floor, Building B, Panchshil Business Park,
+Balewadi Village, Haveli Taluk,
+Pune, Maharashtra, 411045
 ```
 
 ## Registration
@@ -33,7 +37,7 @@ As this is a free event, seats are limited, so please register early to secure y
 
 <h2>
     <!-- <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd8J466lGFnWsmKGzP77-qeqDKU-ycmaxvi3qa2bFkdIWOLsA/viewform" rel="noopener" title="RSVP" target="_blank"> -->
-    <a class="button" href="#" onclick="alert('RSVP not open yet!'); return false;">
+    <a class="button" href="#" onclick="alert('RSVP opens on July 14, 2025!'); return false;">
     <span class="button-inner">
         RSVP
     </span>
