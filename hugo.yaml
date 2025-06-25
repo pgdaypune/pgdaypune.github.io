@@ -174,3 +174,6 @@ menu:
       name: About
       url: /about/
       weight: 100
+services:
+  googleAnalytics:
+    ID: G-407ZB9J08X
