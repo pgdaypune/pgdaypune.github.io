@@ -12,8 +12,8 @@
 
 .ele-wrapper {
   animation: ele-movement 1s infinite linear;
-  left: 5%;
-  position: absolute;
+  left: 10%;
+  position: relative;
   top: 50%;
   transform: translate3D(-50%, -75%, 0);
   width: 200px;
