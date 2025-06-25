@@ -63,6 +63,9 @@
             {{- end }}
         </div>
         {{- end }}
+        <div class="ele-div">
+            {{- partial "elephant.html" -}}
+        </div>
         {{- if .countdown -}}
             <h3>Countdown to Meetup</h3>
             <div id="flipdown" class="flipdown"></div>
@@ -86,7 +89,6 @@
                     });
                 }
             </script>
-
         {{- end }}
         {{ partial "slider.html" (index site.Data.sliders "home_page") }}
         {{- if .VenueIframe -}}
