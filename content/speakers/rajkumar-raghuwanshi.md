@@ -17,6 +17,10 @@ transformation journeys.
 
 <img src="/images/speakers/rajkumar-raghuwanshi.jpeg" alt="Rajkumar Raghuwanshi" aria-label="Rajkumar Raghuwanshi" height="100%" width="40%">
 
+### Talks given
+
+- [Meetup #2](/meetups/2)
+
 ### Contact
 
 - [Linkedin](https://www.linkedin.com/in/rajkumarraghuwanshi/)

@@ -8,6 +8,10 @@ Ujjwal is leading the Google AlloyDB Team and has been with Google for ~2.5 year
 
 <img src="/images/speakers/ujjwal-lanjewar.png" alt="Ujjwal Lanjewar" aria-label="Ujjwal Lanjewar" height="100%" width="40%">
 
+### Talks given
+
+- [Meetup #2](/meetups/2)
+
 ### Contact
 
 - [Linkedin](https://www.linkedin.com/in/ujjwalpl/)

@@ -10,6 +10,10 @@ Mr. Kotwal's extensive background encompasses a deep understanding of database a
 
 <img src="/images/speakers/sachin-d-kotwal.jpeg" alt="Sachin D Kotwal" aria-label="Sachin D Kotwal" height="100%" width="40%">
 
+### Talks given
+
+- [Meetup #2](/meetups/2)
+
 ### Contact
 
 - [Linkedin](https://www.linkedin.com/in/sachindkotwal88/)

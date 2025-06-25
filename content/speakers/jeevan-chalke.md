@@ -12,6 +12,10 @@ I hold a Master’s degree (M.Tech) in Information Technology from IIT Bombay.
 
 <img src="/images/speakers/jeevan-chalke.jpg" alt="Jeevan Chalke" aria-label="Jeevan Chalke" height="100%" width="40%">
 
+### Talks given
+
+- [Meetup #2](/meetups/2)
+
 ### Contact
 
 - [Linkedin](https://www.linkedin.com/in/jeevanc/)

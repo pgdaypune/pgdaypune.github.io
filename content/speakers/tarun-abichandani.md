@@ -8,6 +8,10 @@ Tarun is a Tech Lead in the Google AlloyDB team. He has over 10+ years of experi
 
 <img src="/images/speakers/tarun-abichandani.png" alt="Tarun Abichandani" aria-label="Tarun Abichandani" height="100%" width="40%">
 
+### Talks given
+
+- [Meetup #2](/meetups/2)
+
 ### Contact
 
 - [Linkedin](https://www.linkedin.com/in/abistarun/)
