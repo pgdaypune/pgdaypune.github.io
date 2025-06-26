@@ -31,7 +31,10 @@ git submodule update --init
     Run: `hugo new content content/speakers/full-name.md`
     or manually add new files in content/speakers dir
 
-- To update HOME page, edit [hugo.yaml](./hugo.yaml) file to edit Meetup titles, countdown, venues, etc in homepage
+- To update the Dates, Meetup titles, countdown, venues, links edit [data/info.yaml](/data/info.yaml) file in data dir
+- To update the SLIDES images, edit [data/slider.yaml](/data/slider.yaml) file in data dir
+- To update the SCHEDULE, edit [data/schedule.yaml](/data/schedule.yaml) file in data dir
+- To update HOME page content, edit [hugo.yaml](./hugo.yaml) file
 - To update ABOUT page, edit [about.md](/content/about.md) file in content dir
 - To update CFP page, edit [call-for-papers.md](/content/call-for-papers.md) file in content dir
 - To update REGISTER page, edit [register.md](/content/register.md) file in content dir
