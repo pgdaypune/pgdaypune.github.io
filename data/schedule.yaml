@@ -1,0 +1,38 @@
+- time: "TBD"
+  events:
+    - |
+      ### TBD
+
+# - time: "03:30 PM - 03:45 PM"
+#   events:
+#     - |
+#       ### Registration at Google reception
+
+# - time: "03:45 PM - 04:00 PM"
+#   events:
+#     - |
+#       ### Welcome & Word from Sponsor
+
+# - time: "04:00 PM - 04:35 PM"
+#   events:
+#     - |
+#       ### EXPLAIN Explained: Making Sense of PostgreSQL Query Plans
+#       **`Speaker:`** [Jeevan Chalke](/speakers/jeevan-chalke)
+
+# - time: "04:40 PM - 05:15 PM"
+#   events:
+#     - |
+#       ### Major Version Upgrades of PostgreSQL deployed in Containerized Environment
+#       **`Speakers:`** [Tarun Abichandani](/speakers/tarun-abichandani) [Ujjwal Lanjewar](/speakers/ujjwal-lanjewar)
+
+# - time: "05:20 PM - 05:55 PM"
+#   events:
+#     - |
+#       ### All important but hidden information about your table and table data
+#       **`Speakers:`** [Sachin D. Kotwal](/speakers/sachin-d-kotwal) [Rajkumar Raghuwanshi](/speakers/rajkumar-raghuwanshi)
+
+# - time: "06:00 PM - 07:00 PM"
+#   events:
+#     - |
+#       ### Networking + Hi-Tea
+#       `Networking` `Hi-Tea`

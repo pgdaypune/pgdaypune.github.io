@@ -1,3 +1,4 @@
+{{- $info := site.Data.info }}
 <div class="profile">
     {{- with site.Params.profileMode }}
     <div class="profile_inner">
@@ -30,13 +31,13 @@
             height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
         {{- end }}
         {{- end }}
-        <h1>{{ .title | default site.Title | markdownify }}</h1>
-        {{- if .eventDate -}}
-            <h3>{{ .eventDate | markdownify}}</h3>
+        <h2>{{ $info.eventTitle }}</h2>
+        {{- if $info.eventDate -}}
+            <h3><mark>{{ $info.eventDate | markdownify}}</mark></h3>
         {{- end }}
-        {{- if .venue -}}
+        {{- if $info.venue -}}
             <div class="venue">
-                <b>Venue:</b> {{ .venue | markdownify  }}
+                <b>Venue:</b> <u>{{ $info.venue | markdownify  }}</u>
             </div>
         {{- end }}
         <div class="subtitle">
@@ -66,13 +67,13 @@
         <div class="ele-div">
             {{- partial "elephant.html" -}}
         </div>
-        {{- if .countdown -}}
+        {{- if $info.countdown -}}
             <h3>Countdown to Meetup</h3>
             <div id="flipdown" class="flipdown"></div>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown/dist/flipdown.min.css"/>
             <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js"></script>
             <script>
-                let d = "{{ .countdown }}";
+                let d = "{{ $info.countdown }}";
                 const countdownTarget = new Date(d).getTime()/1000;
                 const flipdownContainer = document.querySelector("#flipdown");
                 if (document.body.className.includes("dark")) {
@@ -90,13 +91,12 @@
                 }
             </script>
         {{- end }}
-        {{ partial "slider.html" (index site.Data.sliders "home_page") }}
-        {{- if .VenueIframe -}}
+        {{ partial "slider.html" site.Data.slider }}
+        {{- if $info.venueIframe -}}
             <div class="flexible-div">
-                {{ .VenueIframe  | markdownify }}
+                {{ $info.venueIframe  | markdownify }}
             </div>
         {{- end }}
     </div>
     {{- end}}
-
 </div>

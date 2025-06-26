@@ -64,19 +64,9 @@ params:
   profileMode:
     enabled: true
     title: |
-      ## PgPune - Meetup #3
-    eventDate: |
-      <mark>Saturday, 02<sup>nd</sup> August, 2025</mark>
-    countdown: "Aug 02, 2025 10:00:00"
-    Venue: |
-      <u><a href="https://maps.app.goo.gl/47idmr8tDfAjgp9r5" target="_blank" rel="noopener noreferrer">
-        Nutanix, Balewadi
-      </a></u>
-    VenueIframe: |
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.0642919713578!2d73.7737472!3d18.57114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf297690c44b%3A0x4b7c1b5589f3fc60!2sNutanix%20Technologies%20India%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1750790508321!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-      width="1650" height="250" style="border:0;" title="Nutanix Pune"></iframe>
+      PgPune
     subtitle: |
-      We are excited to invite you to the third event of the PGDay Pune!
+      We are excited to invite you to the upcoming edition of PGDay Pune!
       PGDay Pune is proudly hosted by the [**Pune PostgreSQL User Group**](https://www.linkedin.com/groups/9884249/), with a mission to grow and strengthen the PostgreSQL community across India.
       This event is designed to promote PostgreSQL awareness and adoption through engaging talks, insightful round-table discussions, and dynamic networking sessions.
     imageUrl: "/images/pgpune.png"
@@ -97,40 +87,6 @@ params:
       url: "https://www.linkedin.com/groups/9884249/"
     - name: email
       url: "mailto:pgdaypune@gmail.com"
-  schedule:
-    - time: "03:30 PM - 03:45 PM"
-      events:
-        - |
-          ### Registration at Google reception
-
-    - time: "03:45 PM - 04:00 PM"
-      events:
-        - |
-          ### Welcome & Word from Sponsor
-
-    - time: "04:00 PM - 04:35 PM"
-      events:
-        - |
-          ### EXPLAIN Explained: Making Sense of PostgreSQL Query Plans
-          **`Speaker:`** [Jeevan Chalke](/speakers/jeevan-chalke)
-
-    - time: "04:40 PM - 05:15 PM"
-      events:
-        - |
-          ### Major Version Upgrades of PostgreSQL deployed in Containerized Environment
-          **`Speakers:`** [Tarun Abichandani](/speakers/tarun-abichandani) [Ujjwal Lanjewar](/speakers/ujjwal-lanjewar)
-
-    - time: "05:20 PM - 05:55 PM"
-      events:
-        - |
-          ### All important but hidden information about your table and table data
-          **`Speakers:`** [Sachin D. Kotwal](/speakers/sachin-d-kotwal) [Rajkumar Raghuwanshi](/speakers/rajkumar-raghuwanshi)
-
-    - time: "06:00 PM - 07:00 PM"
-      events:
-        - |
-          ### Networking + Hi-Tea
-          `Networking` `Hi-Tea`
 
   cover:
     hidden: true # hide everywhere but not in structured data

@@ -4,16 +4,14 @@
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">{{ .Description }}</div>
-    {{- end }}
+    <div class="post-description"> For {{ site.Data.info.eventTitle }}</div>
   </header>
   <div class="post-content">
     {{- if .Content }} {{- if not (.Param "disableAnchoredHeadings") }} {{-
     partial "anchored_headings.html" .Content -}} {{- else }}{{ .Content }}{{
     end }} {{- end }}
     <div class="schedule">
-      {{- range $index, $element := site.Params.schedule }}
+      {{- range $index, $element := site.Data.schedule }}
       {{ $autoAlign:= cond (eq (mod $index 2) 0) "right" "left" }}
       <div class="schedule-text-wrapper schedule-{{ $autoAlign }}">
         <h3>{{ $element.time }}</h3>
