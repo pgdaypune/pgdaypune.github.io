@@ -1,7 +1,7 @@
 baseURL: https://pgpune.in
 languageCode: en-us
 title: Postgres Pune
-theme: PaperMod
+theme: PaperEvent
 
 enableRobotsTXT: true
 buildDrafts: false
