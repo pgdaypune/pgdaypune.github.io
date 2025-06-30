@@ -45,10 +45,3 @@
     font-family: monospace;
     line-height: 1.6;
 }
-
-.flexible-div{
-    @media (max-width: 768px) {
-        display: flex;
-        width: 400px;
-    }
-}
