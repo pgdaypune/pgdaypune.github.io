@@ -38,3 +38,60 @@ git submodule update --init
 - To update ABOUT page, edit [about.md](/content/about.md) file in content dir
 - To update CFP page, edit [call-for-papers.md](/content/call-for-papers.md) file in content dir
 - To update REGISTER page, edit [register.md](/content/register.md) file in content dir
+
+Directory structure
+```
+.
+├── hugo.yaml
+├── data
+│   ├── info.yaml
+│   ├── schedule.yaml
+│   └── slider.yaml
+├── content
+│   ├── about.md
+│   ├── call-for-papers.md
+│   ├── register.md
+│   ├── schedule.md
+│   ├── search.md
+│   ├── meetups
+│   │   ├── 1.md
+│   │   ├── 2.md
+│   │   └── ...
+│   └── speakers
+│       ├── speakers-list.md
+│       └── ...
+├── static
+│   ├── CNAME
+│   ├── images
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── favicon.ico
+│   │   ├── meetups
+│   │   │   ├── 1
+│   │   │   │   ├── group-pic.jpeg
+│   │   │   │   ├── poster.jpeg
+│   │   │   │   ├── schedule.jpeg
+│   │   │   │   ├── speakers.jpeg
+│   │   │   │   ├── talks-slider.png
+│   │   │   │   └── talks.jpeg
+│   │   │   └── 2
+│   │   │       └── ...
+│   │   ├── pgpune-dark.png
+│   │   ├── pgpune.png
+│   │   └── speakers
+│   │       ├── speaker-images-here.jpg
+│   │       └── ...
+│   └── slides
+│       ├── slides-here.pdf
+│       └── ...
+├── README.md
+├── assets
+│   └── css
+│       └── common
+│           └── elephant.css
+└── layouts
+    └── partials
+        ├── elephant.html
+        └── index_profile.html 
+```
