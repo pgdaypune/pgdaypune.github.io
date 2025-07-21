@@ -11,7 +11,7 @@ cfpNotificationDate: |
 # cfpLink: "https://docs.google.com/forms/d/e/1FAIpQLSfnVJeasqqe-p1CdeeilMI389BUTZS5yOrw9dUPQF6LkHtePg/viewform?usp=dialog"
 cfpAlertText: "CFP is closed now!"
 # registrationLink: "https://forms.gle/7K1aCfYA6AQLQpFQ7"
-registrationAlertText: "We are currently fully booked. However, if you are still interested in attending, please email your details to pgdaypune@gmail.com. We will get in touch with you in case of any cancellations."
+registrationAlertText: "We are currently fully booked. However, if you are still interested in attending, please email your details (name, contact number, email, and organization) to pgdaypune@gmail.com. We will contact you in case a spot becomes available due to any cancellations."
 registrationStartDate: |
   Monday, July 14<sup>th</sup>, 2025
 registrationCloseDate: |
