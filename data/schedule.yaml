@@ -3,35 +3,35 @@
     - |
       ### TBD
 
-# - time: "03:30 PM - 03:45 PM"
+# - time: "10:00 AM - 10:15 PM"
 #   events:
 #     - |
-#       ### Registration at Google reception
-
-# - time: "03:45 PM - 04:00 PM"
+#       ### Registration at Nutanix reception
+# - time: "10:15 AM - 11:00 AM"
 #   events:
 #     - |
 #       ### Welcome & Word from Sponsor
-
-# - time: "04:00 PM - 04:35 PM"
+# - time: "11:00 AM - 11:40 AM"
 #   events:
 #     - |
-#       ### EXPLAIN Explained: Making Sense of PostgreSQL Query Plans
-#       **`Speaker:`** [Jeevan Chalke](/speakers/jeevan-chalke)
-
-# - time: "04:40 PM - 05:15 PM"
+#       ### Enhancing Patroni HA: Automated Failover on Leader Data Directory Full
+#       **`Speaker:`** [Hrishikesh Gore](/speakers/hrishikesh-gore)
+# - time: "11:45 PM - 12:30 PM"
 #   events:
 #     - |
-#       ### Major Version Upgrades of PostgreSQL deployed in Containerized Environment
-#       **`Speakers:`** [Tarun Abichandani](/speakers/tarun-abichandani) [Ujjwal Lanjewar](/speakers/ujjwal-lanjewar)
-
-# - time: "05:20 PM - 05:55 PM"
+#       ### Designing a Monitoring Feature in PostgreSQL
+#       **`Speakers:`** [Rahila Syed](/speakers/rahila-syed)
+# - time: "12:35 PM - 01:20 PM"
 #   events:
 #     - |
-#       ### All important but hidden information about your table and table data
-#       **`Speakers:`** [Sachin D. Kotwal](/speakers/sachin-d-kotwal) [Rajkumar Raghuwanshi](/speakers/rajkumar-raghuwanshi)
-
-# - time: "06:00 PM - 07:00 PM"
+#       ### Unified Observability: Monitoring Postgres Anywhere with OpenTelemetry
+#       **`Speakers:`** [Yogesh Jain](/speakers/yogesh-jain)
+# - time: "01:30 PM - 02:15 PM"
+#   events:
+#     - |
+#       ### Troubleshooting Toolkit for PostgreSQL DBAs
+#       **`Speakers:`** [Lalit Choudhary](/speakers/lalit-choudhary)
+# - time: "02:15 PM - 03:00 PM"
 #   events:
 #     - |
 #       ### Networking + Hi-Tea

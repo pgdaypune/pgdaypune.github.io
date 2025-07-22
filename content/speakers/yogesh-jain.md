@@ -1,0 +1,15 @@
+---
+title: 'Yogesh Jain'
+---
+
+### About
+
+Yogesh Jain is a Staﬀ SDE at EnterpriseDB (EDB) with over 7 years of experience in Kubernetes, cloud-native Postgres, observability, and distributed systems. He focuses on building a hybrid control plane for managing Postgres and enabling unified observability across platforms.
+
+### Talks
+
+- [Meetup #3](/meetups/3)
+
+### Contact
+
+- [Linkedin](https://www.linkedin.com/in/yogeshjain96/)
