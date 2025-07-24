@@ -35,6 +35,9 @@
         {{- if $info.eventDate -}}
             <h3><mark>{{ $info.eventDate | markdownify}}</mark></h3>
         {{- end }}
+        {{- if $info.eventTime -}}
+            <code>{{ $info.eventTime | markdownify}}</code>
+        {{- end }}
         {{- if $info.venue -}}
             <div class="venue">
                 <b>Venue:</b> <u>{{ $info.venue | markdownify  }}</u>
