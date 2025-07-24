@@ -1,38 +1,38 @@
-- time: "TBD"
+- time: "10:15 AM - 10:45 AM"
   events:
     - |
-      ### TBD
-
-# - time: "10:00 AM - 10:15 PM"
-#   events:
-#     - |
-#       ### Registration at Nutanix reception
-# - time: "10:15 AM - 11:00 AM"
-#   events:
-#     - |
-#       ### Welcome & Word from Sponsor
-# - time: "11:00 AM - 11:40 AM"
-#   events:
-#     - |
-#       ### Enhancing Patroni HA: Automated Failover on Leader Data Directory Full
-#       **`Speaker:`** [Hrishikesh Gore](/speakers/hrishikesh-gore)
-# - time: "11:45 PM - 12:30 PM"
-#   events:
-#     - |
-#       ### Designing a Monitoring Feature in PostgreSQL
-#       **`Speakers:`** [Rahila Syed](/speakers/rahila-syed)
-# - time: "12:35 PM - 01:20 PM"
-#   events:
-#     - |
-#       ### Unified Observability: Monitoring Postgres Anywhere with OpenTelemetry
-#       **`Speakers:`** [Yogesh Jain](/speakers/yogesh-jain)
-# - time: "01:30 PM - 02:15 PM"
-#   events:
-#     - |
-#       ### Troubleshooting Toolkit for PostgreSQL DBAs
-#       **`Speakers:`** [Lalit Choudhary](/speakers/lalit-choudhary)
-# - time: "02:15 PM - 03:00 PM"
-#   events:
-#     - |
-#       ### Networking + Hi-Tea
-#       `Networking` `Hi-Tea`
+      ### Registration at Nutanix
+- time: "10:45 AM - 11:00 AM"
+  events:
+    - |
+      ### Welcome & Word from Sponsor
+- time: "11:00 AM - 11:45 AM"
+  events:
+    - |
+      ### Unified Observability: Monitoring Postgres Anywhere with OpenTelemetry
+      **`Speaker:`** [Yogesh Jain](/speakers/yogesh-jain)
+- time: "11:45 AM - 12:30 PM"
+  events:
+    - |
+      ### Designing a Monitoring Feature in PostgreSQL
+      **`Speaker:`** [Rahila Syed](/speakers/rahila-syed)
+- time: "12:30 PM - 01:00 PM"
+  events:
+    - |
+      ### Networking + Lunch
+      `Networking` `Lunch`
+- time: "01:00 PM - 01:45 PM"
+  events:
+    - |
+      ### Enhancing Patroni HA: Automated Failover on Leader Data Directory Full
+      **`Speaker:`** [Hrishikesh Gore](/speakers/hrishikesh-gore)
+- time: "01:45 PM - 02:30 PM"
+  events:
+    - |
+      ### Troubleshooting Toolkit for PostgreSQL DBAs
+      **`Speaker:`** [Lalit Choudhary](/speakers/lalit-choudhary)
+- time: "02:30 PM - 03:00 PM"
+  events:
+    - |
+      ### Lightning Talks
+      `Lightning Talks`
