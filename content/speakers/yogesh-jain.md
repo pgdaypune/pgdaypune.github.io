@@ -9,6 +9,7 @@ Yogesh Jain is a Staﬀ SDE at EnterpriseDB (EDB) with over 7 years of experienc
 ### Talks
 
 - [Meetup #3](/meetups/3)
+  ![Yogesh Jain](/images/speakers/yogesh-jain.png)
 
 ### Contact
 

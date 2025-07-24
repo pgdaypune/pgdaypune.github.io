@@ -9,6 +9,7 @@ Rahila Syed is a PostgreSQL developer with 13 years of experience. She has contr
 ### Talks
 
 - [Meetup #3](/meetups/3)
+  ![Rahila Syed](/images/speakers/rahila-syed.png)
 
 ### Contact
 

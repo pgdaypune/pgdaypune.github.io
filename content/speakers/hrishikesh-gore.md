@@ -9,6 +9,7 @@ Hrishikesh Gore is a Database Engineer and PostgreSQL SME with Nutanixʼs NDB te
 ### Talks
 
 - [Meetup #3](/meetups/3)
+  ![Hrishikesh Gore](/images/speakers/hrishikesh-gore.png)
 
 ### Contact
 

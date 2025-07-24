@@ -9,6 +9,7 @@ Lalit Choudhary is a database professional with experience in PostgreSQL and MyS
 ### Talks
 
 - [Meetup #3](/meetups/3)
+  ![Lalit Choudhary](/images/speakers/lalit-choudhary.png)
 - [Meetup #1](/meetups/1)
 
 ### Contact

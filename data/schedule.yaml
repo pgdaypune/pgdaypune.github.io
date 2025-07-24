@@ -11,11 +11,13 @@
     - |
       ### Unified Observability: Monitoring Postgres Anywhere with OpenTelemetry
       **`Speaker:`** [Yogesh Jain](/speakers/yogesh-jain)
+      ![Yogesh Jain](/images/speakers/yogesh-jain.png)
 - time: "11:45 AM - 12:30 PM"
   events:
     - |
       ### Designing a Monitoring Feature in PostgreSQL
       **`Speaker:`** [Rahila Syed](/speakers/rahila-syed)
+      ![Rahila Syed](/images/speakers/rahila-syed.png)
 - time: "12:30 PM - 01:00 PM"
   events:
     - |
@@ -26,11 +28,13 @@
     - |
       ### Enhancing Patroni HA: Automated Failover on Leader Data Directory Full
       **`Speaker:`** [Hrishikesh Gore](/speakers/hrishikesh-gore)
+      ![Hrishikesh Gore](/images/speakers/hrishikesh-gore.png)
 - time: "01:45 PM - 02:30 PM"
   events:
     - |
       ### Troubleshooting Toolkit for PostgreSQL DBAs
       **`Speaker:`** [Lalit Choudhary](/speakers/lalit-choudhary)
+      ![Lalit Choudhary](/images/speakers/lalit-choudhary.png)
 - time: "02:30 PM - 03:00 PM"
   events:
     - |
