@@ -34,42 +34,46 @@
 </marquee>
 
 <script>
-  var countdown = "{{ site.Data.info.countdown }}";
-  var targetDate = new Date(countdown);
   var daysToGoDiv = document.querySelector(".days-to-go");
-  function updateCountdown() {
-    var countDownDateMidnight = new Date(
-      targetDate.getFullYear(),
-      targetDate.getMonth(),
-      targetDate.getDate(),
-      0,
-      0,
-      0
-    ).getTime();
+  var countdown = "{{ site.Data.info.countdown }}";
+  if (!countdown) {
+    daysToGoDiv.innerHTML = "Coming Soon!";
+  } else {
+    var targetDate = new Date(countdown);
+    function updateCountdown() {
+      var countDownDateMidnight = new Date(
+        targetDate.getFullYear(),
+        targetDate.getMonth(),
+        targetDate.getDate(),
+        0,
+        0,
+        0
+      ).getTime();
 
-    var now = new Date();
-    var nowMidnight = new Date(
-      now.getFullYear(),
-      now.getMonth(),
-      now.getDate(),
-      0,
-      0,
-      0
-    ).getTime();
+      var now = new Date();
+      var nowMidnight = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        0,
+        0,
+        0
+      ).getTime();
 
-    var distance = countDownDateMidnight - nowMidnight;
+      var distance = countDownDateMidnight - nowMidnight;
 
-    var days = Math.ceil(distance / (1000 * 60 * 60 * 24));
+      var days = Math.ceil(distance / (1000 * 60 * 60 * 24));
 
-    if (!daysToGoDiv) return;
-    if (distance < 0) {
-      daysToGoDiv.innerHTML = "";
-    } else if (days === 0) {
-      daysToGoDiv.innerHTML = "Event Today!";
-    } else {
-      daysToGoDiv.innerHTML =
-        "<b>" + days + "</b>" + (days == 1 ? " day " : " days ") + "to go!";
+      if (!daysToGoDiv) return;
+      if (distance < 0) {
+        daysToGoDiv.innerHTML = "";
+      } else if (days === 0) {
+        daysToGoDiv.innerHTML = "Event Today!";
+      } else {
+        daysToGoDiv.innerHTML =
+          "<b>" + days + "</b>" + (days == 1 ? " day " : " days ") + "to go!";
+      }
     }
+    updateCountdown();
   }
-  updateCountdown();
 </script>

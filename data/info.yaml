@@ -1,36 +1,35 @@
-eventTitle: "Meetup #3"
+eventTitle: "Meetup #4"
 eventDate: |
-  Saturday, 02<sup>nd</sup> August, 2025
+  Coming Soon
 eventTime: |
-  10:00 AM - 3:00 PM
-countdown: "Aug 02, 2025 10:00:00"
+  Coming Soon
+#   10:00 AM - 3:00 PM
+# countdown: "Aug 02, 2025 10:00:00"
 cfpStartDate: |
-  Monday, June 30<sup>th</sup>, 2025
+  TBD
 cfpCloseDate: |
-  <mark>Thursday, July 10<sup>th</sup>, 2025 </mark>
+  TBD
 cfpNotificationDate: |
-  Thursday, July 17<sup>th</sup>, 2025
+  TBD
 # cfpLink: "https://docs.google.com/forms/d/e/1FAIpQLSfnVJeasqqe-p1CdeeilMI389BUTZS5yOrw9dUPQF6LkHtePg/viewform?usp=dialog"
-cfpAlertText: "CFP is closed now!"
+cfpAlertText: "TBD"
 # registrationLink: "https://forms.gle/7K1aCfYA6AQLQpFQ7"
-registrationAlertText: "We are currently fully booked. However, if you are still interested in attending, please email your details (name, contact number, email, and organization) to pgdaypune@gmail.com. We will contact you in case a spot becomes available due to any cancellations."
+registrationAlertText: "TBD"
 registrationStartDate: |
-  Monday, July 14<sup>th</sup>, 2025
+  TBD
 registrationCloseDate: |
-  Monday, July 21<sup>st</sup>, 2025
-eventTimings: 10:15 AM to 3:00 PM
+  TBD
+eventTimings: TBD
 entryFee: Free
 venue: |
-  <a href="https://maps.app.goo.gl/47idmr8tDfAjgp9r5" target="_blank" rel="noopener noreferrer">
-    Nutanix, Balewadi
-  </a>
-venueIframe: |
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.0642919713578!2d73.7737472!3d18.57114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf297690c44b%3A0x4b7c1b5589f3fc60!2sNutanix%20Technologies%20India%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1750790508321!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-  height="250" style="width: 100vw; border:0;" title="Nutanix Pune"></iframe>
+  TBD
+# <a href="https://maps.app.goo.gl/47idmr8tDfAjgp9r5" target="_blank" rel="noopener noreferrer">
+#   Nutanix, Balewadi
+# </a>
+# venueIframe: |
+#   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.0642919713578!2d73.7737472!3d18.57114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf297690c44b%3A0x4b7c1b5589f3fc60!2sNutanix%20Technologies%20India%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1750790508321!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+#   height="250" style="width: 100vw; border:0;" title="Nutanix Pune"></iframe>
 venueFullAddress: |
   ```
-  Nutanix Technologies India Pvt Ltd,
-  4th Floor, Building B, Panchshil Business Park,
-  Balewadi Village, Haveli Taluk,
-  Pune, Maharashtra, 411045
+  TBD
   ```

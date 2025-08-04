@@ -77,12 +77,14 @@ params:
     buttons:
       # - name: Submit paper
       #   url: call-for-papers
-      - name: Register
-        url: register
+      # - name: Register
+      #   url: register
       # - name: Schedule
       #   url: schedule
-      - name: Know More
-        url: meetups/3
+      - name: Recent Meetups
+        url: meetups
+      - name: About
+        url: about
   socialIcons:
     - name: linkedin
       url: "https://www.linkedin.com/groups/9884249/"
@@ -119,13 +121,13 @@ menu:
       name: Register
       url: /register/
       weight: 80
-    # - identifier: call-for-papers
-    #   name: CFP
-    #   url: /call-for-papers/
+    - identifier: call-for-papers
+      name: CFP
+      url: /call-for-papers/
     #   weight: 90
-    - identifier: schedule
-      name: Schedule
-      url: /schedule/
+    # - identifier: schedule
+    #   name: Schedule
+    #   url: /schedule/
       weight: 99
     - identifier: members
       name: About
