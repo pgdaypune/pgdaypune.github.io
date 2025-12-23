@@ -77,14 +77,16 @@ params:
     buttons:
       # - name: Submit paper
       #   url: call-for-papers
-      # - name: Register
-      #   url: register
+      - name: Register
+        url: register
+      - name: Know More
+        url: meetups/4
       # - name: Schedule
       #   url: schedule
-      - name: Recent Meetups
-        url: meetups
-      - name: About
-        url: about
+      # - name: Recent Meetups
+      #   url: meetups
+      # - name: About
+      #   url: about
   socialIcons:
     - name: linkedin
       url: "https://www.linkedin.com/groups/9884249/"

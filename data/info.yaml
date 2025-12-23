@@ -1,10 +1,10 @@
 eventTitle: "Meetup #4"
 eventDate: |
-  Coming Soon
+  Saturday, 31<sup>st</sup> January, 2026
 # eventTime: |
 #   Coming Soon
 #   10:00 AM - 3:00 PM
-# countdown: "Aug 02, 2025 10:00:00"
+countdown: "Jan 31, 2026 10:00:00"
 cfpStartDate: |
   TBD
 cfpCloseDate: |
@@ -22,14 +22,17 @@ registrationCloseDate: |
 eventTimings: TBD
 entryFee: Free
 venue: |
-  TBD
-# <a href="https://maps.app.goo.gl/47idmr8tDfAjgp9r5" target="_blank" rel="noopener noreferrer">
-#   Nutanix, Balewadi
-# </a>
-# venueIframe: |
-#   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.0642919713578!2d73.7737472!3d18.57114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf297690c44b%3A0x4b7c1b5589f3fc60!2sNutanix%20Technologies%20India%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1750790508321!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-#   height="250" style="width: 100vw; border:0;" title="Nutanix Pune"></iframe>
+  <a href="https://maps.app.goo.gl/YVthd1DMkrCAEay56" target="_blank" rel="noopener noreferrer">
+   FPL Technologies
+  </a>
+venueIframe: |
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3528501102533!2d73.79812139074075!3d18.55812437680679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf004779b789%3A0x1308ebd02ed79a73!2sFpl%20technologies!5e0!3m2!1sen!2sin!4v1766481957643!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+  height="250" style="width: 100vw; border:0;" title="FPL Technologies Pune"></iframe>
 venueFullAddress: |
   ```
-  TBD
+  FPL Technologies
+  West Bay, Survey No. 278, 
+  Hissa No. 4/3 Pallod Farm,
+  Phase II, Baner, Pune - 411045, 
+  Maharashtra, India
   ```
