@@ -12,11 +12,15 @@ cfpCloseDate: |
 cfpNotificationDate: |
   TBD
 # cfpLink: "https://docs.google.com/forms/d/e/1FAIpQLSfnVJeasqqe-p1CdeeilMI389BUTZS5yOrw9dUPQF6LkHtePg/viewform?usp=dialog"
-cfpAlertText: "TBD"
+cfpAlertText: |
+  For this upcoming meetup, we will not be opening a new Call for Papers (CFP). Instead, we want to honor the high-quality submissions we received previously.
+  The pgPune Organizing Committee will be reaching out to speakers who submitted talks for our previous events but weren't selected, giving them the first opportunity to present.
+
+  Stay tuned for more details, and we look forward to seeing you there! 🐘
 # registrationLink: "https://forms.gle/7K1aCfYA6AQLQpFQ7"
-registrationAlertText: "TBD"
+registrationAlertText: "Mark your calendars! Attendee registration officially opens on January 12th."
 registrationStartDate: |
-  TBD
+  Monday, January 12<sup>th</sup>, 2026
 registrationCloseDate: |
   TBD
 eventTimings: TBD
