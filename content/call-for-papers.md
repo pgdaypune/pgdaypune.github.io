@@ -8,6 +8,11 @@ summary: "PG Pune Meetup#3 | CFP | Last date - Thursday, July 10th, 2025"
 
 {{< cfp-details >}}
 
+> *For this upcoming meetup, we will not be opening a new Call for Papers (CFP). Instead, we want to honor the high-quality submissions we received previously.*
+*The pgPune Organizing Committee will be reaching out to speakers who submitted talks for our previous events but weren't selected, giving them the first opportunity to present.*
+>
+> *Stay tuned for more details, and we look forward to seeing you there! 🐘*
+
 Are you passionate about PostgreSQL and eager to share your knowledge, experiences, and insights with fellow enthusiasts? We're excited to announce the call for papers for the upcoming PostgreSQL Meetup in Pune. This is your opportunity to contribute to our vibrant community and showcase your expertise!
 
 We’re excited to see the ideas and insights you’ll bring to PgPune Meetup.

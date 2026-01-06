@@ -1,16 +1,15 @@
 eventTitle: "Meetup #4"
 eventDate: |
   Saturday, 31<sup>st</sup> January, 2026
-# eventTime: |
-#   Coming Soon
-#   10:00 AM - 3:00 PM
-countdown: "Jan 31, 2026 10:00:00"
+eventTime: |
+  10:15 AM - 3:00 PM
+countdown: "Jan 31, 2026 10:15:00"
 cfpStartDate: |
-  TBD
+  NA
 cfpCloseDate: |
-  TBD
+  NA
 cfpNotificationDate: |
-  TBD
+  NA
 # cfpLink: "https://docs.google.com/forms/d/e/1FAIpQLSfnVJeasqqe-p1CdeeilMI389BUTZS5yOrw9dUPQF6LkHtePg/viewform?usp=dialog"
 cfpAlertText: |
   For this upcoming meetup, we will not be opening a new Call for Papers (CFP). Instead, we want to honor the high-quality submissions we received previously.
@@ -20,10 +19,10 @@ cfpAlertText: |
 # registrationLink: "https://forms.gle/7K1aCfYA6AQLQpFQ7"
 registrationAlertText: "Mark your calendars! Attendee registration officially opens on January 12th."
 registrationStartDate: |
-  Monday, January 12<sup>th</sup>, 2026
+  Monday, 12<sup>th</sup> January, 2026
 registrationCloseDate: |
   TBD
-eventTimings: TBD
+eventTimings: 10:15 AM to 3:00 PM
 entryFee: Free
 venue: |
   <a href="https://maps.app.goo.gl/YVthd1DMkrCAEay56" target="_blank" rel="noopener noreferrer">
