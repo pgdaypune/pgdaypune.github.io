@@ -1,7 +1,7 @@
 ---
 title: "Register"
 layout: "page"
-summary: "Register for PG Day Pune Meetup#3"
+summary: "Register for PG Day Pune Meetup"
 ---
 
 {{< registration-details >}}

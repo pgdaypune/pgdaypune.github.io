@@ -1,7 +1,7 @@
 ---
 title: "Call for Papers"
 layout: "page"
-summary: "PG Pune Meetup#3 | CFP | Last date - Thursday, July 10th, 2025"
+summary: "PG Pune Meetup | CFP"
 ---
 
 ### Paper Submission Details
