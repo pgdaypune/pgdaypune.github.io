@@ -123,13 +123,13 @@ menu:
       name: Register
       url: /register/
       weight: 80
-    - identifier: call-for-papers
-      name: CFP
-      url: /call-for-papers/
+    # - identifier: call-for-papers
+    #   name: CFP
+    #   url: /call-for-papers/
     #   weight: 90
-    # - identifier: schedule
-    #   name: Schedule
-    #   url: /schedule/
+    - identifier: schedule
+      name: Schedule
+      url: /schedule/
       weight: 99
     - identifier: members
       name: About
