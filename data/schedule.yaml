@@ -1,42 +1,32 @@
 - time: "10:15 AM - 10:45 AM"
   events:
     - |
-      ### Registration at Nutanix
-- time: "10:45 AM - 11:00 AM"
+      ### Registration at FPL
+- time: "10:45 AM - 11:15 AM"
   events:
     - |
-      ### Welcome & Word from Sponsor
-- time: "11:00 AM - 11:45 AM"
+      ### Welcome & Word from Sponsor & case study
+- time: "11:15 AM - 12:00 PM"
   events:
     - |
-      ### Unified Observability: Monitoring Postgres Anywhere with OpenTelemetry
-      **`Speaker:`** [Yogesh Jain](/speakers/yogesh-jain)
-      ![Yogesh Jain](/images/speakers/yogesh-jain.png)
-- time: "11:45 AM - 12:30 PM"
+      ### Behind the Curtain: A Beginner's Guide to Postgres Internals
+
+- time: "12:00 AM - 12:30 PM"
   events:
     - |
-      ### Designing a Monitoring Feature in PostgreSQL
-      **`Speaker:`** [Rahila Syed](/speakers/rahila-syed)
-      ![Rahila Syed](/images/speakers/rahila-syed.png)
-- time: "12:30 PM - 01:00 PM"
+      ### PostgreSQL Indexing: Types, Trade-offs, and Best Practices
+
+- time: "12:30 PM - 01:15 PM"
   events:
     - |
       ### Networking + Lunch
       `Networking` `Lunch`
-- time: "01:00 PM - 01:45 PM"
+- time: "01:15 PM - 02:00 PM"
   events:
     - |
-      ### Enhancing Patroni HA: Automated Failover on Leader Data Directory Full
-      **`Speaker:`** [Hrishikesh Gore](/speakers/hrishikesh-gore)
-      ![Hrishikesh Gore](/images/speakers/hrishikesh-gore.png)
-- time: "01:45 PM - 02:30 PM"
+      ### The Modern DBA's Toolkit: Implementing a Scalable Logging Stack for PostgreSQL
+
+- time: "02:00 PM - 02:45 PM"
   events:
     - |
-      ### Troubleshooting Toolkit for PostgreSQL DBAs
-      **`Speaker:`** [Lalit Choudhary](/speakers/lalit-choudhary)
-      ![Lalit Choudhary](/images/speakers/lalit-choudhary.png)
-- time: "02:30 PM - 03:00 PM"
-  events:
-    - |
-      ### Lightning Talks
-      `Lightning Talks`
+      ### Practical Integration of PostgreSQL as MCP Toolbox clients with LLM CLI
