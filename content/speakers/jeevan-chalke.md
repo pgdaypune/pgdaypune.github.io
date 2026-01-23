@@ -2,13 +2,7 @@
 title: 'Jeevan Chalke'
 ---
 
-### About
-
-I am Jeevan Chalke, a Principal Engineer and Engineering Manager at EDB, specializing in Database Server development.
-
-I have been with EDB since 2008, bringing over 17 years of experience. As a passionate contributor to the PostgreSQL community, I actively develop and review patches, helping enhance the database ecosystem. My work primarily focuses on designing and implementing features for EnterpriseDB’s Advanced Server.
-
-I hold a Master’s degree (M.Tech) in Information Technology from IIT Bombay.
+Jeevan Chalke is a Principal Engineer and Engineering Manager at EDB, where he specializes in Database Server development. With over 17 years of experience, having been with the company since 2008. Jeevan is a dedicated contributor to the PostgreSQL community, actively developing and reviewing patches to enhance the global database ecosystem. His core work focuses on the design and implementation of key features for EDB’s Advanced Server. He holds an Master’s degree (M.Tech) in Information Technology from IIT Bombay.
 
 <img src="/images/speakers/jeevan-chalke.jpg" alt="Jeevan Chalke" aria-label="Jeevan Chalke" height="100%" width="40%">
 

@@ -2,8 +2,6 @@
 title: "Lalit Choudhary"
 ---
 
-### About
-
 Lalit Choudhary is a database professional with experience in PostgreSQL and MySQL. His core interests include problem-solving, troubleshooting database issues, and testing for reliability and performance.
 
 ### Talks

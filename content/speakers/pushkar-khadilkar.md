@@ -2,7 +2,7 @@
 title: 'Pushkar Khadilkar'
 ---
 
-### About
+Pushkar Khadilkar, software engineers in Google's AlloyDB team, specialise in advancing Al-database integration. Pushkar brings over 10 years of experience in database internals.
 
 ![pushkar-khadilkar](/images/speakers/pushkar-khadilkar.jpeg)
 

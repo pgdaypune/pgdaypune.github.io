@@ -17,6 +17,10 @@ Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our
 - [Rushabh Lathia](https://www.linkedin.com/in/rushabh-lathia-3bb8616/)
 - [Yogesh Jadhav](https://www.linkedin.com/in/pgyogesh/)
 
+### Speakers:
+
+Checkout the [speaker's list here](/speakers/) from all our meetups so far.
+
 ### Website contribution:
  
 - [Khushboo Vashi](https://www.linkedin.com/in/khushboo-vashi-b8303012/)

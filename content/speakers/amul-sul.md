@@ -2,7 +2,7 @@
 title: 'Amul Sul'
 ---
 
-### About
+Amul Sul is a Principal Engineer at EnterpriseDB, contributing to the development of PostgreSQL features and EDB Postgres Advanced Server. With 12 years of experience in database development and a Master's degree in Computer Applications from Mumbai University.
 
 ![Amul Sul](/images/speakers/amul-sul.jpeg)
 

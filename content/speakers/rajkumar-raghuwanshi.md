@@ -2,8 +2,6 @@
 title: 'Rajkumar Raghuwanshi'
 ---
 
-### About
-
 Rajkumar Raghuwanshi, a Database Consultant with AWS Professional
 Services in India. With 11+ years of IT industry experience, he has
 established himself as an expert in database technologies,
