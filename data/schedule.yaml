@@ -10,12 +10,14 @@
   events:
     - |
       ### Behind the Curtain: A Beginner's Guide to Postgres Internals
-
+      **`Speaker:`** [Vaibhav Dalvi](/speakers/vaibhav-dalvi)
+      ![Vaibhav Dalvi](/images/speakers/vaibhav-dalvi.jpeg)
 - time: "12:00 AM - 12:30 PM"
   events:
     - |
       ### PostgreSQL Indexing: Types, Trade-offs, and Best Practices
-
+      **`Speaker:`** [Amit Thakur](/speakers/amit-thakur)
+      ![Amit Thakur](/images/speakers/amit-thakur.jpeg)
 - time: "12:30 PM - 01:15 PM"
   events:
     - |
@@ -25,8 +27,11 @@
   events:
     - |
       ### The Modern DBA's Toolkit: Implementing a Scalable Logging Stack for PostgreSQL
-
+      **`Speaker:`** [Prateek Agarwal](/speakers/prateek-agarwal)
+      ![Prateek Agarwal](/images/speakers/prateek-agarwal.jpeg)
 - time: "02:00 PM - 02:45 PM"
   events:
     - |
       ### Practical Integration of PostgreSQL as MCP Toolbox clients with LLM CLI
+      **`Speaker:`** [Jessica Shelar](/speakers/jessica-shelar)
+      ![Jessica Shelar](/images/speakers/jessica-shelar.jpeg)
