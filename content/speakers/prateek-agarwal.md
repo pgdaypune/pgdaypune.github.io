@@ -1,5 +1,6 @@
 ---
 title: 'Prateek Agarwal'
+date: 2026-01-30T00:00:02+05:30
 ---
 
 Prateek Agarwal is is technical leader at Google in AlloyDB database development areas like observability, high availability, data protection, replication etc.

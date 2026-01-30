@@ -1,5 +1,6 @@
 ---
 title: 'Sachin Khanna'
+date: 2024-12-07T00:00:05+05:30
 ---
 
 Sachin Khanna database solutions architect at AWS with passion for PostgreSQL and its flavours, including AWS Aurora PostgreSQL. With extensive experience in development, migration, implementation, and administration across databases like Oracle, DB2, PostgreSQL, and more, he is also passionate about open-source technologies like Yugabyte, Cassandra, and MongoDB.

@@ -1,5 +1,6 @@
 ---
 title: 'Sachin D Kotwal'
+date: 2025-04-25T00:00:04+05:30
 ---
 
 Mr. Sachin D. Kotwal having over 12+ years of experience in the IT industry, established himself as a leading expert in PostgreSQL database technologies. Currently serving as a Lead Consultant at Amazon Web Services (AWS) ProServe India LLP, he specializes in PostgreSQL database testing, extension development, and facilitating seamless migrations from various databases to PostgreSQL, both on-premises and on the AWS Cloud

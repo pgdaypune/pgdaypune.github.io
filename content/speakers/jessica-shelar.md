@@ -1,5 +1,6 @@
 ---
 title: 'Jessica Shelar'
+date: 2026-01-30T00:00:01+05:30
 ---
 
 Jessica Shelar is Database Developer at DataCloudGaze Consulting and a passionate PostgreSQL enthusiast, with hands-on experience in database development and performance tuning.

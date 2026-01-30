@@ -1,5 +1,6 @@
 ---
 title: 'Ujjwal Lanjewar'
+date: 2025-04-25T00:00:05+05:30
 ---
 
 Ujjwal is leading the Google AlloyDB Team and has been with Google for ~2.5 years. Ujjwal is a veteran with 25+ years in the distributed storage systems having long association with IBM and Seagate for various private cloud storage products and storage for databases, for all the aspects of enterprise software ranging from high availability, data protection, replication, caching and migrations. During his career, Ujjwal has been active in research, technical conferences, academic relations, mentoring, etc. 

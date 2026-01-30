@@ -1,5 +1,6 @@
 ---
 title: 'Amit Thakur'
+date: 2026-01-30T00:00:03+05:30
 ---
 
 Amit Thakur is an experienced SQL and PL/SQL developer with hands-on expertise across multiple
