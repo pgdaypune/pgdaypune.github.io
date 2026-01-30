@@ -15,6 +15,9 @@ Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our
 - [Sachin Kotwal](https://www.linkedin.com/in/sachindkotwal88/)
 - [Sagar Jadhav](https://www.linkedin.com/in/sagar-jadhav-42440a84/)
 - [Rushabh Lathia](https://www.linkedin.com/in/rushabh-lathia-3bb8616/)
+
+#### Ex committee members:
+
 - [Yogesh Jadhav](https://www.linkedin.com/in/pgyogesh/)
 
 ### Speakers:
