@@ -1,12 +1,14 @@
 title: "PgPune Meetups"
 images:
+  - src: /images/meetups/4/group-pic.png
+    caption: "Meetup #4 @ FPL Technologies"
   - src: /images/meetups/3/group-pic.png
     caption: "Meetup #3 @ Nutanix"
   - src: /images/meetups/3/speakers.jpg
     caption: "Talks @ Meetup #3"
   - src: /images/meetups/2/group-pic.jpeg
     caption: "Meetup #2 @ Google"
-  - src: /images/meetups/2/group-pic-2.jpg
+  - src: /images/meetups/2/group-pic-2.png
     caption: "Participants @ Meetup #2"
   - src: /images/meetups/2/talks-slider.png
     caption: "Talks @ Meetup #2"
