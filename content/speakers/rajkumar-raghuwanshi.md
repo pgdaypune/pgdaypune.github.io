@@ -18,7 +18,7 @@ transformation journeys.
 
 ### Talks given
 
-- [Meetup #2](/meetups/2)
+- [PgPune Event #2](/events/2)
 
 ### Contact
 

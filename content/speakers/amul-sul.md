@@ -9,7 +9,7 @@ Amul Sul is a Principal Engineer at EnterpriseDB, contributing to the developmen
 
 ### Talks given
 
-- [Meetup #1](/meetups/1)
+- [PgPune Event #1](/events/1)
 
 ### Contact
 

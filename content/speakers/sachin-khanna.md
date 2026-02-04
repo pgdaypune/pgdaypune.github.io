@@ -9,7 +9,7 @@ Sachin Khanna database solutions architect at AWS with passion for PostgreSQL an
 
 ### Talks given
 
-- [Meetup #1](/meetups/1)
+- [PgPune Event #1](/events/1)
 
 ### Contact
 

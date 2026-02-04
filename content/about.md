@@ -6,7 +6,7 @@ summary: "Meet Our PgPune Community"
 
 ## Meet Our Community
 
-Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our incredible team and community members. From organizers to volunteers and participants, every individual plays a vital role in fostering growth and collaboration.
+Our PostgreSQL events are made possible by the dedication and enthusiasm of our incredible team and community members. From organizers to volunteers and participants, every individual plays a vital role in fostering growth and collaboration.
 
 
 ### Organizers: 
@@ -22,7 +22,7 @@ Our PostgreSQL meetups are made possible by the dedication and enthusiasm of our
 
 ### Speakers:
 
-Checkout the [speaker's list here](/speakers/) from all our meetups so far.
+Checkout the [speaker's list here](/speakers/) from all our events so far.
 
 ### Website contribution:
  
