@@ -9,7 +9,7 @@ Pushkar Khadilkar, software engineers in Google's AlloyDB team, specialise in ad
 
 ### Talks given
 
-- [Meetup #1](/meetups/1)
+- [PgPune Event #1](/events/1)
 
 ### Contact
 

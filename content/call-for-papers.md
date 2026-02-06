@@ -1,16 +1,16 @@
 ---
 title: "Call for Papers"
 layout: "page"
-summary: "PG Pune Meetup | CFP"
+summary: "PG Pune Event | CFP"
 ---
 
 ### Paper Submission Details
 
 {{< cfp-details >}}
 
-Are you passionate about PostgreSQL and eager to share your knowledge, experiences, and insights with fellow enthusiasts? We're excited to announce the call for papers for the upcoming PostgreSQL Meetup in Pune. This is your opportunity to contribute to our vibrant community and showcase your expertise!
+Are you passionate about PostgreSQL and eager to share your knowledge, experiences, and insights with fellow enthusiasts? We're excited to announce the call for papers for the upcoming PostgreSQL Event in Pune. This is your opportunity to contribute to our vibrant community and showcase your expertise!
 
-We’re excited to see the ideas and insights you’ll bring to PgPune Meetup.
+We’re excited to see the ideas and insights you’ll bring to PgPune Event.
 
 {{< cfb-btn >}}
 

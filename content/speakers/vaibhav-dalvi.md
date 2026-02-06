@@ -7,7 +7,7 @@ Vaibhav Dalvi is PostgreSQL Database Engine Developer at EnterpriseDB (EDB) sinc
 
 ### Talks
 
-- [Meetup #4](/meetups/4)
+- [PgPune Event #4](/events/4)
   ![vaibhav-dalvi](/images/speakers/vaibhav-dalvi.jpeg)
 
 ### Contact

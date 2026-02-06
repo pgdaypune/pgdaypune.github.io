@@ -1,20 +1,20 @@
-title: "PgPune Meetups"
+title: "PgPune Events Gallery"
 images:
-  - src: /images/meetups/4/group-pic.png
-    caption: "Meetup #4 @ FPL Technologies"
-  - src: /images/meetups/4/speakers.jpeg
-    caption: "Talks @ Meetup #4"
-  - src: /images/meetups/3/group-pic.png
-    caption: "Meetup #3 @ Nutanix"
-  - src: /images/meetups/3/speakers.jpg
-    caption: "Talks @ Meetup #3"
-  - src: /images/meetups/2/group-pic.jpeg
-    caption: "Meetup #2 @ Google"
-  - src: /images/meetups/2/group-pic-2.png
-    caption: "Participants @ Meetup #2"
-  - src: /images/meetups/2/talks-slider.png
-    caption: "Talks @ Meetup #2"
-  - src: /images/meetups/1/group-pic.jpeg
-    caption: "Meetup #1 @ YugaByte"
-  - src: /images/meetups/1/talks-slider.png
-    caption: "Talks @ Meetup #1"
+  - src: /images/events/4/group-pic.png
+    caption: "Event #4 @ FPL Technologies"
+  - src: /images/events/4/speakers.jpeg
+    caption: "Speakers @ Event #4"
+  - src: /images/events/3/group-pic.png
+    caption: "Event #3 @ Nutanix"
+  - src: /images/events/3/speakers.jpg
+    caption: "Speakers @ Event #3"
+  - src: /images/events/2/group-pic.jpeg
+    caption: "Event #2 @ Google"
+  - src: /images/events/2/group-pic-2.png
+    caption: "Participants @ Event #2"
+  - src: /images/events/2/talks-slider.png
+    caption: "Speakers @ Event #2"
+  - src: /images/events/1/group-pic.jpeg
+    caption: "Event #1 @ YugaByte"
+  - src: /images/events/1/talks-slider.png
+    caption: "Speakers @ Event #1"

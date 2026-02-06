@@ -80,13 +80,13 @@ params:
       # - name: Register
       #   url: register
       # - name: Know More
-      #   url: meetups/4
+      #   url: events/4
       # - name: Schedule
       #   url: schedule
       - name: About
         url: about
-      - name: Recent Meetups
-        url: meetups
+      - name: Recent Events
+        url: events
   socialIcons:
     - name: linkedin
       url: "https://www.linkedin.com/groups/9884249/"
@@ -115,9 +115,9 @@ menu:
     - name: "\U0001F50D"
       url: search
       weight: 1
-    - identifier: meetups
-      name: Meetups
-      url: /meetups/
+    - identifier: events
+      name: Events
+      url: /events/
       weight: 20
     - identifier: register
       name: Register

@@ -7,7 +7,7 @@ Jessica Shelar is Database Developer at DataCloudGaze Consulting and a passionat
 
 ### Talks
 
-- [Meetup #4](/meetups/4)
+- [PgPune Event #4](/events/4)
   ![jessica-shelar](/images/speakers/jessica-shelar.jpeg)
 
 ### Contact

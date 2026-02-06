@@ -8,7 +8,7 @@ Prateek comes with 10+ experience in developing transactional & analytical datab
 
 ### Talks
 
-- [Meetup #4](/meetups/4)
+- [PgPune Event #4](/events/4)
   ![prateek-agarwal](/images/speakers/prateek-agarwal.jpeg)
 
 ### Contact

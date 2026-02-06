@@ -8,7 +8,7 @@ RDBMS platforms, including PostgreSQL. Proficient in performance tuning, databas
 
 ### Talks
 
-- [Meetup #4](/meetups/4)
+- [PgPune Event #4](/events/4)
   ![amit-thakur](/images/speakers/amit-thakur.jpeg)
 
 ### Contact

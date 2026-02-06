@@ -21,10 +21,10 @@ git submodule update --init
 
 ### Update Site
 
-- To add new meetups
+- To add new events
 
-    Run: `hugo new content content/meetups/3.md`
-    or manually add new files in content/meetups dir
+    Run: `hugo new content content/events/3.md`
+    or manually add new files in content/events dir
 
 - To add new speakers
 
@@ -53,7 +53,7 @@ Directory structure
 │   ├── register.md
 │   ├── schedule.md
 │   ├── search.md
-│   ├── meetups
+│   ├── events
 │   │   ├── 1.md
 │   │   ├── 2.md
 │   │   └── ...
@@ -67,7 +67,7 @@ Directory structure
 │   │   ├── favicon-16x16.png
 │   │   ├── favicon-32x32.png
 │   │   ├── favicon.ico
-│   │   ├── meetups
+│   │   ├── events
 │   │   │   ├── 1
 │   │   │   │   ├── group-pic.jpeg
 │   │   │   │   ├── poster.jpeg

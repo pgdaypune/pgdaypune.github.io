@@ -9,7 +9,7 @@ Tarun is a Tech Lead in the Google AlloyDB team. He has over 10+ years of experi
 
 ### Talks given
 
-- [Meetup #2](/meetups/2)
+- [PgPune Event #2](/events/2)
 
 ### Contact
 

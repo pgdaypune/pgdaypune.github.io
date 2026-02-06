@@ -1,12 +1,12 @@
 ---
 title: "Register"
 layout: "page"
-summary: "Register for PG Day Pune Meetup"
+summary: "Register for PG Day Pune Event"
 ---
 
 {{< registration-details >}}
 
-### Why Attend Postgres Pune Meetup?
+### Why Attend Postgres Pune Event?
 
 - **Learn:** Gain insights from industry experts and PostgreSQL practitioners.
 - **Network:** Connect with fellow PostgreSQL users, developers, and community leaders.
