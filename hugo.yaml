@@ -79,14 +79,14 @@ params:
       #   url: call-for-papers
       # - name: Register
       #   url: register
-      # - name: Know More
-      #   url: events/4
+      - name: Know More
+        url: events/5
       # - name: Schedule
       #   url: schedule
       - name: About
         url: about
-      - name: Recent Events
-        url: events
+      # - name: Recent Events
+      #   url: events
   socialIcons:
     - name: linkedin
       url: "https://www.linkedin.com/groups/9884249/"

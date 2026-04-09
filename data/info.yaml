@@ -1,11 +1,11 @@
 eventTitle: "Event #5"
 eventDate: |
-  Coming Soon
-# eventTime: |
-#   10:15 AM - 3:00 PM
-# countdown: "Jan 31, 2026 10:15:00"
+  Saturday, 13<sup>th</sup> June, 2026
+eventTime: |
+  10:15 AM - 3:00 PM
+countdown: "June 13, 2026 10:15:00"
 cfpStartDate: |
-  NA
+  Friday, April 17<sup>th</sup>, 2026
 cfpCloseDate: |
   NA
 cfpNotificationDate: |
@@ -20,17 +20,19 @@ registrationStartDate: |
   TBD
 registrationCloseDate: |
   TBD
-eventTimings: TBD
+eventTimings: 10:15 AM to 3:00 PM
 entryFee: Free
 venue: |
-  TBD
-# <a href="https://maps.app.goo.gl/YVthd1DMkrCAEay56" target="_blank" rel="noopener noreferrer">
-#  FPL Technologies
-# </a>
+  <a href="https://maps.app.goo.gl/LBqVACQDeBjAdsd18" target="_blank" rel="noopener noreferrer">
+    Amazon Development Center India Pvt. Ltd.
+  </a>
 venueIframe: |
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.03447396975!2d73.86296739999999!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1770022731921!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-  height="250" style="width: 100vw; border:0;" title="Pune"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30258.74004933965!2d73.9005784!3d18.5585911!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c300487f6a67%3A0xb11febf587ec1e0d!2sAmazon%20Development%20Center%20India%20Pvt.%20Ltd.%20(PNQ18)!5e0!3m2!1sen!2sin!4v1775728206117!5m2!1sen!2sin"
+  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" height="250" style="width: 100vw; border:0;" title="Amazon Development Center India Pvt. Ltd."></iframe>
 venueFullAddress: |
   ```
-  TDB
+  Amazon Development Centre India PVT LTD (BF)
+  Floors 1-4, Building R3- Gera Commerzone
+  Survey Number 65/1, 65/2 & 65/3
+  Kharadi Village, Haveli Taluka Pune, Maharashtra 411014.
   ```
