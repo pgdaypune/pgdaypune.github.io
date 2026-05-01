@@ -10,9 +10,9 @@ cfpCloseDate: |
   NA
 cfpNotificationDate: |
   NA
-cfpLink: "https://docs.google.com/forms/d/1TI_oRG8EszQdaYbVtnfacsNyQSpaztS65IXNCg1BrIc/viewform"
+# cfpLink: "https://docs.google.com/forms/d/1TI_oRG8EszQdaYbVtnfacsNyQSpaztS65IXNCg1BrIc/viewform"
 cfpAlertText: |
-  CFP not started yet! 🐘
+  CFP Closed! 🐘
 # registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdWMjLW6_2ibUCe13bWqdweZfOTOGyQwnLsEWlH6FIFo0casg/viewform"
 registrationAlertText: |
   Registration not started yet! 🐘
