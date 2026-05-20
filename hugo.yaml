@@ -75,14 +75,14 @@ params:
     imageTitle: "PgPune"
     imageAlt: "PgPune"
     buttons:
-      - name: Submit paper
-        url: call-for-papers
+      # - name: Submit paper
+      #   url: call-for-papers
       # - name: Register
       #   url: register
       - name: Know More
         url: events/5
-      # - name: Schedule
-      #   url: schedule
+      - name: Schedule
+        url: schedule
       # - name: About
       #   url: about
       # - name: Recent Events

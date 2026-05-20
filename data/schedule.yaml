@@ -2,36 +2,47 @@
   events:
     - |
       ### Registration at Amazon Development Center
-- time: "10:45 AM - 11:15 AM"
+- time: "10:45 AM - 11:00 AM"
   events:
     - |
       ### Welcome & Word from Sponsor
-- time: "11:15 AM - 12:00 PM"
+- time: "11:00 AM - 11:35 AM"
   events:
     - |
-      ### TBD
-      **`Speaker:`** [TBD](/speakers/tbd)
-      ![TBD](/images/speakers/tbd.jpeg)
-- time: "12:00 AM - 12:30 PM"
+      ### How India's Largest G2C Platform Broke Free from Oracle
+      **`Speaker:`** [TBA](/speakers/tba)
+      ![TBA](/images/speakers/tba.jpeg)
+- time: "11:35 AM - 12:10 PM"
   events:
     - |
-      ### TBD
-      **`Speaker:`** [TBD](/speakers/tbd)
-      ![TBD](/images/speakers/tbd.jpeg)
-- time: "12:30 PM - 01:15 PM"
+      ### The Journey of VACUUM: From Dead Tuples to REPACK CONCURRENTLY
+      **`Speaker:`** [TBA](/speakers/tba)
+      ![TBA](/images/speakers/tba.jpeg)
+- time: "12:10 PM - 12:25 PM"
+  events:
+    - |
+      ### Tea/Coffee Break
+      `Networking` `Tea/Coffee Break`
+- time: "12:25 PM - 01:00 PM"
+  events:
+    - |
+      ### Upgrade Yourself: The Self-Image Operating System (Softskills track)
+      **`Speaker:`** [TBA](/speakers/tba)
+      ![TBA](/images/speakers/tba.jpeg)
+- time: "01:00 PM - 01:40 PM"
   events:
     - |
       ### Networking + Lunch
       `Networking` `Lunch`
-- time: "01:15 PM - 02:00 PM"
+- time: "01:40 PM - 02:15 PM"
   events:
     - |
-      ### TBD
-      **`Speaker:`** [TBD](/speakers/tbd)
-      ![TBD](/images/speakers/tbd.jpeg)
-- time: "02:00 PM - 02:45 PM"
+      ### Zero-Downtime Schema Changes: From Lock Hell to Live Migrations
+      **`Speaker:`** [TBA](/speakers/tba)
+      ![TBA](/images/speakers/tba.jpeg)
+- time: "02:15 PM - 02:50 PM"
   events:
     - |
-      ### TBD
-      **`Speaker:`** [TBD](/speakers/tbd)
-      ![TBD](/images/speakers/tbd.jpeg)
+      ### SQL Insights - a platform that learns from real PostgreSQL optimization cases and turns that knowledge into actionable recommendations
+      **`Speaker:`** [TBA](/speakers/tba)
+      ![TBA](/images/speakers/tba.jpeg)
