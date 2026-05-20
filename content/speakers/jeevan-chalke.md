@@ -9,8 +9,8 @@ Jeevan Chalke is a Principal Engineer and Engineering Manager at EDB, where he s
 
 ### Talks
 
-- [PgPune Event #2](/events/2)
 - [PgPune Event #5](/events/5)
+- [PgPune Event #2](/events/2)
 
 ### Contact
 
