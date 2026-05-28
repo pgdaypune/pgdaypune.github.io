@@ -33,6 +33,11 @@
     - |
       ### Upgrade Yourself: The Self-Image Operating System (Softskills track)
       **`Speaker:`** [Mohini Ogale](/speakers/mohini-ogale)
+      <details>
+        <summary>Talk Details</summary>
+        In this talk, Mohini unpacks the real source of first impressions — Self‑image. She explains what “image” truly means, how self‑image is formed, and why it matters more than outer polish. Through stories, reflection, and practical steps, she shows how to develop a positive self‑image that builds confidence, authority, and lasting impact in client conversations and career growth.
+      </details>
+
       ![Mohini Ogale](/images/speakers/mohini-ogale.jpeg)
 - time: "01:00 PM - 01:40 PM"
   events:
@@ -49,5 +54,10 @@
   events:
     - |
       ### SQL Insights - a platform that learns from real PostgreSQL optimization cases and turns that knowledge into actionable recommendations
-      **`Speaker:`** [Prafulla P. Ranadive](/speakers/prafulla-p-ranadive)
-      ![Prafulla P. Ranadive](/images/speakers/prafulla-p-ranadive.jpeg)
+      **`Speaker:`** [Prafulla Ranadive](/speakers/prafulla-ranadive)
+      <details>
+        <summary>Talk Details</summary>
+        In his upcoming talk, Prafulla will introduce SQLInsights, a platform he created to transform real-world PostgreSQL optimization data into explainable, actionable recommendations. He will explore how AI-augmented systems—which combine LLM frameworks like LangChain and LlamaIndex with deterministic rule engines—can enable the safer and more reliable adoption of NL-to-SQL agents in production environments.
+      </details>
+
+      ![Prafulla Ranadive](/images/speakers/prafulla-ranadive.jpeg)
