@@ -77,8 +77,8 @@ params:
     buttons:
       # - name: Submit paper
       #   url: call-for-papers
-      # - name: Register
-      #   url: register
+      - name: Register
+        url: register
       - name: Know More
         url: events/5
       - name: Schedule
