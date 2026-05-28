@@ -13,7 +13,7 @@
       **`Speaker:`** [Hari Kiran](/speakers/hari-kiran)
       <details>
         <summary>Talk Details</summary>
-        In his upcoming talk, he will show how he is helping customers across geographies with Database Administration, Enterprise Implementations, Security & Hardening, Backup & Recovery, and Performance Tuning.
+        In his upcoming talk, Hari will show how he is helping customers across geographies with Database Administration, Enterprise Implementations, Security & Hardening, Backup & Recovery, and Performance Tuning.
       </details>
 
       ![Hari Kiran](/images/speakers/hari-kiran.jpeg)
@@ -22,6 +22,11 @@
     - |
       ### The Journey of VACUUM: From Dead Tuples to REPACK CONCURRENTLY
       **`Speaker:`** [Jeevan Chalke](/speakers/jeevan-chalke)
+      <details>
+        <summary>Talk Details</summary>
+        In his talk, Jeevan will trace the evolution of PostgreSQL bloat management from traditional autovacuum to the new native REPACK CONCURRENTLY command in PostgreSQL 19. He will break down how this extensionless, near-zero-downtime tool works under the hood and provide practical guidance for managing table bloat safely in production.
+      </details>
+
       ![Jeevan Chalke](/images/speakers/jeevan-chalke-img.jpeg)
 - time: "12:10 PM - 12:25 PM"
   events:
@@ -49,6 +54,11 @@
     - |
       ### Zero-Downtime Schema Changes: From Lock Hell to Live Migrations
       **`Speaker:`** [Ayush Shah](/speakers/ayush-shah)
+      <details>
+        <summary>Talk Details</summary>
+        In his talk, Ayush will address how PostgreSQL schema changes often trigger costly production outages due to heavy, exclusive table locks. He will break down safe versus high-risk DDL operations and demonstrate how community extensions like pg_repack work under the hood to enable seamless, zero-downtime live migrations at scale.
+      </details>
+
       ![Ayush Shah](/images/speakers/ayush-shah.jpeg)
 - time: "02:15 PM - 02:50 PM"
   events:
