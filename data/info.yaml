@@ -13,7 +13,7 @@ cfpNotificationDate: |
 # cfpLink: "https://docs.google.com/forms/d/1TI_oRG8EszQdaYbVtnfacsNyQSpaztS65IXNCg1BrIc/viewform"
 cfpAlertText: |
   CFP Closed! 🐘
-# registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdWMjLW6_2ibUCe13bWqdweZfOTOGyQwnLsEWlH6FIFo0casg/viewform"
+registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdT4IogiU-vsI_tQFrAuam4RJ3EfFqE9oJw-7ZDX5t-jwWdUQ/viewform"
 registrationAlertText: |
   Registration not started yet! 🐘
 registrationStartDate: |
