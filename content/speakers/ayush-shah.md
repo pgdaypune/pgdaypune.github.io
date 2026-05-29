@@ -8,6 +8,7 @@ Ayush Shah works on the Aurora PostgreSQL engine at AWS. His interests revolve a
 ### Talks
 
 - [PgPune Event #5](/events/5)
+  ![ayush-shah](/images/speakers/ayush-shah.jpeg)
 
 ### Contact
 

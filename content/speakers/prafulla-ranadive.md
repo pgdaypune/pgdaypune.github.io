@@ -8,6 +8,7 @@ Prafulla Ranadive is a Principal Software Engineer and Cloud Architect with over
 ### Talks
 
 - [PgPune Event #5](/events/5)
+  ![prafulla-ranadive](/images/speakers/prafulla-ranadive.jpeg)
 
 ### Contact
 
