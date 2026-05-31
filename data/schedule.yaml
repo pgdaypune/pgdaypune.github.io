@@ -27,7 +27,7 @@
         In his talk, Jeevan will trace the evolution of PostgreSQL bloat management from traditional autovacuum to the new native REPACK CONCURRENTLY command in PostgreSQL 19. He will break down how this extensionless, near-zero-downtime tool works under the hood and provide practical guidance for managing table bloat safely in production.
       </details>
 
-      ![Jeevan Chalke](/images/speakers/jeevan-chalke-img.jpeg)
+      ![Jeevan Chalke](/images/speakers/jeevan-chalke.jpeg)
 - time: "12:10 PM - 12:25 PM"
   events:
     - |

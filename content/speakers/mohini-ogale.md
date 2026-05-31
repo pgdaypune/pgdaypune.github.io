@@ -10,6 +10,7 @@ As a career elevation coach, Mohini works with client‑facing IT professionals 
 ### Talks
 
 - [PgPune Event #5](/events/5)
+  ![mohini-ogale](/images/speakers/mohini-ogale.jpeg)
 
 ### Contact
 
