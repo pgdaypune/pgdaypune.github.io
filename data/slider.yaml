@@ -1,5 +1,16 @@
 title: "PgPune Events Gallery"
 images:
+# /images/events/5/group-pic.jpeg|Group Pic @ PgPune Event #5
+# /images/events/5/session.jpeg|Session @ PgPune Event #5
+# /images/events/5/group-pic-2.jpeg|Group Pic 2 @ PgPune Event #5
+# /images/events/5/organizers.jpeg|Organizers @ PgPune Event #5
+# /images/events/5/hari.jpeg|Speaker @ PgPune Event #5
+  - src: /images/events/5/group-pic.jpeg
+    caption: "Event #5 @ Amazon Development Center"
+  - src: /images/events/5/group-pic-2.jpeg
+    caption: "Event #5 @ Amazon Development Center"
+  - src: /images/events/5/speakers.jpeg
+    caption: "Speakers @ Event #5"
   - src: /images/events/4/group-pic.png
     caption: "Event #4 @ FPL Technologies"
   - src: /images/events/4/speakers.jpeg
