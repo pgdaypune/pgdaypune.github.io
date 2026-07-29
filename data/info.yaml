@@ -1,10 +1,9 @@
 eventTitle: "Event #6"
 eventDate: |
-  Coming Soon
-#   Saturday, 13<sup>th</sup> June, 2026
-# eventTime: |
-#   10:15 AM - 3:00 PM
-# countdown: "June 13, 2026 10:15:00"
+  Friday, 09<sup>th</sup> October, 2026
+eventTime: |
+  08:30 AM - 6:00 PM
+countdown: "October 09, 2026 08:30:00"
 cfpStartDate: |
   NA
 #   Friday, April 17<sup>th</sup>, 2026
@@ -22,9 +21,9 @@ registrationStartDate: |
   TBD
 registrationCloseDate: |
   TBD
-eventTimings: TBD
-# 10:15 AM to 3:00 PM
-entryFee: Free
+eventTimings: 
+  08:30 AM - 6:00 PM
+entryFee: TBD
 venue: |
   TBD
 # <a href="https://maps.app.goo.gl/LBqVACQDeBjAdsd18" target="_blank" rel="noopener noreferrer">

@@ -1,0 +1,58 @@
+.sponsors-div {
+  width: 90vw;
+  max-width: 900px;
+}
+
+.sponsors-title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.sponsor-category {
+  margin: 1.5rem 0;
+}
+
+.sponsor-category-title {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
+}
+
+.sponsors {
+  display: flex;
+  width: 90vw;
+  max-width: 900px;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor a,
+.sponsor a:hover {
+  display: inline-flex;
+  box-shadow: none !important;
+}
+
+.sponsor img {
+  display: block;
+}
+
+.sponsor img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.sponsor img:hover {
+  transform: scale(1.05);
+}
+
+/* ---- Category default sizes ---- */
+.sponsor-category--diamond .sponsor img {
+  height: 100px;
+}
+
+.sponsor-category--gold .sponsor img {
+  height: 70px;
+}
