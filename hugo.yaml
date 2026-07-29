@@ -68,7 +68,7 @@ params:
     subtitle: |
       PgPune is hosted by the [**Pune PostgreSQL User Group**](https://www.linkedin.com/groups/9884249/), a community of 
       engineers, DBAs, and open-source enthusiasts on a mission to grow PostgreSQL adoption in the region.
-      Each edition brings together practitioners for talks, round-table discussions, and hands-on networking — entirely community-run.
+      Each edition brings together practitioners for talks, round-table discussions, and hands-on networking, entirely community-run.
     imageUrl: "/images/pgpune.png"
     imageWidth: 150
     imageHeight: 150
@@ -79,12 +79,12 @@ params:
       #   url: call-for-papers
       # - name: Register
       #   url: register
-      # - name: Know More
-      #   url: events/5
+      - name: Know More
+        url: events/6
       # - name: Schedule
       #   url: schedule
-      - name: Recent Events
-        url: events
+      # - name: Recent Events
+      #   url: events
       - name: About
         url: about
   socialIcons:

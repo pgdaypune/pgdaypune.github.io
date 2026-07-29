@@ -70,6 +70,7 @@
         <div class="ele-div">
             {{- partial "elephant.html" -}}
         </div>
+        {{ partial "sponsors.html" site.Data.sponsors }}
         {{- if $info.countdown -}}
             <h3>Countdown to Meetup</h3>
             <div id="flipdown" class="flipdown"></div>
