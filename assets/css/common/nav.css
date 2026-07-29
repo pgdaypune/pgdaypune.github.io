@@ -1,0 +1,114 @@
+/* Hamburger button — hidden on desktop, shown on small screens */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin: auto var(--gap);
+  line-height: 1;
+}
+
+/* Icon swap: ☰ when closed, ✕ when open */
+.nav-toggle .icon-close {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .icon-open {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .icon-close {
+  display: inline-flex;
+}
+
+/* Text labels next to icons — only shown inside the mobile dropdown */
+.nav-search-label,
+.nav-theme-label {
+  display: none;
+}
+
+/* Only the label matching the current theme is ever relevant */
+body.dark .theme-label-light {
+  display: none !important;
+}
+
+body:not(.dark) .theme-label-dark {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  /* Nav links collapse into a full-width dropdown below the bar */
+  #menu {
+    order: 3;
+    flex-basis: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    line-height: normal;
+    background: var(--theme);
+    transition: max-height 0.25s ease;
+  }
+
+  #menu.open {
+    max-height: 80vh;
+    padding: 0.5rem var(--gap) 1rem;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  #menu li {
+    width: 100%;
+  }
+
+  #menu li + li {
+    margin-inline-start: 0;
+    margin-top: 0.25rem;
+  }
+
+  #menu a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  /* Show text next to the icons inside the dropdown */
+  .nav-search-label,
+  .nav-theme-label {
+    display: inline;
+    margin-inline-start: 0.4rem;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  /* Theme toggle sits inline with its label, not oversized.
+     Inverted colours: dark button in light mode, light button in dark mode. */
+  #theme-toggle {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    margin: 0.25rem 0;
+    padding: 0.4rem 0.8rem;
+    background: var(--primary);
+    color: var(--theme);
+    border-radius: 6px;
+  }
+
+  #theme-toggle svg {
+    stroke: var(--theme);
+  }
+}
