@@ -27,7 +27,7 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Postgres Pune
-  description: "PGDay Pune is proudly hosted by the Pune PostgreSQL User Group, with a mission to grow and strengthen the PostgreSQL community across India."
+  description: "Postgres Pune is proudly hosted by the Pune PostgreSQL User Group, with a mission to grow and strengthen the PostgreSQL community across India."
   keywords: [Postgres, Pune, Postgresql, PgPune, PGDay, PostgreSQL User Group, Pune PostgreSQL User Group, India, Community, Meetup, Conference, Event, Database, Open Source]
   images: ["https://pgpune.in/images/pgpune.png"]
   DateFormat: "March 11, 2025"
@@ -66,9 +66,9 @@ params:
     title: |
       PgPune
     subtitle: |
-      We are excited to invite you to the upcoming edition of PGDay Pune!
-      PGDay Pune is proudly hosted by the [**Pune PostgreSQL User Group**](https://www.linkedin.com/groups/9884249/), with a mission to grow and strengthen the PostgreSQL community across India.
-      This event is designed to promote PostgreSQL awareness and adoption through engaging talks, insightful round-table discussions, and dynamic networking sessions.
+      PgPune is hosted by the [**Pune PostgreSQL User Group**](https://www.linkedin.com/groups/9884249/), a community of 
+      engineers, DBAs, and open-source enthusiasts on a mission to grow PostgreSQL adoption in the region.
+      Each edition brings together practitioners for talks, round-table discussions, and hands-on networking — entirely community-run.
     imageUrl: "/images/pgpune.png"
     imageWidth: 150
     imageHeight: 150

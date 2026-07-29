@@ -8,7 +8,6 @@ summary: "Meet Our PgPune Community"
 
 Our PostgreSQL events are made possible by the dedication and enthusiasm of our incredible team and community members. From organizers to volunteers and participants, every individual plays a vital role in fostering growth and collaboration.
 
-
 ### Organizers: 
 
 - [Ashish Mehra](https://www.linkedin.com/in/ashishkmehra/)
@@ -30,3 +29,9 @@ Checkout the [speaker's list here](/speakers/) from all our events so far.
 - [Yogesh Jain](https://www.linkedin.com/in/yogeshjain96/)
 
 > If you have any questions, please email us at `pgdaypune[at]gmail.com`. Thank you!
+
+### Part of PGConf India's City Chapter Network
+
+<image src="https://pgconf.in/api/uploads/orgs/1/logos/pgconf-logo.png" height="150px"  align="left" style="margin: 0 10px 0 0;"> The India Postgres User Group (IPUG) has been actively engaged in promoting PostgreSQL through the organization of <a href="https://pgconf.in/" target="_blank">**PGConf India**</a> for the past 10 years. To broaden its reach and strengthen the PostgreSQL community across the country, IPUG now proposes the formation of local city chapters. These chapters act as regional extensions of the national initiative, offering PostgreSQL users and organizations localized access to funds, resources, knowledge, and community support.
+
+> PgPune is proud to be one of these city chapters, a regional extension of IPUG's national mission, right here in Pune.
