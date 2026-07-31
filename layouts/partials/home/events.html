@@ -1,0 +1,34 @@
+<section class="section events" id="events" aria-labelledby="events-h">
+  <div class="wrap">
+    <div class="events__head">
+      <p class="psql" id="events-h">pgpune=# <span class="q">SELECT event FROM pgpune_community ORDER BY n DESC;</span></p>
+      <div class="events__nav">
+        <button class="btn btn--sm" type="button" data-rail-prev aria-label="Previous events">←</button>
+        <button class="btn btn--sm" type="button" data-rail-next aria-label="More events">→</button>
+      </div>
+    </div>
+    <ul class="rail" data-rail tabindex="0" role="region" aria-label="Past editions (scrollable)">
+      {{- /* Past editions from each event page's frontmatter (has a cover-img), newest first. */ -}}
+      {{- $past := where (where site.RegularPages "Section" "events") "Params.cover-img" "!=" "" }}
+      {{- range sort $past "Params.number" "desc" }}
+      {{- $cover := index .Params "cover-img" }}
+      <li class="card">
+        <a href="{{ .RelPermalink }}">
+          <div class="card__ph">
+            {{- if resources.Get $cover }}
+              {{ partial "img.html" (dict "src" $cover "fill" "300x180" "sizes" "300px" "class" "card__img"
+                 "alt" (printf "Postgres Pune Event #%v at %s" .Params.number .Params.host)) }}
+            {{- else }}
+              <div class="card__noimg">image not available</div>
+            {{- end }}
+          </div>
+          <div class="card__meta">
+            <span class="card__t">#{{ .Params.number }} · {{ .Params.host }}</span>
+            <span class="card__s">{{ (time.AsTime .Params.date).Format "Jan 2006" }}</span>
+          </div>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>

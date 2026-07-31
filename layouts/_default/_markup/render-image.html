@@ -1,0 +1,4 @@
+{{- /* Content images: lazy + async, sensible defaults. (Content images live in
+       static/, so they aren't run through the asset pipeline.) */ -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}"
+     {{ with .Title }}title="{{ . }}" {{ end }}loading="lazy" decoding="async">

@@ -1,0 +1,14 @@
+{{/* Generate a /speakers/<slug>/ page for each entry in data/speakers.yaml.
+     slug = image filename (else urlized name). This makes data/speakers.yaml the
+     single source of truth — no per-speaker markdown files. */}}
+{{ range hugo.Data.speakers }}
+  {{ $slug := urlize .name }}
+  {{ with .image }}{{ $slug = path.BaseName . }}{{ end }}
+  {{ $.AddPage (dict
+      "path" $slug
+      "kind" "page"
+      "title" .name
+      "content" (dict "mediaType" "text/markdown" "value" (.bio | default ""))
+      "params" (dict "image" .image "linkedin" .linkedin "events" .events)
+  ) }}
+{{ end }}

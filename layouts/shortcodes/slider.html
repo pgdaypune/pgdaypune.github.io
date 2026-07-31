@@ -1,94 +1,23 @@
-<style>
-  .mySwiper {
-    width: 100%;
-    height: 640px;
-    /* reserve room at the bottom so the pagination dots sit below the caption */
-    padding-bottom: 28px;
-    box-sizing: border-box;
-  }
-
-  @media (max-width: 768px) {
-    .mySwiper {
-      height: 440px;
-    }
-  }
-
-  /* keep the dots in the reserved strip, clear of the caption */
-  .mySwiper .swiper-pagination {
-    bottom: 2px;
-  }
-
-  .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Whole image fits the same box; wide images get space top/bottom,
-     tall images get space left/right (no cropping). */
-  .swiper-slide img {
-    flex: 1 1 auto;
-    width: 100%;
-    min-height: 0;
-    object-fit: contain;
-    padding: 8px;
-    box-sizing: border-box;
-    background: var(--entry);
-    border-radius: 8px;
-  }
-
-  /* Reserve a consistent caption strip so slides line up even without text */
-  .swiper-slide .caption {
-    flex: 0 0 auto;
-    height: 2.6em;
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--secondary);
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: var(--primary);
-    text-shadow: 0 0 4px var(--theme);
-  }
-</style>
-
-<div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    {{ range split .Inner "\n" }}
-    {{- $line := . | replaceRE "^[\\s\\r\\n]+" "" | replaceRE "[\\s\\r\\n]+$" "" }}
+{{- /* CSS scroll-snap gallery (no JS library). Inner lines: "path|caption".
+       Images are shown whole (never cropped) on a uniform-height filmstrip;
+       arrows nudge the rail. Self-scoped so several galleries can share a page. */ -}}
+<div class="gallery-wrap" data-gallery>
+  <div class="gallery__nav">
+    <button class="btn btn--sm" type="button" aria-label="Scroll gallery left" data-gallery-prev>←</button>
+    <button class="btn btn--sm" type="button" aria-label="Scroll gallery right" data-gallery-next>→</button>
+  </div>
+  <div class="gallery" role="region" aria-label="Image gallery (scrollable)" tabindex="0" data-gallery-rail>
+    {{- range split .Inner "\n" }}
+    {{- $line := trim . " \r\t" }}
     {{- if ne $line "" }}
     {{- $parts := split $line "|" }}
-    {{- $src := index $parts 0 }}
-    {{- $caption := cond (gt (len $parts) 1) (index $parts 1) "" }}
-    <div class="swiper-slide">
-      <img src="{{ $src }}" alt="{{ $caption | default "Slide Image" }}" title="{{ $caption }}" loading="lazy" />
-      <div class="caption">{{ $caption }}</div>
-    </div>
+    {{- $src := trim (index $parts 0) " " }}
+    {{- $cap := cond (gt (len $parts) 1) (trim (index $parts 1) " ") "" }}
+    <figure class="gslide">
+      <img src="{{ $src | relURL }}" alt="{{ $cap | default "PgPune photo" }}" loading="lazy" decoding="async">
+      {{- with $cap }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
     {{- end }}
-    {{ end }}
+    {{- end }}
   </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
 </div>
-
-{{- $swiper_js := resources.Get "js/swiper-bundle.min.js" | fingerprint}}
-<script src="{{ $swiper_js.RelPermalink }}"></script>
-
-<script>
-  new Swiper(".mySwiper", {
-    loop: true,
-    pagination: { el: ".swiper-pagination", clickable: true },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    autoplay: { delay: 3000, disableOnInteraction: false },
-  });
-</script>

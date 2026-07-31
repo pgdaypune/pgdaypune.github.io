@@ -1,0 +1,18 @@
+{{ define "main" }}
+  {{- /* One long scroll for the current edition:
+         hero · countdown · community+schedule · events slider ·
+         elephant band · CFP band · sponsor strip. */ -}}
+  {{ partial "home/hero.html" . }}
+  <section class="section" aria-label="Community and schedule">
+    <div class="wrap">
+      <div class="cs-grid">
+        {{ partial "home/community.html" . }}
+        {{ partial "home/schedule.html" . }}
+      </div>
+    </div>
+  </section>
+  {{ partial "home/events.html" . }}
+  {{ partial "elephant.html" . }}
+  {{ partial "home/cfp.html" . }}
+  {{ partial "home/sponsors.html" . }}
+{{ end }}

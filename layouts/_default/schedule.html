@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{- $e := hugo.Data.event }}
+<section class="page">
+  <div class="wrap">
+    <header class="page__head">
+      <h1 class="page__title">Schedule</h1>
+      <p class="psql page__q">pgpune=# <span class="q">SELECT schedule FROM pgpune_community WHERE event={{ $e.number }};</span></p>
+    </header>
+    <ol class="sched-full">
+      {{- range hugo.Data.schedule }}
+      {{- $talk := or (not .type) (eq .type "talk") }}
+      <li class="sfrow{{ if not $talk }} sfrow--meta{{ end }}">
+        <time class="sfrow__t" datetime="{{ .start }}">{{ .start }} – {{ .end }}</time>
+        <div class="sfrow__body">
+          <h2 class="sfrow__title">{{ .title }}</h2>
+          {{- with .speaker }}
+          {{- $n := . }}{{ $slug := urlize $n }}
+          {{- $img := "" }}{{ range (slice "jpeg" "jpg" "png") }}{{ if os.FileExists (printf "static/images/speakers/%s.%s" $slug .) }}{{ $img = printf "/images/speakers/%s.%s" $slug . }}{{ end }}{{ end }}
+          <a class="sfrow__spk" href="{{ printf "/speakers/%s/" $slug | relURL }}">
+            <span class="sfrow__av">{{ if $img }}<img src="{{ $img | relURL }}" alt="{{ $n }}" loading="lazy" decoding="async">{{ else }}<span aria-hidden="true">{{ substr $n 0 1 }}</span>{{ end }}</span>
+            <span>{{ $n }}</span>
+          </a>
+          {{- end }}
+          {{- with .abstract }}<p class="sfrow__abs">{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+{{ end }}

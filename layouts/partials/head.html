@@ -1,0 +1,82 @@
+{{- $prod := hugo.IsProduction | or (eq site.Params.env "production") -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="{{ cond (and $prod (ne .Params.robotsNoIndex true)) "index, follow" "noindex, nofollow" }}">
+
+{{- /* Title + description */ -}}
+<title>{{ if .IsHome }}{{ site.Title }} — Pune PostgreSQL User Group{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}{{ end }}</title>
+{{- $desc := "" }}
+{{- if .IsHome }}{{ $desc = site.Params.description }}
+{{- else }}{{ $desc = or .Description .Summary (printf "%s — %s" .Title site.Title) }}{{ end }}
+<meta name="description" content="{{ $desc }}">
+{{- $kw := cond .IsHome site.Params.keywords .Params.keywords }}
+{{- with $kw }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* Preload the two above-the-fold font faces (self-hosted, same-origin) */ -}}
+<link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
+
+{{- /* One CSS bundle: tokens/design first, then elephant (consumes tokens) */ -}}
+{{- $css := slice (resources.Get "css/main.css") }}
+{{- with resources.Get "css/common/elephant.css" }}{{ $css = $css | append . }}{{ end }}
+{{- $css = $css | resources.Concat "css/site.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+
+{{- /* One tiny deferred JS bundle: countdown, slider arrows, mobile nav.
+       Scoped to assets/js/app/ so the theme's swiper/fuse bundles are excluded. */ -}}
+{{- with resources.Match "js/app/*.js" }}
+{{- $js := . | resources.Concat "js/site.js" | js.Build (dict "minify" true) | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end }}
+
+{{- /* Favicons */ -}}
+<link rel="icon" href="{{ "images/favicon.ico" | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon-16x16.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32x32.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | absURL }}">
+<meta name="theme-color" content="#0e1116">
+
+{{- /* OG image: for the home page, generate a 1200×630 card (white landmark on
+       the dark bg) through the image pipeline; else fall back to the site image. */ -}}
+{{- $ogimg := (index site.Params.images 0) | absURL }}
+{{- if .IsHome }}
+  {{- with resources.Get "images/pgpune-logo.png" }}
+    {{- $card := (.Resize "560x").Filter (images.Padding 171 320 172 320 "#0e1116") }}
+    {{- $ogimg = $card.Permalink }}
+  {{- end }}
+{{- end }}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $ogimg }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $ogimg }}">
+
+{{- /* JSON-LD Event schema for the current edition (home only) */ -}}
+{{- if .IsHome }}
+{{- $e := hugo.Data.event }}
+{{- $ld := dict
+    "@context" "https://schema.org" "@type" "Event"
+    "name" (printf "%s — Event #%v" $e.name $e.number)
+    "startDate" $e.startTime "endDate" $e.endTime
+    "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
+    "eventStatus" "https://schema.org/EventScheduled"
+    "isAccessibleForFree" true
+    "url" site.BaseURL "image" $ogimg
+    "description" site.Params.description
+    "location" (dict "@type" "Place" "name" (cond (ne $e.venue "") $e.venue "To be announced")
+        "address" (dict "@type" "PostalAddress" "addressLocality" "Pune" "addressCountry" "IN"))
+    "organizer" (dict "@type" "Organization" "name" "Pune PostgreSQL User Group" "url" site.BaseURL)
+    "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "INR"
+        "availability" "https://schema.org/InStock" "url" ($e.registerURL | absURL)) }}
+<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+{{- end }}
+
+{{- /* RSS / alternate output links */ -}}
+{{- range .AlternativeOutputFormats }}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">{{ end }}

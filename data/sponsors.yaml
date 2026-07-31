@@ -1,15 +1,18 @@
+# Logos are dark-mode variants (white/brand-colour on transparent) so they read
+# on the site's dark theme. `height` is the rendered logo height in px inside its
+# card — tuned per logo so wordmarks and square icon-marks sit at a similar weight.
 categories:
   - name: "PGConf India Diamond Sponsors"
     class: "diamond"
     sponsors:
       - name: "AWS"
-        logo: "/images/sponsors/aws.png"
+        logo: "/images/sponsors/aws.svg"
         url: "https://aws.amazon.com/"
-        height: 100
+        height: 45
       - name: "EDB"
-        logo: "/images/sponsors/edb.png"
+        logo: "/images/sponsors/edb.svg"
         url: "https://www.enterprisedb.com/"
-        height: 60
+        height: 45
       - name: "Google Cloud"
         logo: "/images/sponsors/google-cloud.png"
         url: "https://cloud.google.com/"
@@ -17,25 +20,18 @@ categories:
       - name: "Microsoft"
         logo: "/images/sponsors/microsoft.png"
         url: "https://www.microsoft.com/"
-        height: 80
+        height: 70
 
   # - name: "Gold"
   #   class: "gold"
   #   sponsors:
   #     - name: "TBD"
-  #       logo: "/images/sponsors/google-cloud.png"
-  #       url: "https://cloud.google.com/"
-  #       height: 70
-  #     - name: "TBD"
-  #       logo: "/images/sponsors/microsoft.png"
-  #       url: "https://www.microsoft.com/"
 
   # Example of a custom category with per-logo sizing:
   # - name: "Community Partners"
   #   class: "community"
   #   sponsors:
   #     - name: "Example"
-  #       logo: "/images/sponsors/example.png"
+  #       logo: "/images/sponsors/example.svg"
   #       url: "https://example.com/"
-  #       height: 50
-  #       width: 120
+  #       height: 40

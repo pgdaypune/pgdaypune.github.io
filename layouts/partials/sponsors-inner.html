@@ -1,0 +1,42 @@
+{{- /* Shared sponsors body: header, tiered logo cards, become-a-sponsor CTA.
+       Context (`.`) must be the categories slice, i.e. hugo.Data.sponsors.categories.
+       Used by the home section (home/sponsors.html) and the {{< sponsors >}}
+       shortcode so both render identically. */ -}}
+<header class="sponsors__head">
+  <h2 class="sponsors__title" id="sponsors-h">Sponsors</h2>
+  <p class="psql">pgpune=# <span class="q">SELECT org, tier FROM sponsors ORDER BY tier;</span></p>
+</header>
+
+<div class="tiers">
+  {{- range . }}
+  <section class="tier tier--{{ .class }}" aria-label="{{ .name }} sponsors">
+    <div class="tier__head">
+      <span class="tier__gem" aria-hidden="true"></span>
+      <h3 class="tier__name">{{ .name }}</h3>
+      <span class="tier__rule" aria-hidden="true"></span>
+    </div>
+
+    <ul class="logos">
+      {{- range .sponsors }}
+      {{- if eq (lower .name) "tbd" }}
+      <li class="logo logo--open"><span>Your logo here</span></li>
+      {{- else }}
+      <li class="logo">
+        <a class="logo__link" href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name }}">
+          <img src="{{ .logo | relURL }}" alt="{{ .name }}" loading="lazy" decoding="async"
+               style="--h:{{ .height | default 34 }}px; border: none;">
+        </a>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+</div>
+
+{{- $ev := hugo.Data.event -}}
+{{- $email := hugo.Data.about.contactEmail | default "pgdaypune@gmail.com" -}}
+<div class="sponsors__cta">
+  <span class="sponsors__cta-note">Want your brand in front of Pune's Postgres community?</span>
+  <a class="btn-sponsor" href="{{ printf `mailto:%s?subject=Sponsoring%%20Postgres%%20Pune%%20Event%%20%%23%d` $email $ev.number | safeURL }}">Sponsor Event #{{ $ev.number }} →</a>
+</div>

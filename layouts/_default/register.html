@@ -1,0 +1,52 @@
+{{ define "main" }}
+{{- $e := hugo.Data.event }}
+{{- $start := time.AsTime $e.startTime }}
+{{- $end := time.AsTime $e.endTime }}
+<section class="hero hero--sub" aria-labelledby="reg-h">
+  <div class="wrap">
+    <h1 id="reg-h" class="lockup lockup--sub">Register</h1>
+    <p class="psql psql--hero">pgpune=# <span class="q">INSERT INTO attendees (event, name) VALUES ({{ $e.number }}, 'you');</span></p>
+  </div>
+</section>
+
+<section class="block"><div class="wrap">
+  <ul class="facts facts--page" aria-label="Event facts">
+    <li class="fact"><span class="fact__k">Date</span><span class="fact__vgroup"><span class="fact__v fact__v--gold"><time datetime="{{ $start.Format "2006-01-02" }}">{{ $start.Format "02 Jan 2006" }}</time></span><span class="fact__sub">{{ $start.Format "Monday" }}</span></span></li>
+    <li class="fact"><span class="fact__k">Hours</span><span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span></li>
+    <li class="fact"><span class="fact__k">Venue</span><span class="fact__v{{ if not $e.venue }} fact__v--tba{{ end }}">{{ $e.venue | default "To be announced" }}</span></li>
+    <li class="fact"><span class="fact__k">Entry</span><span class="fact__v{{ with $e.entryURL }} fact__v--link{{ end }}">{{ with $e.entryURL }}<a href="{{ . }}"{{ if hasPrefix . "http" }} target="_blank" rel="noopener"{{ end }}>{{ $e.entryDetails | default "Get tickets →" }}</a>{{ else }}{{ $e.entryDetails | default "TBA" }}{{ end }}</span></li>
+  </ul>
+  <div class="status">
+    {{- if and $e.registrationOpen $e.registerURL }}
+    <a class="cta cta--lg" href="{{ $e.registerURL | relURL }}"{{ if hasPrefix $e.registerURL "http" }} target="_blank" rel="noopener"{{ end }}>Register now →</a>
+    {{- else }}
+    <p class="notice">{{ $e.registrationAlert }}</p>
+    {{- end }}
+  </div>
+</div></section>
+
+{{- with .Params.intro }}
+<section class="block"><div class="wrap"><p class="lead lead--wide">{{ . }}</p></div></section>
+{{- end }}
+
+{{- with .Params.whyAttend }}
+<section class="block"><div class="wrap">
+  <h2 class="block-h">Why attend?</h2>
+  <p class="psql">pgpune=# <span class="q">SELECT reason FROM why_attend;</span></p>
+  <div class="kv kv--wide">
+    {{- range . }}<div class="kv__row"><span class="kv__k">{{ .k }}</span><span class="kv__v">{{ .v }}</span></div>{{ end }}
+  </div>
+</div></section>
+{{- end }}
+
+{{- with .Params.goodToKnow }}
+<section class="block"><div class="wrap">
+  <p class="eyebrow">Good to know</p>
+  <p class="lead" style="font-size:18px">{{ . }}</p>
+</div></section>
+{{- end }}
+
+{{- with .Params.note }}
+<section class="block"><div class="wrap"><p class="cfp-note">{{ . }}</p></div></section>
+{{- end }}
+{{ end }}

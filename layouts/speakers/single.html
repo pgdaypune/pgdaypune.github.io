@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="page">
+  <div class="wrap">
+    <header class="spk-single__head">
+      <span class="spk-single__ph">
+        {{- with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }}" width="120" height="120" loading="eager" decoding="async">
+        {{- else }}<span class="spk-single__ini" aria-hidden="true">{{ substr .Title 0 1 }}</span>{{ end }}
+      </span>
+      <div>
+        <h1 class="page__title">{{ .Title }}</h1>
+        {{- with .Params.events }}
+        <p class="page__sum">Spoke at PgPune {{ range $i, $e := . }}{{ if $i }}, {{ end }}<a class="spoke-ev" href="{{ printf "/events/%v/" $e | relURL }}">Event #{{ $e }}</a>{{ end }}</p>
+        {{- end }}
+      </div>
+    </header>
+    {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    {{- with .Params.linkedin }}
+    <div class="btn-row" style="margin-top:20px"><a class="cta" href="{{ . }}" target="_blank" rel="noopener">LinkedIn →</a></div>
+    {{- end }}
+  </div>
+</article>
+{{ end }}

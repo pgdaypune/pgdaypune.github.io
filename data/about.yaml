@@ -1,0 +1,43 @@
+# Drives the /about/ page (hugo.Data.about) — data-driven, no markdown body.
+intro: >-
+  PgPune is run by the Pune PostgreSQL User Group — a community of engineers,
+  DBAs and open-source enthusiasts. Every edition is made possible by organizers,
+  volunteers and participants who show up to grow PostgreSQL in the region.
+contactEmail: "pgdaypune@gmail.com"
+
+# Organizing committee. Set `photo` to an image path under static/ to show a
+# picture (e.g. /images/organizers/ashish-mehra.jpg); leave empty for initials.
+organizers:
+  committee:
+    - name: "Ashish Mehra"
+      linkedin: "https://www.linkedin.com/in/ashishkmehra/"
+      photo: "/images/organizers/ashish-mehra.jpg"
+    - name: "Sachin Kotwal"
+      linkedin: "https://www.linkedin.com/in/sachindkotwal88/"
+      photo: ""
+    - name: "Sagar Jadhav"
+      linkedin: "https://www.linkedin.com/in/sagar-jadhav-42440a84/"
+      photo: "/images/organizers/sagar-jadhav.jpeg"
+    - name: "Rushabh Lathia"
+      linkedin: "https://www.linkedin.com/in/rushabh-lathia-3bb8616/"
+      photo: "/images/organizers/rushabh-lathia.jpeg"
+  past:
+    - name: "Yogesh Jadhav"
+      linkedin: "https://www.linkedin.com/in/pgyogesh/"
+
+contributors:
+  - name: "Khushboo Vashi"
+    linkedin: "https://www.linkedin.com/in/khushboo-vashi-b8303012/"
+  - name: "Yogesh Jain"
+    linkedin: "https://www.linkedin.com/in/yogeshjain96/"
+
+chapter:
+  title: "Part of PGConf India's City Chapter Network"
+  logo: "/images/pgconf-logo.png"
+  url: "https://pgconf.in/"
+  body: >-
+    The India PostgreSQL User Group (IPUG) has promoted PostgreSQL through PGConf
+    India for over a decade. To broaden its reach, IPUG runs local city chapters —
+    regional extensions that give PostgreSQL users and organizations localized
+    access to funds, resources, knowledge and community support. PgPune is proud
+    to be the Pune city chapter of that national mission.

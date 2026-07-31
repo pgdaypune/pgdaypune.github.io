@@ -1,0 +1,72 @@
+{{- /*
+  Responsive image via Hugo's pipeline: a WebP <source> with an original
+  fallback, explicit width/height (CLS 0), lazy/async by default.
+  (WebP is universally supported and encodes reliably; AVIF was dropped
+  because a bad/partial AVIF decode has no <picture> fallback.)
+
+  Params (dict):
+    src      path under assets/ (e.g. "images/events/5/group-pic.jpeg")  [required]
+    page     optional Page — resolves page-bundle resources first
+    alt      alt text (default "")
+    class    class on the <img>
+    sizes    sizes attr (default "100vw")
+    loading  "lazy" (default) or "eager"
+    fetchpriority  optional ("high" for LCP image)
+    widths   resize widths (default 400 800 1200); capped to source width
+    fill     "WxH" to crop to a fixed ratio at 1x/2x instead of resizing
+    quality  JPEG/WebP quality (default 78)
+
+  Falls back to a plain <img> when src isn't a processable Hugo resource
+  (e.g. an image still living under static/).
+*/ -}}
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $decoding := .decoding | default "async" -}}
+{{- $fp := .fetchpriority -}}
+{{- $q := .quality | default 78 -}}
+{{- $fill := .fill -}}
+{{- $widths := .widths | default (slice 400 800 1200) -}}
+{{- $r := "" -}}
+{{- with .page }}{{ $r = .Resources.GetMatch $src }}{{ end -}}
+{{- if not $r }}{{ $r = resources.Get $src }}{{ end -}}
+{{- $processable := slice "jpg" "jpeg" "png" "tiff" "bmp" "gif" "webp" -}}
+{{- if and $r (in $processable $r.MediaType.SubType) -}}
+  {{- $ow := $r.Width -}}
+  {{- $webp := slice }}{{ $orig := slice -}}
+  {{- $fw := $ow }}{{ $fh := 0 -}}
+  {{- if $fill -}}
+    {{- $d := split $fill "x" -}}
+    {{- $bw := int (index $d 0) }}{{ $bh := int (index $d 1) -}}
+    {{- range $s := (slice 1 2) -}}
+      {{- $w := mul $bw $s }}{{ $h := mul $bh $s -}}
+      {{- if le $w $ow -}}
+        {{- $spec := printf "%dx%d" $w $h -}}
+        {{- $webp = $webp | append (printf "%s %dw" ($r.Fill (printf "%s webp q%d" $spec $q)).RelPermalink $w) -}}
+        {{- $orig = $orig | append (printf "%s %dw" ($r.Fill $spec).RelPermalink $w) -}}
+        {{- $fw = $w }}{{ $fh = $h -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $ws := slice -}}
+    {{- range $widths }}{{ if lt . $ow }}{{ $ws = $ws | append . }}{{ end }}{{ end -}}
+    {{- $ws = $ws | append $ow -}}
+    {{- range $w := $ws -}}
+      {{- $webp = $webp | append (printf "%s %dw" ($r.Resize (printf "%dx webp q%d" $w $q)).RelPermalink $w) -}}
+      {{- $orig = $orig | append (printf "%s %dw" ($r.Resize (printf "%dx q%d" $w $q)).RelPermalink $w) -}}
+    {{- end -}}
+    {{- $fh = int (math.Round (mul $ow (div (float $r.Height) (float $ow)))) -}}
+  {{- end -}}
+  <picture>
+    <source type="image/webp" srcset="{{ delimit $webp ", " }}" sizes="{{ $sizes }}">
+    <img src="{{ ($r.Resize (printf "%dx q%d" $fw $q)).RelPermalink }}" srcset="{{ delimit $orig ", " }}" sizes="{{ $sizes }}"
+         width="{{ $fw }}" height="{{ $fh }}" alt="{{ $alt }}"
+         {{ with $class }}class="{{ . }}" {{ end }}loading="{{ $loading }}" decoding="{{ $decoding }}"{{ with $fp }} fetchpriority="{{ . }}"{{ end }}>
+  </picture>
+{{- else if $r -}}
+  <img src="{{ $r.RelPermalink }}" alt="{{ $alt }}" {{ with $class }}class="{{ . }}" {{ end }}loading="{{ $loading }}" decoding="{{ $decoding }}"{{ with $fp }} fetchpriority="{{ . }}"{{ end }}>
+{{- else -}}
+  <img src="{{ $src | relURL }}" alt="{{ $alt }}" {{ with $class }}class="{{ . }}" {{ end }}loading="{{ $loading }}" decoding="{{ $decoding }}"{{ with $fp }} fetchpriority="{{ . }}"{{ end }}>
+{{- end -}}

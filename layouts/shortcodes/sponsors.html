@@ -1,1 +1,7 @@
-{{ partial "sponsors.html" site.Data.sponsors }}
+{{- /* Renders the same tiered sponsors design as the homepage, broken out of the
+       prose column to full content width (see .sponsors-embed in main.css). */ -}}
+{{- with hugo.Data.sponsors.categories }}
+<section class="sponsors-embed" aria-labelledby="sponsors-h">
+  {{ partial "sponsors-inner.html" . }}
+</section>
+{{- end }}

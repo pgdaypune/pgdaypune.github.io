@@ -1,11 +1,10 @@
 baseURL: https://pgpune.in
-languageCode: en-us
+locale: en-us
 title: Postgres Pune
-theme: PaperEvent
 
 enableRobotsTXT: true
 buildDrafts: false
-buildFuture: false
+buildFuture: true   # event pages carry their real (often future) date in frontmatter
 buildExpired: false
 
 minify:
@@ -27,6 +26,7 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Postgres Pune
+  # Current-edition data lives in data/event.yaml (hugo.Data.event).
   description: "Postgres Pune is proudly hosted by the Pune PostgreSQL User Group, with a mission to grow and strengthen the PostgreSQL community across India."
   keywords: [Postgres, Pune, Postgresql, PgPune, PGDay, PostgreSQL User Group, Pune PostgreSQL User Group, India, Community, Meetup, Conference, Event, Database, Open Source]
   images: ["https://pgpune.in/images/pgpune.png"]

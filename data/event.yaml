@@ -1,0 +1,31 @@
+# =============================================================================
+# Current edition — the single source of truth for the homepage (fact bar,
+# countdown, community stats, CFP band) and the JSON-LD Event schema.
+# Read in templates via hugo.Data.event.
+# =============================================================================
+name: "Postgres Pune"
+number: 6
+
+# RFC3339 with the +05:30 offset. startTime drives the countdown + JSON-LD.
+startTime: "2026-10-09T08:30:00+05:30"
+endTime:   "2026-10-09T18:00:00+05:30"
+
+venue: ""                 # empty -> "To be announced" (rendered in --gold)
+venueMapURL: ""           # Google Maps link; a static map + link show once set
+
+registerURL: "/register/"        # replace with the real form URL when it opens
+cfpURL:      "/call-for-papers/"  # replace with the real CFP URL when it opens
+cfpDeadline: ""           # e.g. "2026-08-15"; empty -> "TBA"
+
+# CFP / registration status (drives the /call-for-papers/ and /register/ pages).
+cfpOpen: false
+cfpAlert: "The call for papers isn't open yet — check back soon. 🐘"
+registrationOpen: false
+registrationAlert: "Registration isn't open yet — check back soon. 🐘"
+entryDetails: "" # Get Tickets →markdown entry fee block; empty -> "TBA"
+entryURL: "" # if set, the Entry value links here (e.g. a ticketing page)
+venueAddress: "" # markdown address block; empty -> "To be announced"
+
+stats:
+  editions: 5
+  talks: "28+"

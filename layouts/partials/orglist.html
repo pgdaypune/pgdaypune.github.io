@@ -1,0 +1,23 @@
+{{- /* Organizer cards (same look as the speakers grid): circular avatar +
+       centered name, linking to LinkedIn. Photo from data/about.yaml (initials
+       fallback). */ -}}
+{{- $o := hugo.Data.about.organizers -}}
+<ul class="egrid orgs-grid">
+  {{- range $o.committee }}
+  {{- $n := .name }}
+  <li class="card">
+    <a href="{{ .linkedin | default "#" }}"{{ with .linkedin }} target="_blank" rel="noopener" aria-label="{{ $n }} on LinkedIn"{{ end }}>
+      <div class="scard__ph">
+        {{- if .photo }}<img class="scard__avatar" src="{{ .photo | relURL }}" alt="{{ $n }}" width="120" height="120" loading="lazy" decoding="async">
+        {{- else }}<span class="scard__ini" aria-hidden="true">{{ substr $n 0 1 }}</span>{{ end }}
+      </div>
+      <div class="card__meta"><span class="card__t">{{ $n }}</span></div>
+    </a>
+  </li>
+  {{- end }}
+</ul>
+{{- with $o.past }}
+<p class="orgs-past">Past committee Member:
+  {{- range $i, $p := . }}{{ if $i }},{{ end }} {{ with $p.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">{{ $p.name }}</a>{{ else }}{{ $p.name }}{{ end }}{{ end }}
+</p>
+{{- end }}

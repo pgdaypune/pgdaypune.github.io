@@ -1,5 +1,5 @@
 ---
 title: "Schedule"
 layout: "schedule"
-summary: "Schedule for PgPune Event"
+summary: "Schedule for the upcoming PgPune Event"
 ---
