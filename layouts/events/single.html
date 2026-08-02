@@ -12,7 +12,7 @@
 <section class="hero hero--sub" aria-labelledby="ev-h">
   <div class="wrap">
     <h1 id="ev-h" class="lockup lockup--sub">Event <span class="lockup__pune">#{{ $n }}</span></h1>
-    <p class="psql psql--hero">pgpune=# <span class="q">SELECT * FROM events WHERE n={{ $n }};</span></p>
+    <p class="psql psql--hero">pgpune=# <span class="q">SELECT event FROM pgpune_community WHERE event={{ $n }};</span></p>
   </div>
 </section>
 

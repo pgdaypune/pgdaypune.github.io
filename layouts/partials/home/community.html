@@ -1,12 +1,11 @@
 {{- $ne := hugo.Data.event -}}
 {{- $s := $ne.stats -}}
+{{- $a := hugo.Data.about -}}
 {{- $editions := or $s.editions (sub $ne.number 1) -}}
 {{- $speakers := len (where site.RegularPages "Section" "speakers") -}}
 <div class="community" id="about">
   <p class="psql">pgpune=# <span class="q">SELECT about FROM pgpune_community;</span></p>
-  <p class="lead">A community of engineers, DBAs and open-source people growing Postgres
-    adoption in western India. Talks, round-tables, hands-on hallway track.
-    Entirely community-run, five events in.</p>
+  <p class="lead">{{ $a.about | safeHTML }}</p>
   <div class="stats">
     <div class="stat"><span class="stat__n">{{ $editions }}</span><span class="stat__l">events</span></div>
     <div class="stat"><span class="stat__n">{{ $speakers }}</span><span class="stat__l">speakers</span></div>

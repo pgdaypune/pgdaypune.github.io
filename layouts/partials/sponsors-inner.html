@@ -38,5 +38,5 @@
 {{- $email := hugo.Data.about.contactEmail | default "pgdaypune@gmail.com" -}}
 <div class="sponsors__cta">
   <span class="sponsors__cta-note">Want your brand in front of Pune's Postgres community?</span>
-  <a class="btn-sponsor" href="{{ printf `mailto:%s?subject=Sponsoring%%20Postgres%%20Pune%%20Event%%20%%23%d` $email $ev.number | safeURL }}">Sponsor Event #{{ $ev.number }} →</a>
+  <a class="btn-sponsor" href="{{ printf `mailto:%s?subject=Reg%%3A%%20Sponsoring%%20Postgres%%20Pune%%20Event%%20%%23%d` $email $ev.number | safeURL }}">Sponsor Event #{{ $ev.number }} →</a>
 </div>

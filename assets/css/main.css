@@ -41,7 +41,7 @@
   --sans: "Space Grotesk", system-ui, -apple-system, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --wrap: 100%;                    /* full-bleed content (padding provides gutters) */
+  --wrap: 1200px;                  /* centered content column; bands/gradients stay full-bleed */
   --pad: clamp(20px, 5vw, 48px);
 }
 
@@ -77,9 +77,6 @@ body {
   html { scroll-behavior: smooth; }
   [id] { scroll-margin-top: 72px; }
 }
-
-/* App-like cross-document transitions at zero JS cost. */
-@view-transition { navigation: auto; }
 
 /* --- Reusable primitives -------------------------------------------------- */
 .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--pad); }
@@ -186,6 +183,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 9px;
+  height: 56px;
+  padding: 0 12px;
+  margin-left: -12px;
   font-family: var(--mono);
   font-size: 15px;
   color: var(--fg);
@@ -197,14 +197,29 @@ body {
 }
 .brand__tld { color: var(--pg-light); }
 .nav { display: flex; align-items: center; gap: 22px; }
-.nav__links { display: flex; align-items: center; gap: 22px; }
+.nav__links { display: flex; align-items: center; gap: 2px; }
 .nav__links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 12px;
   font-family: var(--mono);
   font-size: 14px;
   color: var(--muted);
   transition: color 0.15s;
 }
 .nav__links a:hover { color: var(--pg-lighter); }
+.nav__links a.is-active { color: var(--fg-strong); }
+.nav__links a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 12px; right: 12px; bottom: 10px;
+  height: 2px; border-radius: 2px;
+  background: var(--pg-light);
+}
+/* Register lives in the top bar on desktop; hidden inside the menu. */
+.nav__links .nav__menu-cta { display: none; }
 
 /* --- Footer --------------------------------------------------------------- */
 .footer {
@@ -239,7 +254,9 @@ body {
 .hero__logo {
   position: absolute;
   top: 40px;
-  right: clamp(0px, 3vw, 48px);
+  /* align to the centered content column's right edge; fall back to the gutter
+     on narrower screens where the column spans full width. */
+  right: max(clamp(0px, 3vw, 48px), calc(50% - var(--wrap) / 2 + var(--pad)));
   width: 340px; height: auto;
   opacity: 0.9;
   pointer-events: none;
@@ -550,8 +567,8 @@ body {
   padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 44px);
 }
 .prose .sponsors-embed {
-  width: calc(100vw - 2 * var(--pad));
-  max-width: calc(100vw - 2 * var(--pad));
+  width: min(calc(100vw - 2 * var(--pad)), calc(var(--wrap) - 2 * var(--pad)));
+  max-width: min(calc(100vw - 2 * var(--pad)), calc(var(--wrap) - 2 * var(--pad)));
 }
 /* Isolate the shared component from .prose typography so it renders exactly like
    the homepage — these re-assert the component's own values over prose's
@@ -570,7 +587,13 @@ body {
 .prose .sponsors-embed .btn-sponsor { color: #fff; }
 
 /* --- Subpages (single / list / schedule / search / 404) ------------------- */
-.page { padding: 40px 0 72px; }
+.page {
+  padding: 40px 0 72px;
+  /* same top glow as the hero, pinned to a fixed height so it doesn't stretch
+     down these full-length pages — fades into the base background. */
+  background: radial-gradient(120% 360px at 85% 0%, #14263a 0%, var(--bg) 62%);
+  background-repeat: no-repeat;
+}
 .crumbs { font-family: var(--mono); font-size: 12px; color: var(--muted-2); margin-bottom: 24px; }
 .crumbs a:hover { color: var(--pg-lighter); }
 .page__head { margin-bottom: 28px; }
@@ -631,7 +654,7 @@ body {
 .gallery-wrap { margin-block: 1.4em; }
 /* Break out of the 72ch prose column to use the full wrap width (prose is
    left-aligned at the gutter, so extend rightward to the opposite gutter). */
-.prose .gallery-wrap { width: calc(100vw - 2 * var(--pad)); max-width: calc(100vw - 2 * var(--pad)); }
+.prose .gallery-wrap { width: min(calc(100vw - 2 * var(--pad)), calc(var(--wrap) - 2 * var(--pad))); max-width: min(calc(100vw - 2 * var(--pad)), calc(var(--wrap) - 2 * var(--pad))); }
 .gallery__nav { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 10px; }
 .gallery__nav .btn { min-width: 40px; justify-content: center; }
 .gallery {
@@ -685,7 +708,17 @@ body {
     max-height: calc(100dvh - 56px); overflow-y: auto;
   }
   .nav__links.open { display: flex; }
-  .nav__links a { min-height: 44px; display: flex; align-items: center; font-size: 15px; }
+  .nav__links a { height: auto; min-height: 44px; padding: 0 4px; display: flex; align-items: center; font-size: 15px; }
+  .nav__links a.is-active::after { left: 0; right: auto; bottom: auto; top: 8px; width: 3px; height: 28px; }
+  /* On mobile the top-bar Register would crowd out the menu toggle: move it
+     into the dropdown as a full-width button. */
+  .nav__cta { display: none; }
+  .nav__links .nav__menu-cta {
+    display: flex; justify-content: center;
+    min-height: 48px; margin-top: 8px; padding: 0 14px;
+    color: #fff;
+  }
+  .nav__links .nav__menu-cta.is-active::after { content: none; }
 }
 
 /* --- Events archive grid (photo cards) ------------------------------------ */
@@ -868,6 +901,21 @@ body {
 /* Inline SQL comment in a psql prompt */
 .psql .c { color: var(--muted-2); font-style: italic; }
 .pg-result a.pg-result__v:hover { color: var(--pg-lighter); }
+
+/* psql typing effect — only under html.qtype (set by the inline head guard when
+   motion is allowed). font-size:0 hides the query pre-type with no reserved
+   width, so there's no flash and no reflow; JS types the text back in. */
+html.qtype .psql .q { font-size: 0; }
+html.qtype .psql .q.is-active { font-size: inherit; }
+html.qtype .psql .q.caret::after {
+  content: "";
+  display: inline-block;
+  width: 1px; height: 1.05em;
+  margin-left: 3px; transform: translateY(0.16em);
+  background: var(--pg-light);
+  animation: sqlcaret 0.9s steps(1) infinite;
+}
+@keyframes sqlcaret { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 
 /* Speaker avatar in the schedule */
 .sfrow__spk { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; }

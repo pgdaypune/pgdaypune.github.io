@@ -7,7 +7,7 @@
 <section class="hero hero--sub" aria-labelledby="about-h">
   <div class="wrap">
     <h1 id="about-h" class="lockup lockup--sub">About <span class="lockup__pune">PgPune</span></h1>
-    <p class="psql psql--hero">pgpune=# <span class="q">SELECT about FROM pgpune_community;</span></p>
+    <p class="psql psql--hero">pgpune=# <span class="q">\d pgpune_community</span></p>
   </div>
 </section>
 
@@ -48,16 +48,21 @@
         {{- end }}
         {{- if gt (len $all) 7 }}<a class="spk-av spk-av--more" href="{{ "/speakers/" | relURL }}" aria-label="See all speakers"><span>+{{ sub (len $all) 7 }}</span></a>{{ end }}
       </div>
-      <a class="btn" href="{{ "/speakers/" | relURL }}">See all speakers →</a>
+      <a class="btn" href="{{ "/speakers/" | relURL }}">View all speakers →</a>
     </div>
   </div>
   <div style="margin-top:26px">
-    <p class="psql">pgpune=# <span class="q">SELECT web-contributors FROM pgpune_community;</span></p>
-    <div class="btn-row">
-      {{- range $a.contributors }}
-      <a class="btn" href="{{ .linkedin }}" target="_blank" rel="noopener">{{ .name }}</a>
-      {{- end }}
-    </div>
+    {{- $head := "web_contributors" }}
+    {{- $w := len $head }}
+    {{- range $a.contributors }}{{ $l := len .name }}{{ if gt $l $w }}{{ $w = $l }}{{ end }}{{ end }}
+    {{- $sep := strings.Repeat (add $w 2) "-" }}
+    {{- $padL := int (math.Floor (div (sub $w (len $head)) 2)) }}
+    {{- $hpad := strings.Repeat (add $padL 1) " " }}
+    <p class="psql">pgpune=# <span class="q">SELECT web_contributors FROM pgpune_community;</span></p>
+    <pre class="pg-result">{{ $hpad }}{{ $head }}
+{{ $sep }}
+{{ range $a.contributors }} <a class="pg-result__v" href="{{ .linkedin }}" target="_blank" rel="noopener">{{ .name }}</a>
+{{ end }}({{ len $a.contributors }} row{{ if ne (len $a.contributors) 1 }}s{{ end }})</pre>
   </div>
 </div></section>
 

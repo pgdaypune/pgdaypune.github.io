@@ -1,7 +1,8 @@
 baseURL: https://pgpune.in
 locale: en-us
 title: Postgres Pune
-
+RelativeURLs: true
+CanonifyURLs: true
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: true   # event pages carry their real (often future) date in frontmatter

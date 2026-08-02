@@ -17,6 +17,11 @@
 <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
 
+{{- /* Enable the psql typing effect only when we'll actually animate, so queries
+       can be hidden pre-type without penalising reduced-motion / no-JS users.
+       Runs before paint to avoid a flash of the full query text. */ -}}
+<script>(function(){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window){document.documentElement.classList.add("qtype")}}catch(e){}})();</script>
+
 {{- /* One CSS bundle: tokens/design first, then elephant (consumes tokens) */ -}}
 {{- $css := slice (resources.Get "css/main.css") }}
 {{- with resources.Get "css/common/elephant.css" }}{{ $css = $css | append . }}{{ end }}

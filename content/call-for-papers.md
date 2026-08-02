@@ -22,12 +22,12 @@ topics:
   - "Postgres & AI"
 guidelines:
   - k: "Abstract"
-    v: "A concise 100–200 word summary of your talk."
+    v: "A concise 100–200 words summary of your talk."
   - k: "Speaker bio"
     v: "A short intro highlighting your PostgreSQL expertise."
 whySpeak:
   - "Share your knowledge with a passionate PostgreSQL community."
   - "Visibility and recognition as a thought leader in the ecosystem."
   - "Networking with fellow speakers and attendees."
-note: "Spread the word — share this CFP with your network and encourage others to submit."
+note: "Spread the words — share this CFP with your network and encourage others to submit."
 ---

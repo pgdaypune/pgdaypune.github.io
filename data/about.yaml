@@ -1,9 +1,15 @@
 # Drives the /about/ page (hugo.Data.about) — data-driven, no markdown body.
 intro: >-
-  PgPune is run by the Pune PostgreSQL User Group — a community of engineers,
-  DBAs and open-source enthusiasts. Every edition is made possible by organizers,
-  volunteers and participants who show up to grow PostgreSQL in the region.
+  Our PostgreSQL events are made possible by the dedication and enthusiasm of our incredible team and community members.
+  From organizers to volunteers and participants, every individual plays a vital role in fostering growth and collaboration.
 contactEmail: "pgdaypune@gmail.com"
+
+# Home-page community blurb (rendered as-is; contains one inline link).
+about: >-
+  PgPune is hosted by the
+  <a class="spoke-ev" href="https://www.linkedin.com/groups/9884249/" target="_blank" rel="noopener">Pune PostgreSQL User Group</a>,
+  a community of engineers, DBAs, and open-source enthusiasts on a mission to grow PostgreSQL adoption in the region.
+  Each edition brings together practitioners for talks, round-table discussions, and hands-on networking, entirely community-run.
 
 # Organizing committee. Set `photo` to an image path under static/ to show a
 # picture (e.g. /images/organizers/ashish-mehra.jpg); leave empty for initials.
@@ -14,7 +20,7 @@ organizers:
       photo: "/images/organizers/ashish-mehra.jpg"
     - name: "Sachin Kotwal"
       linkedin: "https://www.linkedin.com/in/sachindkotwal88/"
-      photo: ""
+      photo: "/images/organizers/sachin-kotwal.jpeg"
     - name: "Sagar Jadhav"
       linkedin: "https://www.linkedin.com/in/sagar-jadhav-42440a84/"
       photo: "/images/organizers/sagar-jadhav.jpeg"
