@@ -10,97 +10,27 @@ buildExpired: false
 
 minify:
   disableXML: true
-  # minifyOutput: true
 
 markup:
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: true      # templates render trusted HTML via safeHTML / markdownify
   highlight:
     noClasses: false
 
 outputs:
   home:
     - HTML
-    - JSON
+    - JSON              # search index — fastsearch.js fetches /index.json
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Postgres Pune
+  env: production       # gates analytics + OpenGraph/schema (head.html, analytics.html)
   # Current-edition data lives in data/event.yaml (hugo.Data.event).
   description: "Postgres Pune is proudly hosted by the Pune PostgreSQL User Group, with a mission to grow and strengthen the PostgreSQL community across India."
   keywords: [Postgres, Pune, Postgresql, PgPune, PGDay, PostgreSQL User Group, Pune PostgreSQL User Group, India, Community, Meetup, Conference, Event, Database, Open Source]
-  images: ["https://pgpune.in/images/pgpune.png"]
-  DateFormat: "March 11, 2025"
-  defaultTheme: light
-  disableThemeToggle: false
+  images: ["https://pgpune.in/images/pgpune.png"]   # default OG / Twitter card image
 
-  ShowReadingTime: false
-  ShowShareButtons: false
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
-  ShowWordCount: false
-  ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
-  showtoc: false
-  tocopen: false
-
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "/images/favicon.ico"
-    favicon16x16: "/images/favicon-16x16.png"
-    favicon32x32: "/images/favicon-32x32.png"
-    apple_touch_icon: "/images/apple-touch-icon.png"
-
-  label:
-    text: "Postgres Pune"
-
-  profileMode:
-    enabled: true
-    title: |
-      PgPune
-    subtitle: |
-      PgPune is hosted by the [**Pune PostgreSQL User Group**](https://www.linkedin.com/groups/9884249/), a community of 
-      engineers, DBAs, and open-source enthusiasts on a mission to grow PostgreSQL adoption in the region.
-      Each edition brings together practitioners for talks, round-table discussions, and hands-on networking, entirely community-run.
-    imageUrl: "/images/pgpune.png"
-    imageWidth: 150
-    imageHeight: 150
-    imageTitle: "PgPune"
-    imageAlt: "PgPune"
-    buttons:
-      # - name: Submit paper
-      #   url: call-for-papers
-      # - name: Register
-      #   url: register
-      # - name: Know More
-      #   url: events/6
-      # - name: Schedule
-      #   url: schedule
-      # - name: Recent Events
-      #   url: events
-      # - name: About
-      #   url: about
-  socialIcons:
-    - name: linkedin
-      url: "https://www.linkedin.com/groups/9884249/"
-    - name: email
-      url: "mailto:pgdaypune@gmail.com"
-
-  cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
-
-  # for search
-  # https://fusejs.io/api/options.html
+  # Client-side search (Fuse.js) — consumed by layouts/_default/search.html
   fuseOpts:
     isCaseSensitive: false
     shouldSort: false
@@ -109,33 +39,9 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     findAllMatches: true
-    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    limit: 10
     keys: ["title", "permalink", "summary", "content"]
-menu:
-  main:
-    - name: "\U0001F50D"
-      url: search
-      weight: 1
-    - identifier: events
-      name: Events
-      url: /events/
-      weight: 20
-    - identifier: register
-      name: Register
-      url: /register/
-      weight: 80
-    - identifier: call-for-papers
-      name: CFP
-      url: /call-for-papers/
-      weight: 90
-    # - identifier: schedule
-    #   name: Schedule
-    #   url: /schedule/
-    #   weight: 99
-    - identifier: members
-      name: About
-      url: /about/
-      weight: 100
+
 services:
   googleAnalytics:
     ID: G-407ZB9J08X
