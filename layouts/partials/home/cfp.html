@@ -1,9 +1,0 @@
-{{- $ne := hugo.Data.event -}}
-{{- $cd := $ne.cfpDeadline -}}
-<section class="section cfp" aria-labelledby="cfp-h">
-  <div class="wrap cfp-in">
-    <h2 class="cfp-h" id="cfp-h">Speak at Event #{{ $ne.number }}.<br>
-      {{ if $cd }}CFP closes {{ (time.AsTime $cd).Format "2 Jan" }}.{{ else }}CFP opening soon.{{ end }}</h2>
-    <a class="btn-cfp" href="{{ $ne.cfpURL | relURL }}">submit a talk →</a>
-  </div>
-</section>
