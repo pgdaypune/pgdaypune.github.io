@@ -4,7 +4,7 @@
 <meta name="robots" content="{{ cond (and $prod (ne .Params.robotsNoIndex true)) "index, follow" "noindex, nofollow" }}">
 
 {{- /* Title + description */ -}}
-<title>{{ if .IsHome }}{{ site.Title }} — Pune PostgreSQL User Group{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ site.Title }} | Pune PostgreSQL User Group{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}{{ end }}</title>
 {{- $desc := "" }}
 {{- if .IsHome }}{{ $desc = site.Params.description }}
 {{- else }}{{ $desc = or .Description .Summary (printf "%s — %s" .Title site.Title) }}{{ end }}
@@ -21,6 +21,9 @@
        can be hidden pre-type without penalising reduced-motion / no-JS users.
        Runs before paint to avoid a flash of the full query text. */ -}}
 <script>(function(){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window){document.documentElement.classList.add("qtype")}}catch(e){}})();</script>
+
+{{- /* Apply the saved theme before paint (dark is the default when unset). */ -}}
+<script>(function(){try{if(localStorage.getItem("theme")==="light"){document.documentElement.setAttribute("data-theme","light")}}catch(e){}})();</script>
 
 {{- /* One CSS bundle: tokens/design first, then elephant (consumes tokens) */ -}}
 {{- $css := slice (resources.Get "css/main.css") }}

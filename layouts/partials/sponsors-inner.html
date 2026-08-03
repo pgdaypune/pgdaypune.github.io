@@ -18,13 +18,25 @@
 
     <ul class="logos">
       {{- range .sponsors }}
-      {{- if eq (lower .name) "tbd" }}
+      {{- $sp := . }}
+      {{- if eq (lower $sp.name) "tbd" }}
       <li class="logo logo--open"><span>Your logo here</span></li>
       {{- else }}
+      {{- $light := $sp.logo }}
+      {{- $dark := or (index $sp "logo-dark") $light }}
+      {{- $hL := $sp.height | default 34 }}
+      {{- $hD := or (index $sp "height-dark") $hL }}
       <li class="logo">
-        <a class="logo__link" href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name }}">
-          <img src="{{ .logo | relURL }}" alt="{{ .name }}" loading="lazy" decoding="async"
-               style="--h:{{ .height | default 34 }}px; border: none;">
+        <a class="logo__link" href="{{ $sp.url }}" target="_blank" rel="noopener" title="{{ $sp.name }}">
+          {{- if eq $dark $light }}
+          <img class="logo__img" src="{{ $light | relURL }}" alt="{{ $sp.name }}" loading="lazy" decoding="async"
+               style="--h:{{ $hL }}px; border: none;">
+          {{- else }}
+          <img class="logo__img logo__img--dark" src="{{ $dark | relURL }}" alt="{{ $sp.name }}" loading="lazy" decoding="async"
+               style="--h:{{ $hD }}px; border: none;">
+          <img class="logo__img logo__img--light" src="{{ $light | relURL }}" alt="{{ $sp.name }}" loading="lazy" decoding="async"
+               style="--h:{{ $hL }}px; border: none;">
+          {{- end }}
         </a>
       </li>
       {{- end }}

@@ -21,7 +21,11 @@
 }
 
 /* --- Design tokens -------------------------------------------------------- */
+/* Dark is the default theme. The light theme (html[data-theme="light"]) below
+   only overrides colour tokens, so every rule that uses tokens flips for free.
+   A user's choice is persisted in localStorage and applied pre-paint in head. */
 :root {
+  color-scheme: dark;
   --bg: #0e1116;
   --bg-2: #0b0e12;
   --bg-3: #131c26;
@@ -38,11 +42,55 @@
   --gold: #e8b339;
   --green: #57ab5a;
 
+  /* Semantic tokens for values that must flip but weren't tokens before. */
+  --lead: #c8ced6;                 /* lead paragraph body text */
+  --topbar: rgba(14, 17, 22, 0.85);/* sticky header (translucent) */
+  --ph-bg: #141a21;                /* image/placeholder tile background */
+  --ph-fg: #3f4c5a;                /* placeholder tile text */
+  --grad: #14263a;                 /* radial accent for hero/section glows */
+  --theme-color: #0e1116;          /* mirrors <meta name="theme-color"> */
+
   --sans: "Space Grotesk", system-ui, -apple-system, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --wrap: 1200px;                  /* centered content column; bands/gradients stay full-bleed */
   --pad: clamp(20px, 5vw, 48px);
+}
+
+/* --- Light theme ---------------------------------------------------------- */
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --bg-2: #f3f5f8;
+  --bg-3: #eef2f6;
+  --line: #d9dee4;
+  --line-soft: #e7ebf0;
+  --border-btn: #c4ccd6;
+  --fg: #1f2933;
+  --fg-strong: #0b0e12;
+  --muted: #545e6b;
+  --muted-2: #6b7480;              /* dimmer than --muted, still legible on white */
+  --pg: #336791;
+  --pg-light: #2c6c9c;             /* darkened so accents stay legible on white */
+  --pg-lighter: #1f5480;
+  --gold: #b8860b;
+  --green: #2f8132;
+
+  --lead: #3d454f;
+  --topbar: rgba(255, 255, 255, 0.85);
+  --ph-bg: #eef2f6;
+  --ph-fg: #98a2af;
+  --grad: #e3edf6;
+  --theme-color: #ffffff;
+}
+
+/* Brief cross-fade while toggling (class added by JS only for the switch,
+   so it never overrides hover transitions or flashes on first paint). */
+@media (prefers-reduced-motion: no-preference) {
+  html.theme-anim, html.theme-anim * {
+    transition: background-color 0.25s ease, border-color 0.25s ease,
+                color 0.25s ease, fill 0.25s ease !important;
+  }
 }
 
 /* --- Reset ---------------------------------------------------------------- */
@@ -92,6 +140,8 @@ body {
   color: var(--muted-2);
 }
 .psql .q { color: var(--pg-light); }
+/* Light mode: deepen the prompt so it reads strongly on white. */
+html[data-theme="light"] .psql { color: #45505d; }
 
 /* Small mono uppercase label. */
 .eyebrow {
@@ -165,7 +215,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(14, 17, 22, 0.85);
+  background: var(--topbar);
   backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -248,7 +298,7 @@ body {
   position: relative;
   overflow: hidden;
   /* the single gradient allowed on the site */
-  background: radial-gradient(120% 90% at 85% 0%, #14263a 0%, #0e1116 62%);
+  background: radial-gradient(120% 90% at 85% 0%, var(--grad) 0%, var(--bg) 62%);
   padding: 52px 0 44px;
 }
 .hero__logo {
@@ -397,7 +447,7 @@ body {
 .community--solo .lead { max-width: 54ch; }
 
 .lead {
-  font-size: 20px; line-height: 1.5; color: #c8ced6;
+  font-size: 20px; line-height: 1.5; color: var(--lead);
   max-width: 46ch; margin-top: 16px;
 }
 .stats { display: flex; gap: 34px; margin: 30px 0; }
@@ -465,7 +515,7 @@ body {
 .card__ph img, .card__img { width: 100%; height: 180px; object-fit: cover; filter: saturate(0.85); }
 .card__noimg {
   height: 180px; display: flex; align-items: center; justify-content: center;
-  background: #141a21; color: #3f4c5a; font-family: var(--mono); font-size: 13px;
+  background: var(--ph-bg); color: var(--ph-fg); font-family: var(--mono); font-size: 13px;
 }
 .card__meta { padding: 12px 14px; display: flex; flex-direction: column; gap: 5px; }
 .card__t { font-family: var(--mono); font-size: 13px; color: var(--pg-light); }
@@ -545,6 +595,13 @@ body {
 }
 .logo:hover img { opacity: 1; }
 
+/* Per-theme logo swap. When a sponsor has both variants they both ship in the
+   DOM and CSS flips which is shown, so toggling switches logos live (no reload).
+   Dark theme is the default, so the --dark image shows unless data-theme=light. */
+.logo__img--light { display: none; }
+html[data-theme="light"] .logo__img--dark { display: none; }
+html[data-theme="light"] .logo__img--light { display: block; }
+
 /* Diamond tier gets a touch more presence. */
 .tier--diamond .logo { min-height: 120px; }
 
@@ -611,7 +668,7 @@ body {
   padding: 40px 0 72px;
   /* same top glow as the hero, pinned to a fixed height so it doesn't stretch
      down these full-length pages — fades into the base background. */
-  background: radial-gradient(120% 360px at 85% 0%, #14263a 0%, var(--bg) 62%);
+  background: radial-gradient(120% 360px at 85% 0%, var(--grad) 0%, var(--bg) 62%);
   background-repeat: no-repeat;
 }
 .crumbs { font-family: var(--mono); font-size: 12px; color: var(--muted-2); margin-bottom: 24px; }
@@ -746,7 +803,7 @@ body {
 .egrid .card { flex: initial; }              /* override rail flex-basis in grid */
 .card--next .card__ph--next {
   height: 190px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
-  background: radial-gradient(120% 120% at 70% 0%, #14263a 0%, var(--bg-3) 70%);
+  background: radial-gradient(120% 120% at 70% 0%, var(--grad) 0%, var(--bg-3) 70%);
 }
 .card__no { font-family: var(--mono); font-weight: 700; font-size: 34px; color: var(--fg-strong); }
 .card__soon { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pg-light); }
@@ -842,6 +899,14 @@ body {
 .nav__search { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: var(--muted); transition: color 0.15s; }
 .nav__search:hover { color: var(--pg-lighter); }
 
+/* Theme toggle: sun shown in dark mode (click → light), moon in light mode. */
+.nav__theme { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: var(--muted); transition: color 0.15s; }
+.nav__theme:hover { color: var(--pg-lighter); }
+.nav__theme svg { width: 18px; height: 18px; }
+.nav__theme .icon-moon { display: none; }
+html[data-theme="light"] .nav__theme .icon-sun { display: none; }
+html[data-theme="light"] .nav__theme .icon-moon { display: block; }
+
 /* Search results dropdown (refined) */
 .search-results { max-width: 640px; margin-top: 10px; border: 1px solid var(--line); }
 .search-results:empty { border: 0; margin-top: 0; }
@@ -855,7 +920,7 @@ body {
 .card a { display: block; }
 .scard__ph {
   height: 170px; display: flex; align-items: center; justify-content: center;
-  background: radial-gradient(120% 120% at 50% 0%, #14263a 0%, var(--bg-3) 75%);
+  background: radial-gradient(120% 120% at 50% 0%, var(--grad) 0%, var(--bg-3) 75%);
 }
 .scard__avatar {
   width: 116px; height: 116px; border-radius: 50%; object-fit: cover;
