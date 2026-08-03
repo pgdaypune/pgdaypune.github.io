@@ -7,7 +7,7 @@
 <section class="hero hero--sub" aria-labelledby="about-h">
   <div class="wrap">
     <h1 id="about-h" class="lockup lockup--sub">About <span class="lockup__pune">PgPune</span></h1>
-    <p class="psql psql--hero">pgpune=# <span class="q">\d pgpune_community</span></p>
+    {{ partial "psql.html" (dict "key" "aboutHero" "class" "psql--hero") }}
   </div>
 </section>
 
@@ -25,13 +25,13 @@
 
 <section class="block" id="organizers"><div class="wrap">
   <h1 class="spk-h">Organizers</h2>
-  <p class="psql spk-q">pgpune=# <span class="q">SELECT organizers FROM pgpune_community;</span></p>
+  {{ partial "psql.html" (dict "key" "aboutOrganizers" "class" "spk-q") }}
   {{ partial "orglist.html" . }}
 </div></section>
 
 <section class="block"><div class="wrap">
   <div>
-    <p class="psql">pgpune=# <span class="q">SELECT count(speakers) FROM pgpune_community;</span></p>
+    {{ partial "psql.html" (dict "key" "aboutSpeakerCount") }}
     <pre class="pg-result" aria-hidden="true"> count
 -------
 <span class="pg-result__v">{{ printf "%6d" $speakers }}</span>
@@ -58,7 +58,7 @@
     {{- $sep := strings.Repeat (add $w 2) "-" }}
     {{- $padL := int (math.Floor (div (sub $w (len $head)) 2)) }}
     {{- $hpad := strings.Repeat (add $padL 1) " " }}
-    <p class="psql">pgpune=# <span class="q">SELECT web_contributors FROM pgpune_community;</span></p>
+    {{ partial "psql.html" (dict "key" "aboutContributors") }}
     <pre class="pg-result">{{ $hpad }}{{ $head }}
 {{ $sep }}
 {{ range $a.contributors }} <a class="pg-result__v" href="{{ .linkedin }}" target="_blank" rel="noopener">{{ .name }}</a>
@@ -76,7 +76,7 @@
 </div></section>
 
 <section class="block"><div class="wrap">
-  <p class="psql">pgpune=# <span class="q">SELECT contact_email FROM pgpune_community;</span> <span class="c">-- any query?</span></p>
+  {{ partial "psql.html" (dict "key" "aboutContact") }}
   <pre class="pg-result"> contact_email
 ---------------------
  <a class="pg-result__v" href="mailto:{{ $a.contactEmail }}">{{ $a.contactEmail }}</a>

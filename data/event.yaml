@@ -17,6 +17,10 @@ registerURL: "/register/"        # replace with the real form URL when it opens
 cfpURL:      "/call-for-papers/"  # replace with the real CFP URL when it opens
 cfpDeadline: ""           # e.g. "2026-08-15"; empty -> "TBA"
 
+# Show the tentative schedule alongside community on the home page.
+# Set true once the agenda is ready to be showcased.
+showSchedule: false
+
 # CFP / registration status (drives the /call-for-papers/ and /register/ pages).
 cfpOpen: false
 cfpAlert: "The call for papers isn't open yet — check back soon. 🐘"

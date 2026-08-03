@@ -3,7 +3,7 @@
 {{- $secs := int ($start.Sub now).Seconds -}}
 {{- if lt $secs 0 }}{{ $secs = 0 }}{{ end -}}
 <div class="countdown-block">
-  <p class="psql">pgpune=# <span class="q">\watch countdown</span></p>
+  {{ partial "psql.html" (dict "key" "countdown") }}
   {{- /* aria-live off: the live tick is decorative; the accessible source is the
          always-correct <time> below (also the no-JS fallback). */ -}}
   <div class="countdown" role="timer" aria-live="off">

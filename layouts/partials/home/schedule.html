@@ -1,6 +1,6 @@
 <div class="schedule" id="schedule">
   <div class="sched-head">
-    <p class="psql">pgpune=# <span class="q">\d schedule</span> <span class="c">--tentative</span></p>
+    {{ partial "psql.html" (dict "key" "homeSchedule") }}
     <a class="btn btn--sm" href="{{ "/schedule/" | relURL }}">Full schedule →</a>
   </div>
   <ol class="sched-list">

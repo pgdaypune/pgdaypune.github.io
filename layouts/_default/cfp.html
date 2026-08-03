@@ -4,7 +4,7 @@
 <section class="hero hero--sub" aria-labelledby="cfp-h">
   <div class="wrap">
     <h1 id="cfp-h" class="lockup lockup--sub">Call for <span class="lockup__pune">Papers</span></h1>
-    <p class="psql psql--hero">pgpune=# <span class="q">INSERT INTO talks (event, speaker_name, talk_title, abstract)<br>VALUES ({{ $e.number }}, 'you', 'your talk', 'abstract in 100~200 words');</span></p>
+    {{ partial "psql.html" (dict "key" "cfpHero" "class" "psql--hero" "n" $e.number) }}
   </div>
 </section>
 
@@ -31,10 +31,20 @@
 {{- with .Params.topics }}
 <section class="block"><div class="wrap">
   <h2 class="block-h">Topics of interest</h2>
-  <p class="psql">pgpune=# <span class="q">SELECT topics FROM community-interests;</span></p>
-  <ul class="tag-grid">
-    {{- range . }}<li class="tag-cell">{{ . }}</li>{{ end }}
-  </ul>
+  {{- $n := len . }}
+  {{- $idHead := "id" }}{{ $topicHead := "topic" }}
+  {{- $w1 := len $idHead }}{{ $nl := len (printf "%d" $n) }}{{ if gt $nl $w1 }}{{ $w1 = $nl }}{{ end }}
+  {{- $w2 := len $topicHead }}
+  {{- range . }}{{ $l := len . }}{{ if gt $l $w2 }}{{ $w2 = $l }}{{ end }}{{ end }}
+  {{- $id_pl := int (math.Floor (div (sub $w1 (len $idHead)) 2)) }}
+  {{- $id_pr := sub (sub $w1 (len $idHead)) $id_pl }}
+  {{- $tp_pl := int (math.Floor (div (sub $w2 (len $topicHead)) 2)) }}
+  {{- $sep := printf "%s+%s" (strings.Repeat (add $w1 2) "-") (strings.Repeat (add $w2 2) "-") }}
+  {{ partial "psql.html" (dict "key" "cfpTopics") }}
+  <pre class="pg-result"> {{ strings.Repeat $id_pl " " }}{{ $idHead }}{{ strings.Repeat $id_pr " " }} | {{ strings.Repeat $tp_pl " " }}{{ $topicHead }}
+{{ $sep | safeHTML }}
+{{ range $i, $t := . }} {{ strings.Repeat (sub $w1 (len (printf "%d" (add $i 1)))) " " }}{{ add $i 1 }} | <span class="pg-result__v">{{ $t }}</span>
+{{ end }}({{ $n }} row{{ if ne $n 1 }}s{{ end }})</pre>
 </div></section>
 {{- end }}
 

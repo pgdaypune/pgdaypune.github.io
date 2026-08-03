@@ -12,7 +12,7 @@
 <section class="hero hero--sub" aria-labelledby="ev-h">
   <div class="wrap">
     <h1 id="ev-h" class="lockup lockup--sub">Event <span class="lockup__pune">#{{ $n }}</span></h1>
-    <p class="psql psql--hero">pgpune=# <span class="q">SELECT event FROM pgpune_community WHERE event={{ $n }};</span></p>
+    {{ partial "psql.html" (dict "key" "eventHero" "class" "psql--hero" "n" $n) }}
   </div>
 </section>
 
@@ -37,7 +37,7 @@
 {{- if $speakers }}
 <section class="block"><div class="wrap">
   <h3 class="spk-hs">Meet the Speakers</h3>
-  <p class="psql spk-q">pgpune=# <span class="q">SELECT speakers FROM pgpune_community WHERE event={{ $n }};</span></p>
+  {{ partial "psql.html" (dict "key" "eventSpeakers" "class" "spk-q" "n" $n) }}
   <ul class="egrid orgs-grid">
     {{- range $speakers }}
     {{- $slug := urlize .name }}{{ with .image }}{{ $slug = path.BaseName . }}{{ end }}
@@ -57,7 +57,7 @@
 {{- /* No speakers yet for the upcoming edition — point people at the CFP. */}}
 <section class="block"><div class="wrap">
   <h3 class="spk-hs">Speakers</h3>
-  <p class="psql spk-q">pgpune=# <span class="q">SELECT speakers FROM pgpune_community WHERE event={{ $n }};</span></p>
+  {{ partial "psql.html" (dict "key" "eventSpeakers" "class" "spk-q" "n" $n) }}
   <p class="spk-empty">{{ if $ev.cfpOpen }}The call for papers is open — the lineup lands once talks are accepted.{{ else }}Speaker lineup to be announced.{{ end }}</p>
   <a class="btn" href="{{ $ev.cfpURL | relURL }}">{{ if $ev.cfpOpen }}Submit a talk{{ else }}Call for Papers{{ end }} →</a>
 </div></section>

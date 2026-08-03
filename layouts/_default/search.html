@@ -3,7 +3,7 @@
   <div class="wrap">
     <header class="page__head">
       <h1 class="page__title">Search</h1>
-      <p class="psql page__q">pgpune=# <span class="q">SELECT * FROM site WHERE …</span></p>
+      {{ partial "psql.html" (dict "key" "searchHero" "class" "page__q") }}
     </header>
     <div id="searchbox">
       <input id="searchInput" autofocus maxlength="64" type="search" autocomplete="off"

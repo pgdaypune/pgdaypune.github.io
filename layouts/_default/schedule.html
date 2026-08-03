@@ -4,7 +4,7 @@
   <div class="wrap">
     <header class="page__head">
       <h1 class="page__title">Schedule</h1>
-      <p class="psql page__q">pgpune=# <span class="q">SELECT schedule FROM pgpune_community WHERE event={{ $e.number }};</span></p>
+      {{ partial "psql.html" (dict "key" "scheduleHero" "class" "page__q" "n" $e.number) }}
     </header>
     <ol class="sched-full">
       {{- range hugo.Data.schedule }}

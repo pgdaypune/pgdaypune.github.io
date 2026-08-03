@@ -1,0 +1,36 @@
+# =============================================================================
+# psql prompt lines shown across the site (the "pgpune=# ..." queries).
+# Rendered by layouts/partials/psql.html — call with (dict "key" "<key>" ...).
+#   %d in a query is filled from the partial's "n" arg (e.g. the event number).
+#   Optional "c" renders a trailing "-- comment" in the muted color.
+# Backslash meta-commands (\d, \watch) are single-quoted; the rest double-quoted.
+# =============================================================================
+
+# --- Home ---
+communityAbout: { q: "SELECT about FROM pgpune_community;" }
+homeSchedule:   { q: '\d schedule', c: "--tentative" }
+countdown:      { q: '\watch countdown' }
+homeEvents:     { q: "SELECT event FROM pgpune_community ORDER BY n DESC;" }
+sponsors:       { q: "SELECT org, tier FROM sponsors ORDER BY tier;" }
+
+# --- About ---
+aboutHero:         { q: '\d pgpune_community' }
+aboutOrganizers:   { q: "SELECT organizers FROM pgpune_community;" }
+aboutSpeakerCount: { q: "SELECT count(speakers) FROM pgpune_community;" }
+aboutContributors: { q: "SELECT web_contributors FROM pgpune_community;" }
+aboutContact:      { q: "SELECT contact_email FROM pgpune_community;", c: "-- any query?" }
+
+# --- Call for papers ---
+cfpHero:   { q: "INSERT INTO talks (event, speaker_name, talk_title, abstract) VALUES (%d, 'you', 'your talk', 'abstract in 100~200 words');" }
+cfpTopics: { q: "SELECT id, topic FROM topics_of_interest ORDER BY id;" }
+
+# --- Register ---
+registerHero: { q: "INSERT INTO attendees (event, name) VALUES (%d, 'you');" }
+registerWhy:  { q: "SELECT reason FROM why_attend;" }
+
+# --- Schedule / events / search ---
+scheduleHero:   { q: "SELECT schedule FROM pgpune_community WHERE event=%d;" }
+eventsListHero: { q: "SELECT event FROM pgpune_community;" }
+eventHero:      { q: "SELECT event FROM pgpune_community WHERE event=%d;" }
+eventSpeakers:  { q: "SELECT speakers FROM pgpune_community WHERE event=%d;" }
+searchHero:     { q: "SELECT * FROM site WHERE …" }

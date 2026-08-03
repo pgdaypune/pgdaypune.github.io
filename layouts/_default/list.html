@@ -4,7 +4,7 @@
     <header class="page__head">
       <h1 class="page__title">{{ .Title }}</h1>
       {{- if eq .Section "events" }}
-      <p class="psql page__q">pgpune=# <span class="q">SELECT event FROM pgpune_community;</span></p>
+      {{ partial "psql.html" (dict "key" "eventsListHero" "class" "page__q") }}
       {{- end }}
       {{- with .Params.summary }}<p class="page__sum">{{ . }}</p>{{ end }}
     </header>
@@ -59,7 +59,7 @@
     {{- with where $roster "events" "intersect" (slice $ev) }}
     <div class="spk-group">
       <h2 class="spk-h">Event #{{ $ev }}</h2>
-      <p class="psql spk-q">pgpune=# <span class="q">SELECT speakers FROM pgpune_community WHERE event={{ $ev }};</span></p>
+      {{ partial "psql.html" (dict "key" "eventSpeakers" "class" "spk-q" "n" $ev) }}
       <ul class="egrid">
         {{- range . }}
         {{- $slug := urlize .name }}{{ with .image }}{{ $slug = path.BaseName . }}{{ end }}

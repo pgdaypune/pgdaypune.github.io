@@ -4,7 +4,7 @@
        shortcode so both render identically. */ -}}
 <header class="sponsors__head">
   <h2 class="sponsors__title" id="sponsors-h">Sponsors</h2>
-  <p class="psql">pgpune=# <span class="q">SELECT org, tier FROM sponsors ORDER BY tier;</span></p>
+  {{ partial "psql.html" (dict "key" "sponsors") }}
 </header>
 
 <div class="tiers">
