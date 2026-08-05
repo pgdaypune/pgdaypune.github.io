@@ -4,35 +4,16 @@ layout: "page"
 summary: "How we keep Postgres Pune welcoming for everyone."
 ---
 
-Postgres Pune is a community-run event by the Pune PostgreSQL User Group. We want
-every attendee, speaker, volunteer and sponsor to have a safe, welcoming and
-harassment-free experience — regardless of experience level, gender, gender
-identity and expression, sexual orientation, disability, physical appearance,
-body size, race, ethnicity, age, religion or technology choices.
+PgPune event is dedicated to providing a harassment-free conference experience for everyone.
 
-### The short version
+The PostgreSQL Project expects everyone who participates in the conference to conduct themselves in a professional manner, acting with common courtesy and in the common interest, with respect for all users and developers. To that end, the PostgreSQL Project has adopted a Code of Conduct for community interaction and participation in the project’s work and the community at large. PgPune event conference has wholeheartedly adopted the main PostgreSQL Project’s Code of Conduct, which can be found here: https://www.postgresql.org/about/policies/coc/. Additionally, all complaints and concerns can be referred to the PG CoCC at coc@postgresql.org.
 
-- **Be respectful.** Treat everyone with courtesy, on stage, in the hallway track
-  and online.
-- **Be inclusive.** Welcome newcomers and help the community grow.
-- **No harassment.** Harassment, intimidation or discrimination in any form is not
-  tolerated.
+We do not tolerate harassment of PgPune event participants in any form. Sexual language and imagery are not appropriate for any conference venue, including exhibition booths, talks, and social events around PgPune event. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the PgPune conference organizers.
 
-### Not welcome
+Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion; displaying sexual images in public spaces; deliberate intimidation; stalking; following; harassing photography or recording; sustained disruption of talks or other events; inappropriate physical contact; and unwelcome sexual attention. Participants asked to stop any harassing behavior are expected to comply immediately.
 
-- Offensive or discriminatory comments; deliberate intimidation, stalking or
-  following.
-- Unwelcome photography or recording; sustained disruption of talks or events.
-- Unwelcome sexual attention or physical contact.
+If a participant engages in harassing behavior, the PgPune event conference organizers may take any action they deem appropriate, including ejection from the conference with no refund. If you feel that you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a PostgreSQL India Board Member immediately.
 
-### If something happens
+PgPune event volunteers will be happy to help participants contact hotel/venue security or the police, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference.
 
-If you experience or witness unacceptable behaviour, or have any concerns, please
-contact the organisers right away — in person at the event, or by email at
-`pgdaypune[at]gmail.com`. Reports will be handled discreetly.
-
-Organisers may take any action they deem appropriate, up to and including removal
-from the event without refund (where applicable).
-
-> This code of conduct applies to all Postgres Pune spaces — the venue, talks,
-> networking, and our online channels.
+Thank you for your help in making PgPune event fun and enjoyable for everyone!

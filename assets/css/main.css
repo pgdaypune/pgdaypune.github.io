@@ -289,9 +289,9 @@ html[data-theme="light"] .psql { color: #45505d; }
   align-items: center;
   justify-content: space-between;
 }
-.footer a { color: var(--muted); }
+.footer a { color: var(--pg-light); }
 .footer a:hover { color: var(--pg-lighter); }
-.footer__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.footer__links { display: flex; flex-wrap: wrap; gap: 8px 10px; }
 
 /* --- Hero ----------------------------------------------------------------- */
 .hero {
