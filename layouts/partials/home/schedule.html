@@ -1,0 +1,15 @@
+<div class="schedule" id="schedule">
+  <div class="sched-head">
+    {{ partial "psql.html" (dict "key" "homeSchedule") }}
+    <a class="btn btn--sm" href="{{ "/schedule/" | relURL }}">Full schedule →</a>
+  </div>
+  <ol class="sched-list">
+    {{- range hugo.Data.schedule }}
+    {{- $talk := or (not .type) (eq .type "talk") }}
+    <li class="sched-row{{ if not $talk }} sched-row--meta{{ end }}">
+      <time class="sched-time" datetime="{{ .start }}">{{ .start }}</time>
+      <span class="sched-title">{{ .title }}</span>
+    </li>
+    {{- end }}
+  </ol>
+</div>

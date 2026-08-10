@@ -1,0 +1,23 @@
+{{- $ne := hugo.Data.event -}}
+<section class="hero" aria-labelledby="hero-title">
+  {{- with resources.Get "images/pgpune-logo.png" }}
+  {{- $w := .Resize "340x webp q82" }}{{ $w2 := .Resize "680x webp q82" }}
+  {{- $p := .Resize "680x png" }}
+  <picture>
+    <source type="image/webp" srcset="{{ $w.RelPermalink }} 1x, {{ $w2.RelPermalink }} 2x">
+    <img class="hero__logo" src="{{ $p.RelPermalink }}" width="340" height="174"
+         alt="Postgres Pune" decoding="async" fetchpriority="low">
+  </picture>
+  {{- end }}
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Pune PostgreSQL User Group · Event #{{ $ne.number }}</p>
+    <h1 id="hero-title" class="lockup">
+      <span class="lockup__l1">Postgres</span>
+      <span class="lockup__l2">
+        <span class="lockup__pune">Pune</span>
+      </span>
+    </h1>
+    {{ partial "home/factbar.html" . }}
+    {{ partial "home/countdown.html" . }}
+  </div>
+</section>

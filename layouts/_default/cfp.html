@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{- $e := hugo.Data.event }}
+{{- $cd := $e.cfpDeadline }}
+<section class="hero hero--sub" aria-labelledby="cfp-h">
+  <div class="wrap">
+    <h1 id="cfp-h" class="lockup lockup--sub">Call for <span class="lockup__pune">Papers</span></h1>
+    {{ partial "psql.html" (dict "key" "cfpHero" "class" "psql--hero" "n" $e.number) }}
+  </div>
+</section>
+
+<section class="block"><div class="wrap">
+  <ul class="facts facts--page" aria-label="CFP facts">
+    <li class="fact"><span class="fact__k">Status</span><span class="fact__v{{ if not $e.cfpOpen }} fact__v--tba{{ end }}">{{ if $e.cfpOpen }}Open{{ else }}Not open yet{{ end }}</span></li>
+    <li class="fact"><span class="fact__k">Closes</span><span class="fact__v">{{ if $cd }}{{ (time.AsTime $cd).Format "2 Jan 2006" }}{{ else }}TBA{{ end }}</span></li>
+    <li class="fact"><span class="fact__k">Format</span><span class="fact__v">Talks (~30-45 mins)</span></li>
+    <li class="fact"><span class="fact__k">Edition</span><span class="fact__v">Event #{{ $e.number }}</span></li>
+  </ul>
+  <div class="status">
+    {{- if and $e.cfpOpen $e.cfpURL }}
+    <a class="cta cta--lg" href="{{ $e.cfpURL | relURL }}"{{ if hasPrefix $e.cfpURL "http" }} target="_blank" rel="noopener"{{ end }}>Submit a talk →</a>
+    {{- else }}
+    <p class="notice">{{ $e.cfpAlert }}</p>
+    {{- end }}
+  </div>
+</div></section>
+
+{{- with .Params.intro }}
+<section class="block"><div class="wrap"><p class="lead lead--wide">{{ . }}</p></div></section>
+{{- end }}
+
+{{- with .Params.topics }}
+<section class="block"><div class="wrap">
+  <h2 class="block-h">Topics of interest</h2>
+  {{- $n := len . }}
+  {{- $idHead := "id" }}{{ $topicHead := "topic" }}
+  {{- $w1 := len $idHead }}{{ $nl := len (printf "%d" $n) }}{{ if gt $nl $w1 }}{{ $w1 = $nl }}{{ end }}
+  {{- $w2 := len $topicHead }}
+  {{- range . }}{{ $l := len . }}{{ if gt $l $w2 }}{{ $w2 = $l }}{{ end }}{{ end }}
+  {{- $id_pl := int (math.Floor (div (sub $w1 (len $idHead)) 2)) }}
+  {{- $id_pr := sub (sub $w1 (len $idHead)) $id_pl }}
+  {{- $tp_pl := int (math.Floor (div (sub $w2 (len $topicHead)) 2)) }}
+  {{- $sep := printf "%s+%s" (strings.Repeat (add $w1 2) "-") (strings.Repeat (add $w2 2) "-") }}
+  {{ partial "psql.html" (dict "key" "cfpTopics") }}
+  <pre class="pg-result"> {{ strings.Repeat $id_pl " " }}{{ $idHead }}{{ strings.Repeat $id_pr " " }} | {{ strings.Repeat $tp_pl " " }}{{ $topicHead }}
+{{ $sep | safeHTML }}
+{{ range $i, $t := . }} {{ strings.Repeat (sub $w1 (len (printf "%d" (add $i 1)))) " " }}{{ add $i 1 }} | <span class="pg-result__v">{{ $t }}</span>
+{{ end }}({{ $n }} row{{ if ne $n 1 }}s{{ end }})</pre>
+</div></section>
+{{- end }}
+
+{{- with .Params.guidelines }}
+<section class="block"><div class="wrap">
+  <p class="eyebrow">Submission guidelines</p>
+  <div class="kv kv--wide">
+    {{- range . }}<div class="kv__row"><span class="kv__k">{{ .k }}</span><span class="kv__v">{{ .v }}</span></div>{{ end }}
+  </div>
+</div></section>
+{{- end }}
+
+{{- with .Params.whySpeak }}
+<section class="block"><div class="wrap">
+  <p class="eyebrow">Why speak?</p>
+  <ol class="why-grid">
+    {{- range $i, $w := . }}<li class="why-cell"><span class="why-n">{{ printf "%02d" (add $i 1) }}</span><span class="why-t">{{ $w }}</span></li>{{ end }}
+  </ol>
+</div></section>
+{{- end }}
+
+{{- with .Params.note }}
+<section class="block"><div class="wrap"><p class="cfp-note">{{ . }}</p></div></section>
+{{- end }}
+{{ end }}

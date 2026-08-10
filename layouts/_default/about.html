@@ -1,0 +1,85 @@
+{{ define "main" }}
+{{- $a := hugo.Data.about }}
+{{- $e := hugo.Data.event }}
+{{- $s := $e.stats }}
+{{- $speakers := len (where site.RegularPages "Section" "speakers") }}
+
+<section class="hero hero--sub" aria-labelledby="about-h">
+  <div class="wrap">
+    <h1 id="about-h" class="lockup lockup--sub">About <span class="lockup__pune">PgPune</span></h1>
+    {{ partial "psql.html" (dict "key" "aboutHero" "class" "psql--hero") }}
+  </div>
+</section>
+
+{{- with $a.intro }}
+<section class="block"><div class="wrap"><p class="lead lead--wide">{{ . }}</p></div></section>
+{{- end }}
+
+<section class="block"><div class="wrap">
+  <div class="stats">
+    <div class="stat"><span class="stat__n">{{ or $s.editions (sub $e.number 1) }}</span><span class="stat__l">events</span></div>
+        <div class="stat"><span class="stat__n">{{ $speakers }}</span><span class="stat__l">speakers</span></div>
+    <div class="stat"><span class="stat__n">{{ $s.talks | default "TBA" }}</span><span class="stat__l">talks</span></div>
+  </div>
+</div></section>
+
+<section class="block" id="organizers"><div class="wrap">
+  <h1 class="spk-h">Organizers</h2>
+  {{ partial "psql.html" (dict "key" "aboutOrganizers" "class" "spk-q") }}
+  {{ partial "orglist.html" . }}
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div>
+    {{ partial "psql.html" (dict "key" "aboutSpeakerCount") }}
+    <pre class="pg-result" aria-hidden="true"> count
+-------
+<span class="pg-result__v">{{ printf "%6d" $speakers }}</span>
+(1 row)</pre>
+    {{- $all := hugo.Data.speakers }}
+    <div class="spk-teaser">
+      <div class="spk-avatars">
+        {{- range first 7 $all }}
+        {{- $slug := urlize .name }}{{ with .image }}{{ $slug = path.BaseName . }}{{ end }}
+        <a class="spk-av" href="{{ printf "/speakers/%s/" $slug | relURL }}" title="{{ .name }}" aria-label="{{ .name }}">
+          {{- if .image }}<img src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy" decoding="async">
+          {{- else }}<span aria-hidden="true">{{ substr .name 0 1 }}</span>{{ end }}
+        </a>
+        {{- end }}
+        {{- if gt (len $all) 7 }}<a class="spk-av spk-av--more" href="{{ "/speakers/" | relURL }}" aria-label="See all speakers"><span>+{{ sub (len $all) 7 }}</span></a>{{ end }}
+      </div>
+      <a class="btn" href="{{ "/speakers/" | relURL }}">View all speakers →</a>
+    </div>
+  </div>
+  <div style="margin-top:26px">
+    {{- $head := "web_contributors" }}
+    {{- $w := len $head }}
+    {{- range $a.contributors }}{{ $l := len .name }}{{ if gt $l $w }}{{ $w = $l }}{{ end }}{{ end }}
+    {{- $sep := strings.Repeat (add $w 2) "-" }}
+    {{- $padL := int (math.Floor (div (sub $w (len $head)) 2)) }}
+    {{- $hpad := strings.Repeat (add $padL 1) " " }}
+    {{ partial "psql.html" (dict "key" "aboutContributors") }}
+    <pre class="pg-result">{{ $hpad }}{{ $head }}
+{{ $sep }}
+{{ range $a.contributors }} <a class="pg-result__v" href="{{ .linkedin }}" target="_blank" rel="noopener">{{ .name }}</a>
+{{ end }}({{ len $a.contributors }} row{{ if ne (len $a.contributors) 1 }}s{{ end }})</pre>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap chapter">
+  <img class="chapter__logo" src="{{ $a.chapter.logo | relURL }}" alt="PGConf India" width="120" height="120" loading="lazy" decoding="async">
+  <div>
+    <p class="eyebrow">{{ $a.chapter.title }}</p>
+    <p class="lead lead--wide" style="font-size:18px">{{ $a.chapter.body }}</p>
+    <div class="btn-row"><a class="btn" href="{{ $a.chapter.url }}" target="_blank" rel="noopener">pgconf.in →</a></div>
+  </div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  {{ partial "psql.html" (dict "key" "aboutContact") }}
+  <pre class="pg-result"> contact_email
+---------------------
+ <a class="pg-result__v" href="mailto:{{ $a.contactEmail }}">{{ $a.contactEmail }}</a>
+(1 row)</pre>
+</div></section>
+{{ end }}

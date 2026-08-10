@@ -6,6 +6,10 @@
 .ele-container {
   height: 250px;
   width: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: ele-walk 30s linear infinite;
 }
 
 .ele-wrapper {
@@ -21,8 +25,8 @@
   animation: body-movement 1s infinite cubic-bezier(0.63, 0.15, 0.49, 0.93);
   background: linear-gradient(
     to bottom,
-    rgb(57.6352040816, 116.4005102041, 163.8647959184) 0%,
-    rgb(31.0943877551, 62.7984693878, 88.4056122449) 70%
+    rgb(58, 116, 164) 0%,
+    rgb(31, 63, 88) 70%
   );
   border: 1px solid #0064a5;
   border-radius: 100px 50px 70px 60px;
@@ -52,19 +56,25 @@
 }
 
 .ele-tail-banner {
-  border: 4px solid #336791;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 4px solid var(--pg);
+  background: var(--bg-3);
+  color: var(--fg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
   padding: 0.7rem;
   text-align: center;
   position: absolute;
-  left: -150px;
+  left: -130px;
   top: 40px;
   border-top-right-radius: 140px 0px;
   border-top-left-radius: 90px 90px;
   border-bottom-right-radius: 90px 90px;
   border-bottom-left-radius: 0px 40px;
   transform: translate3d(-2%, 29%, 0) rotateZ(-7deg);
+  font-size: 13px;
+  line-height: 1.35;
 }
+.ele-tail-banner b,
+.days-to-go { color: var(--fg-strong); }
 
 
 .ele-head {
@@ -96,7 +106,7 @@
   background: linear-gradient(
     to top,
     #336791 20%,
-    rgb(31.0943877551, 62.7984693878, 88.4056122449) 100%
+    rgb(31, 63, 88) 100%
   );
   border-radius: 10px;
   border-top: 1px solid #0064a5;
@@ -124,7 +134,7 @@
   background: linear-gradient(
     to left,
     #336791 10%,
-    rgb(37.7295918367, 76.1989795918, 107.2704081633) 100%
+    rgb(38, 76, 107) 100%
   );
   border-bottom: 1px solid #0064a5;
   border-left: 1px solid #0064a5;
@@ -143,7 +153,7 @@
   background: linear-gradient(
     to bottom,
     #336791 50%,
-    rgb(37.7295918367, 76.1989795918, 107.2704081633) 100%
+    rgb(38, 76, 107) 100%
   );
   border-radius: 0px 100% 0px 0px;
   border-top: 2px solid #0064a5;
@@ -155,7 +165,7 @@
 }
 .ele-mouth:before {
   animation: mouth-after-movement 1s infinite linear;
-  background-color: rgb(37.7295918367, 76.1989795918, 107.2704081633);
+  background-color: rgb(38, 76, 107);
   border-bottom: 1px solid #0064a5;
   border-left: 1px solid #0064a5;
   border-radius: 8px;
@@ -205,7 +215,7 @@
 }
 
 .ele-fang-back {
-  border-bottom-color: rgb(229.5, 229.5, 229.5);
+  border-bottom-color: rgb(230, 230, 230);
   left: 115px;
   top: 95px;
   z-index: -1;
@@ -239,24 +249,24 @@ div[class^="ele-leg-"]:before {
 }
 
 .ele-leg-front {
-  background-color: rgb(31.0943877551, 62.7984693878, 88.4056122449);
+  background-color: rgb(31, 63, 88);
   top: 100%;
   z-index: 1;
 }
 .ele-leg-front .ele-foot {
-  background-color: rgb(31.0943877551, 62.7984693878, 88.4056122449);
+  background-color: rgb(31, 63, 88);
 }
 
 .ele-leg-back {
-  background-color: rgb(17.8239795918, 35.9974489796, 50.6760204082);
+  background-color: rgb(18, 36, 51);
   top: 95%;
 }
 .ele-leg-back .ele-foot {
-  background-color: rgb(17.8239795918, 35.9974489796, 50.6760204082);
+  background-color: rgb(18, 36, 51);
 }
 .ele-leg-back .ele-foot:before,
 .ele-leg-back .ele-foot:after {
-  background-color: rgb(185.75, 185.75, 185.75);
+  background-color: rgb(186, 186, 186);
 }
 
 .ele-leg-1 {
@@ -514,3 +524,45 @@ div[class^="ele-leg-"]:before {
 }
 
 /* Based on a concept by FabioG: https://codepen.io/FabioG/pen/gaOGja */
+
+/* --- Dark-page band placement + traversal (replaces <marquee>) ------------ */
+.ele-band {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+@keyframes ele-walk {
+  /* The sprite spans ~-258..+197px around the container origin; both endpoints
+     sit fully off-screen (bandWidth = 100vw) so the wrap never teleports.
+     --ele-pad is the off-screen margin; mobile shrinks it (smaller sprite) so
+     the elephant re-enters sooner instead of idling off-screen. */
+  from { transform: translateX(calc(-1 * var(--ele-pad, 278px))); }
+  to   { transform: translateX(calc(100vw + var(--ele-pad, 278px))); }
+}
+
+/* Motion-safe only: park the elephant visible mid-band, live count still shows. */
+@media (prefers-reduced-motion: reduce) {
+  .ele-container { animation: none; transform: translateX(42vw); }
+  .ele-wrapper, .ele-body, .ele-head, .ele-ear, .ele-mouth, .ele-mouth:before,
+  .ele-tail, .ele-eyebrows, .ele-eyes:before, .ele-eyes:after,
+  div[class^="ele-leg-"], div[class^="ele-leg-"]:before, .ele-foot {
+    animation: none !important;
+  }
+}
+
+/* Mobile: keep the left-to-right walk, just shrink the sprite. Scaling the inner
+   wrapper (via the standalone `scale` property) leaves the container's `ele-walk`
+   translateX untouched, so the traversal distance/speed stay correct. */
+@media (max-width: 768px) {
+  /* Tall enough that the 0.6-scaled sprite's feet + tail banner stay inside the
+     band (not cropped by the CFP band below). Center-origin scale keeps the
+     whole sprite proportional to desktop, so the banner stays aligned. */
+  .ele-band { height: 235px; }
+  .ele-wrapper { scale: 0.7; }
+  /* Smaller sprite → smaller off-screen margin (~170px clears it), so it walks
+     back in much sooner. Faster cadence too (25s). */
+  .ele-container { animation-duration: 25s; --ele-pad: 170px; }
+}

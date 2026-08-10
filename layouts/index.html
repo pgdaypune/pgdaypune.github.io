@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{- /* One long scroll for the current edition:
+         hero · countdown · community+schedule · events slider ·
+         elephant band · CFP band · sponsor strip. */ -}}
+  {{ partial "home/hero.html" . }}
+  <section class="section" aria-label="Community{{ if hugo.Data.event.showSchedule }} and schedule{{ end }}">
+    <div class="wrap">
+      {{- if hugo.Data.event.showSchedule }}
+      <div class="cs-grid">
+        {{ partial "home/community.html" . }}
+        {{ partial "home/schedule.html" . }}
+      </div>
+      {{- else }}
+      {{ partial "home/community.html" . }}
+      {{- end }}
+    </div>
+  </section>
+  {{ partial "home/events.html" . }}
+  {{ partial "elephant.html" . }}
+  {{ partial "home/sponsors.html" . }}
+{{ end }}

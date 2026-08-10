@@ -1,0 +1,16 @@
+{{- $ne := hugo.Data.event -}}
+{{- $start := time.AsTime $ne.startTime -}}
+{{- $secs := int ($start.Sub now).Seconds -}}
+{{- if lt $secs 0 }}{{ $secs = 0 }}{{ end -}}
+<div class="countdown-block">
+  {{ partial "psql.html" (dict "key" "countdown") }}
+  {{- /* aria-live off: the live tick is decorative; the accessible source is the
+         always-correct <time> below (also the no-JS fallback). */ -}}
+  <div class="countdown" role="timer" aria-live="off">
+    <div class="cd-cell"><span class="cd-num" data-days>{{ div $secs 86400 }}</span><span class="cd-lab">days</span></div>
+    <div class="cd-cell"><span class="cd-num" data-hrs>{{ printf "%02d" (mod (div $secs 3600) 24) }}</span><span class="cd-lab">hrs</span></div>
+    <div class="cd-cell"><span class="cd-num" data-min>{{ printf "%02d" (mod (div $secs 60) 60) }}</span><span class="cd-lab">min</span></div>
+    <div class="cd-cell"><span class="cd-num cd-num--sec" data-sec>{{ printf "%02d" (mod $secs 60) }}</span><span class="cd-lab">sec</span></div>
+  </div>
+  <time class="visually-hidden" datetime="{{ $ne.startTime }}" data-countdown>{{ $start.Format "Monday, 2 January 2006, 15:04" }} IST — countdown to {{ $ne.name }} Event #{{ $ne.number }}</time>
+</div>

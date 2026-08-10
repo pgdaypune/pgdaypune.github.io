@@ -1,15 +1,24 @@
+# `logo` is the light-mode artwork (dark/brand-colour). Add an optional `logo-dark`
+# (white/light variant) and it swaps in automatically under the dark theme — live,
+# no page reload. When `logo-dark` is absent, `logo` is used in both themes.
+# `height` is the rendered logo height in px inside its card (applies to `logo`).
+# Add an optional `height-dark` to size the dark-mode logo differently — useful
+# when the two artworks have different internal padding. Falls back to `height`.
 categories:
   - name: "PGConf India Diamond Sponsors"
     class: "diamond"
     sponsors:
       - name: "AWS"
         logo: "/images/sponsors/aws.png"
+        height: 70
+        logo-dark: "/images/sponsors/aws-dark.svg"
+        height-dark: 45
         url: "https://aws.amazon.com/"
-        height: 100
       - name: "EDB"
-        logo: "/images/sponsors/edb.png"
+        logo: "/images/sponsors/edb.svg"
+        logo-dark: "/images/sponsors/edb-dark.svg"
         url: "https://www.enterprisedb.com/"
-        height: 60
+        height: 45
       - name: "Google Cloud"
         logo: "/images/sponsors/google-cloud.png"
         url: "https://cloud.google.com/"
@@ -17,25 +26,19 @@ categories:
       - name: "Microsoft"
         logo: "/images/sponsors/microsoft.png"
         url: "https://www.microsoft.com/"
-        height: 80
+        height: 50
 
   # - name: "Gold"
   #   class: "gold"
   #   sponsors:
   #     - name: "TBD"
-  #       logo: "/images/sponsors/google-cloud.png"
-  #       url: "https://cloud.google.com/"
-  #       height: 70
-  #     - name: "TBD"
-  #       logo: "/images/sponsors/microsoft.png"
-  #       url: "https://www.microsoft.com/"
 
   # Example of a custom category with per-logo sizing:
   # - name: "Community Partners"
   #   class: "community"
   #   sponsors:
   #     - name: "Example"
-  #       logo: "/images/sponsors/example.png"
+  #       logo: "/images/sponsors/example.svg"
+  #       logo-dark: "/images/sponsors/example-dark.svg"
   #       url: "https://example.com/"
-  #       height: 50
-  #       width: 120
+  #       height: 40

@@ -1,0 +1,153 @@
+# Speakers — the single source of truth (hugo.Data.speakers).
+# /speakers/<slug>/ pages are generated from this file by
+# content/speakers/_content.gotmpl (slug = image filename, else urlized name).
+# image: path under static/ ("" -> initials avatar). events: editions spoken at.
+- name: "Hari Kiran"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/hari-kiran-pg/"
+  events: [5]
+  bio: |
+    Hari Kiran is a seasoned Database Engineer with nearly 18 years of experience in multiple domains of the IT industry, including healthcare, banking, project & portfolio management, and CRM.
+
+    In 2021, he began his entrepreneurial journey by founding OpenSource DB, a Postgres company focused on helping organizations unlock their potential in a data-driven world. The company specializes in PostgreSQL, Data Analytics, and Al, offering professional services and database development expertise.
+- name: "Jeevan Chalke"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/jeevanc/"
+  events: [5, 2]
+  bio: |
+    Jeevan Chalke is a Principal Engineer and Engineering Manager at EDB, where he specializes in Database Server development. With over 17 years of experience, having been with the company since 2008. Jeevan is a dedicated contributor to the PostgreSQL community, actively developing and reviewing patches to enhance the global database ecosystem. His core work focuses on the design and implementation of key features for EDB’s Advanced Server. He holds an Master’s degree (M.Tech) in Information Technology from IIT Bombay.
+- name: "Mohini Ogale"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/mohini-ogale-765966107/"
+  events: [5]
+  bio: |
+    Mohini brings over a decade of experience in client‑facing roles within the IT industry. She is a certified soft skills trainer from the Image Consulting Business Institute (ICBI) and the founder of her own venture, Soft Skills BoutiEQ.
+
+    As a career elevation coach, Mohini works with client‑facing IT professionals to build confidence and authority, positioning them for recognition, promotions, and higher earning potential.
+- name: "Ayush Shah"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/ayushshah07/"
+  events: [5]
+  bio: |
+    Ayush Shah works on the Aurora PostgreSQL engine at AWS. His interests revolve around low-level systems, databases, and understanding how low-level systems behave internally, especially within PostgreSQL.
+- name: "Prafulla Ranadive"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/prafullaranadive/"
+  events: [5]
+  bio: |
+    Prafulla Ranadive is a Principal Software Engineer and Cloud Architect with over 21 years of experience building high-performance distributed systems, data platforms, and cloud-native infrastructure.
+- name: "Vaibhav Dalvi"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/vaibhav-dalvi-33004683/"
+  events: [4]
+  bio: |
+    Vaibhav Dalvi is PostgreSQL Database Engine Developer at EnterpriseDB (EDB) since 2018. He is specialize in core database internals, contributing to the development of both community PostgreSQL and the proprietary EDB Postgres Advanced Server (EPAS).
+- name: "Amit Thakur"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/thakuramit55/"
+  events: [4]
+  bio: |
+    Amit Thakur is an experienced SQL and PL/SQL developer with hands-on expertise across multiple
+    RDBMS platforms, including PostgreSQL. Proficient in performance tuning, database design, shell scripting, and working with cloud-based data systems.
+- name: "Prateek Agarwal"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/qrko/"
+  events: [4]
+  bio: |
+    Prateek Agarwal is is technical leader at Google in AlloyDB database development areas like observability, high availability, data protection, replication etc.
+    Prateek comes with 10+ experience in developing transactional & analytical databases in SAP & Sybase product family - SAP ASE, IQ, HANA.
+- name: "Jessica Shelar"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/jessica-shelar-3006b8305/"
+  events: [4]
+  bio: |
+    Jessica Shelar is Database Developer at DataCloudGaze Consulting and a passionate PostgreSQL enthusiast, with hands-on experience in database development and performance tuning.
+- name: "Hrishikesh Gore"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/hrishikesh-gore-1034b1b0/"
+  events: [3]
+  bio: |
+    Hrishikesh Gore is a Database Engineer and PostgreSQL SME with Nutanixʼs NDB team. He has over 4 years of experience contributing to the development of PostgreSQL solutions, with a focus on upgrades, security, high availability, and performance tuning for enterprise-scale systems.
+- name: "Rahila Syed"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/rahila-syed/"
+  events: [3]
+  bio: |
+    Rahila Syed is a PostgreSQL developer with 13 years of experience. She has contributed to features like WAL compression, default partitioning, vacuum progress, parallel index scan, and logical replication. She also worked on a multi-master active-active replication solution and currently develops new PostgreSQL features at Microsoft.
+- name: "Yogesh Jain"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/yogeshjain96/"
+  events: [3]
+  bio: |
+    Yogesh Jain is a Staﬀ SDE at EnterpriseDB (EDB) with over 7+ years of experience in Kubernetes, cloud-native Postgres, observability, and distributed systems. He focuses on building a hybrid control plane for managing Postgres and enabling unified observability across platforms.
+- name: "Lalit Choudhary"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/lalit-choudhary-8116ba77/"
+  events: [3, 1]
+  bio: |
+    Lalit Choudhary is a database professional with experience in PostgreSQL and MySQL. His core interests include problem-solving, troubleshooting database issues, and testing for reliability and performance.
+- name: "Tarun Abichandani"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/abistarun/"
+  events: [2]
+  bio: |
+    Tarun is a Tech Lead in the Google AlloyDB team. He has over 10+ years of experience in the industry and has worked with multiple organizations, including Amazon and ThoughtWorks. Throughout his career, Tarun has leveraged his background as a Computer Engineer with a blend of statistical and technical knowledge. His experience includes building a tool to predict commodity demand using ML, developing an observability platform using big-data, and programming a Python server with pre-configured ML and statistical models for a BI tool. Tarun is skilled in various technologies including Java, Python, Big Data stacks, and Machine Learning, and is passionate about technology and innovation.
+- name: "Ujjwal Lanjewar"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/ujjwalpl/"
+  events: [2]
+  bio: |
+    Ujjwal is leading the Google AlloyDB Team and has been with Google for ~2.5 years. Ujjwal is a veteran with 25+ years in the distributed storage systems having long association with IBM and Seagate for various private cloud storage products and storage for databases, for all the aspects of enterprise software ranging from high availability, data protection, replication, caching and migrations. During his career, Ujjwal has been active in research, technical conferences, academic relations, mentoring, etc.
+- name: "Sachin D. Kotwal"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/sachindkotwal88/"
+  events: [2]
+  bio: |
+    Mr. Sachin D. Kotwal having over 12+ years of experience in the IT industry, established himself as a leading expert in PostgreSQL database technologies. Currently serving as a Lead Consultant at Amazon Web Services (AWS) ProServe India LLP, he specializes in PostgreSQL database testing, extension development, and facilitating seamless migrations from various databases to PostgreSQL, both on-premises and on the AWS Cloud
+
+    Mr. Kotwal's extensive background encompasses a deep understanding of database architectures and a commitment to delivering innovative solutions that empower organizations to leverage the full potential of cloud computing. His dedication to excellence and passion for technology have made him a trusted advisor in the field.
+- name: "Rajkumar Raghuwanshi"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/rajkumarraghuwanshi/"
+  events: [2]
+  bio: |
+    Rajkumar Raghuwanshi, a Database Consultant with AWS Professional
+    Services in India. With 11+ years of IT industry experience, he has
+    established himself as an expert in database technologies,
+    specializing in PostgreSQL, Oracle and Cloud Databases.
+
+    In his role at AWS, Rajkumar helps organizations successfully migrate
+    and modernize their databases to the AWS Cloud. His deep understanding
+    of database architectures and commitment to innovation has made him a
+    trusted advisor to numerous enterprises undertaking cloud
+    transformation journeys.
+- name: "Amul Sul"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/sulamul/"
+  events: [1]
+  bio: |
+    Amul Sul is a Principal Engineer at EnterpriseDB, contributing to the development of PostgreSQL features and EDB Postgres Advanced Server. With 12 years of experience in database development and a Master's degree in Computer Applications from Mumbai University.
+- name: "Pushkar Khadilkar"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/pushkarkhadilkar/"
+  events: [1]
+  bio: |
+    Pushkar Khadilkar, software engineers in Google's AlloyDB team, specialise in advancing Al-database integration. Pushkar brings over 10 years of experience in database internals.
+- name: "Sachin Khanna"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/sachinkhanna43/"
+  events: [1]
+  bio: |
+    Sachin Khanna database solutions architect at AWS with passion for PostgreSQL and its flavours, including AWS Aurora PostgreSQL. With extensive experience in development, migration, implementation, and administration across databases like Oracle, DB2, PostgreSQL, and more, he is also passionate about open-source technologies like Yugabyte, Cassandra, and MongoDB.
+- name: "Tanvi Kamble"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/tanvi-kamble/"
+  events: [1]
+  bio: |
+    Tanvi Kamble, software engineers in Google's AlloyDB team, specialise in advancing Al-database integration. Tanvi focuses on observability and performance insights.
+- name: "Yogi Rampuria"
+  image: ""
+  linkedin: "https://www.linkedin.com/in/yogi/"
+  events: [1]
+  bio: |
+    Yogi Rampuria is a Principal Solution Engineer at YugabyteDB, based in Singapore. With nearly 20 years of experience, he specialises in designing, developing, and maintaining software systems. An active member of the Kubernetes community, he also contributes to organising Office Hours (EU edition).

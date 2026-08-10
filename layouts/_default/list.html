@@ -1,0 +1,96 @@
+{{ define "main" }}
+<section class="page">
+  <div class="wrap">
+    <header class="page__head">
+      <h1 class="page__title">{{ .Title }}</h1>
+      {{- if eq .Section "events" }}
+      {{ partial "psql.html" (dict "key" "eventsListHero" "class" "page__q") }}
+      {{- end }}
+      {{- with .Params.summary }}<p class="page__sum">{{ . }}</p>{{ end }}
+    </header>
+    {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+
+    {{- if eq .Section "events" }}
+    {{- /* Events archive: one card per event page, newest first. Each event page
+           carries its own host/date/cover-img in frontmatter; the current edition
+           (no group photo yet) falls back to live details from data/event.yaml. */ -}}
+    {{- $e := hugo.Data.event }}
+    <ul class="egrid">
+      {{- range sort (where site.RegularPages "Section" "events") "Params.number" "desc" }}
+      {{- $isCurrent := eq (int .Params.number) $e.number }}
+      {{- $cover := index .Params "cover-img" }}
+      {{- if and $cover (resources.Get $cover) }}
+      <li class="card">
+        <a href="{{ .RelPermalink }}">
+          <div class="card__ph">
+            {{ partial "img.html" (dict "src" $cover "fill" "320x190" "sizes" "(max-width:640px) 90vw, 320px" "class" "card__img" "alt" (printf "Postgres Pune Event #%v at %s" .Params.number .Params.host)) }}
+          </div>
+          <div class="card__meta">
+            <span class="card__t">#{{ .Params.number }} · {{ .Params.host }}</span>
+            <span class="card__s">{{ (time.AsTime .Params.date).Format "Jan 2006" }}</span>
+          </div>
+        </a>
+      </li>
+      {{- else }}
+      {{- $venue := or .Params.host (cond $isCurrent $e.venue "") }}
+      {{- $date := or .Params.date (cond $isCurrent $e.startTime "") }}
+      <li class="card card--next">
+        <a href="{{ .RelPermalink }}">
+          <div class="card__ph card__ph--next">
+            <span class="card__no">#{{ .Params.number }}</span><span class="card__soon">Upcoming</span>
+          </div>
+          <div class="card__meta">
+            <span class="card__t">#{{ .Params.number }} · {{ with $venue }}{{ . }}{{ else }}Venue TBA{{ end }}</span>
+            <span class="card__s">{{ with $date }}{{ (time.AsTime .).Format "2 Jan 2006" }}{{ end }}</span>
+          </div>
+        </a>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+
+    {{- else if eq .Section "speakers" }}
+    {{- /* Speakers grouped by edition. Roster from data/speakers.yaml (single
+           source of truth); each speaker carries its own image + events. */ -}}
+    {{- $roster := hugo.Data.speakers }}
+    {{- $max := sub hugo.Data.event.number 1 }}
+    {{- range (seq $max) }}
+    {{- $ev := sub (add $max 1) . }}
+    {{- with where $roster "events" "intersect" (slice $ev) }}
+    <div class="spk-group">
+      <h2 class="spk-h">Event #{{ $ev }}</h2>
+      {{ partial "psql.html" (dict "key" "eventSpeakers" "class" "spk-q" "n" $ev) }}
+      <ul class="egrid">
+        {{- range . }}
+        {{- $slug := urlize .name }}{{ with .image }}{{ $slug = path.BaseName . }}{{ end }}
+        <li class="card">
+          <a href="{{ printf "/speakers/%s/" $slug | relURL }}">
+            <div class="scard__ph">
+              {{- if .image }}<img class="scard__avatar" src="{{ .image | relURL }}" alt="{{ .name }}" width="120" height="120" loading="lazy" decoding="async">
+              {{- else }}<span class="scard__ini" aria-hidden="true">{{ substr .name 0 1 }}</span>{{ end }}
+            </div>
+            <div class="card__meta"><span class="card__t">{{ .name }}</span></div>
+          </a>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+    {{- end }}
+
+    {{- else }}
+    {{- /* Generic section: title cards. */ -}}
+    <ul class="archive">
+      {{- range .Pages.ByTitle }}
+      <li class="acard">
+        <a href="{{ .RelPermalink }}">
+          <span class="acard__t">{{ .Title }}</span>
+          {{- with .Params.summary }}<span class="acard__s">{{ . }}</span>{{ end }}
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+    {{- end }}
+  </div>
+</section>
+{{ end }}

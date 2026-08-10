@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="page">
+  <div class="wrap">
+    <header class="page__head">
+      <h1 class="page__title">Search</h1>
+      {{ partial "psql.html" (dict "key" "searchHero" "class" "page__q") }}
+    </header>
+    <div id="searchbox">
+      <input id="searchInput" autofocus maxlength="64" type="search" autocomplete="off"
+             aria-label="Search" placeholder="{{ .Params.placeholder | default "search talks, speakers, events…" }}">
+      <ul id="searchResults" class="search-results" aria-label="search results"></ul>
+    </div>
+  </div>
+</section>
+{{- $fs := resources.Get "js/search/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | minify }}
+{{- $fuse := resources.Get "js/search/fuse.basic.min.js" }}
+{{- $bundle := slice $fuse $fs | resources.Concat "js/search.js" | fingerprint }}
+<script defer src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}

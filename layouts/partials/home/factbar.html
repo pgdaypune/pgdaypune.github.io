@@ -1,0 +1,36 @@
+{{- $ne := hugo.Data.event -}}
+{{- $start := time.AsTime $ne.startTime -}}
+{{- $end := time.AsTime $ne.endTime -}}
+{{- /* Once the CFP closes (deadline passed), shift the highlight from the
+       Call-for-papers cell to the Entry/Register cell. */ -}}
+{{- $cfpClosed := false -}}
+{{- with $ne.cfpDeadline }}{{ if now.After (time.AsTime .) }}{{ $cfpClosed = true }}{{ end }}{{ end -}}
+<ul class="facts" aria-label="Event facts">
+  <li class="fact">
+    <span class="fact__k">Date</span>
+    <span class="fact__vgroup">
+      <span class="fact__v fact__v--gold"><time datetime="{{ $start.Format "2006-01-02" }}">{{ $start.Format "02 Jan 2006" }}</time></span>
+      <span class="fact__sub">{{ $start.Format "Monday" }}</span>
+    </span>
+  </li>
+  <li class="fact">
+    <span class="fact__k">Hours</span>
+    <span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span>
+  </li>
+  <li class="fact">
+    <span class="fact__k">Venue</span>
+    <span class="fact__v{{ if not $ne.venue }} fact__v--tba{{ end }}">{{ $ne.venue | default "To be announced" }}</span>
+  </li>
+  <li class="fact fact--link{{ if not $cfpClosed }} fact--hl{{ end }}">
+    <a class="fact__link" href="{{ $ne.cfpURL | relURL }}">
+      <span class="fact__k">Call for papers</span>
+      <span class="fact__v fact__v--link">Submit talk →</span>
+    </a>
+  </li>
+  <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
+    <a class="fact__link" href="{{ $ne.registerURL | relURL }}">
+      <span class="fact__k">Entry</span>
+      <span class="fact__v fact__v--link">Register →</span>
+    </a>
+  </li>
+</ul>

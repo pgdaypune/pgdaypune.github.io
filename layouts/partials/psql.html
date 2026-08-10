@@ -1,0 +1,7 @@
+{{- /* Renders a psql prompt line. Query text lives in data/psql.yaml.
+       Params (dict): key (required) — data/psql key; class — extra <p> classes;
+       id — element id; n — number for a single %d placeholder in the query. */ -}}
+{{- $d := index hugo.Data.psql .key -}}
+{{- $q := $d.q -}}
+{{- with .n }}{{ $q = printf $d.q . }}{{ end -}}
+<p class="psql{{ with .class }} {{ . }}{{ end }}"{{ with .id }} id="{{ . }}"{{ end }}>pgpune=# <span class="q">{{ $q | safeHTML }}</span>{{ with $d.c }} <span class="c">{{ . }}</span>{{ end }}</p>
