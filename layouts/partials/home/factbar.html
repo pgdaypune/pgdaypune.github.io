@@ -17,9 +17,11 @@
     <span class="fact__k">Hours</span>
     <span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span>
   </li>
-  <li class="fact">
+  <li class="fact{{ if $ne.venueMapURL }} fact--link{{ end }}">
+    {{ if $ne.venueMapURL }}<a class="fact__link" href="{{ $ne.venueMapURL | relURL }}" target="_blank">{{ end }}
     <span class="fact__k">Venue</span>
-    <span class="fact__v{{ if not $ne.venue }} fact__v--tba{{ end }}">{{ $ne.venue | default "To be announced" }}</span>
+    <span class="fact__v{{ if not $ne.venue }} fact__v--tba{{ end }} fact__v--highlight">{{ $ne.venue | default "To be announced" }}</span>
+    {{ if $ne.venueMapURL }}</a>{{ end }}
   </li>
   <li class="fact fact--link{{ if not $cfpClosed }} fact--hl{{ end }}">
     <a class="fact__link" href="{{ $ne.cfpURL | relURL }}">

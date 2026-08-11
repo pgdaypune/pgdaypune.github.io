@@ -13,7 +13,11 @@
   <ul class="facts facts--page" aria-label="Event facts">
     <li class="fact"><span class="fact__k">Date</span><span class="fact__vgroup"><span class="fact__v fact__v--gold"><time datetime="{{ $start.Format "2006-01-02" }}">{{ $start.Format "02 Jan 2006" }}</time></span><span class="fact__sub">{{ $start.Format "Monday" }}</span></span></li>
     <li class="fact"><span class="fact__k">Hours</span><span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span></li>
-    <li class="fact"><span class="fact__k">Venue</span><span class="fact__v{{ if not $e.venue }} fact__v--tba{{ end }}">{{ $e.venue | default "To be announced" }}</span></li>
+    <li class="fact"><span class="fact__k">Venue</span>
+      {{ if $e.venueMapURL }}<a class="fact--link" href="{{ $e.venueMapURL | relURL }}" target="_blank">{{ end }}
+      <span class="fact__v{{ if not $e.venue }} fact__v--tba{{ end }} fact__v--highlight">{{ $e.venue | default "To be announced" }}</span>
+      {{ if $e.venueMapURL }}</a>{{ end }}
+    </li>
     <li class="fact"><span class="fact__k">Entry</span><span class="fact__v{{ with $e.entryURL }} fact__v--link{{ end }}">{{ with $e.entryURL }}<a href="{{ . }}"{{ if hasPrefix . "http" }} target="_blank" rel="noopener"{{ end }}>{{ $e.entryDetails | default "Get tickets →" }}</a>{{ else }}{{ $e.entryDetails | default "TBA" }}{{ end }}</span></li>
   </ul>
   <div class="status">
@@ -49,4 +53,15 @@
 {{- with .Params.note }}
 <section class="block"><div class="wrap"><p class="cfp-note">{{ . }}</p></div></section>
 {{- end }}
+
+{{ if $e.venueIframeURL }}
+<section class="block">
+  <div class="wrap">
+    <iframe src="{{ $e.venueIframeURL | relURL }}" width="100%" height="300"style="border:0;"
+      allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+</section>
+{{ end }}
+
 {{ end }}

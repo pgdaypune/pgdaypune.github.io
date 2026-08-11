@@ -10,8 +10,9 @@ number: 6
 startTime: "2026-10-09T08:30:00+05:30"
 endTime:   "2026-10-09T18:00:00+05:30"
 
-venue: ""                 # empty -> "To be announced" (rendered in --gold)
-venueMapURL: ""           # Google Maps link; a static map + link show once set
+venue: "St Laurn - Koregaon Park"                 # empty -> "To be announced" (rendered in --gold)
+venueMapURL: "https://maps.app.goo.gl/F6uMfXfZ38TtkvZJ7"           # Google Maps link; a static map + link show once set
+venueIframeURL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3782.7858735612995!2d73.8859192!3d18.538576!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0fc2b2b56db%3A0x76b21edc396aa13!2sSt%20Laurn%20-%20Koregaon%20Park%2C%20Pune!5e0!3m2!1sen!2sin!4v1786431663529!5m2!1sen!2sin"
 
 registerURL: "/register/"        # replace with the real form URL when it opens
 cfpURL:      "/call-for-papers/"  # replace with the real CFP URL when it opens
@@ -28,7 +29,6 @@ registrationOpen: false
 registrationAlert: "Registration isn't open yet — check back soon. 🐘"
 entryDetails: "" # Get Tickets →markdown entry fee block; empty -> "TBA"
 entryURL: "" # if set, the Entry value links here (e.g. a ticketing page)
-venueAddress: "" # markdown address block; empty -> "To be announced"
 
 stats:
   editions: 5

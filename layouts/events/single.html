@@ -19,7 +19,11 @@
 <section class="block"><div class="wrap">
   <ul class="facts facts--page" aria-label="Event facts">
     <li class="fact"><span class="fact__k">Date</span><span class="fact__v">{{ $date | default "TBA" }}</span></li>
-    <li class="fact"><span class="fact__k">Venue</span><span class="fact__v{{ if not $venue }} fact__v--tba{{ end }}">{{ $venue | default "To be announced" }}</span></li>
+    <li class="fact"><span class="fact__k">Venue</span>
+      {{ if $ev.venueMapURL }}<a class="fact--link" href="{{ $ev.venueMapURL | relURL }}" target="_blank">{{ end }}
+      <span class="fact__v fact__v--highlight {{ if not $venue }} fact__v--tba{{ end }}">{{ $venue | default "To be announced" }}</span>
+      {{ if $ev.venueMapURL }}</a>{{ end }}
+    </li>
     <li class="fact"><span class="fact__k">Speakers</span>{{ $ns := len $speakers }}{{ if and (eq $ns 0) $isCurrent }}<span class="fact__v fact__v--tba">TBA</span>{{ else }}<span class="fact__v">{{ $ns }}</span>{{ end }}</li>
     <li class="fact"><span class="fact__k">Edition</span><span class="fact__v{{ if $isCurrent }} fact__v--gold{{ end }}">#{{ $n }}{{ if $isCurrent }} · upcoming{{ end }}</span></li>
   </ul>
