@@ -368,6 +368,7 @@ html[data-theme="light"] .psql { color: #45505d; }
 .fact__v { font-size: 19px; font-weight: 700; color: var(--fg-strong); }
 .fact__v--tba { color: var(--gold); }
 .fact__v--link { color: var(--pg-light); }
+.fact__v--highlight { color: var(--gold); }
 .fact__link:hover { background: var(--bg-3); }
 .fact__link:hover .fact__v--link { color: var(--pg-lighter); }
 
