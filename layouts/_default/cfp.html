@@ -10,8 +10,8 @@
 
 <section class="block"><div class="wrap">
   <ul class="facts facts--page" aria-label="CFP facts">
-    <li class="fact"><span class="fact__k">Status</span><span class="fact__v{{ if not $e.cfpOpen }} fact__v--tba{{ end }}">{{ if $e.cfpOpen }}Open{{ else }}Not open yet{{ end }}</span></li>
-    <li class="fact"><span class="fact__k">Closes</span><span class="fact__v">{{ if $cd }}{{ (time.AsTime $cd).Format "2 Jan 2006" }}{{ else }}TBA{{ end }}</span></li>
+    <li class="fact"><span class="fact__k">Status</span><span class="fact__v{{ if not $e.cfpOpen }} fact__v--tba{{ end }} {{ if $e.cfpOpen }}fact__v--gold{{ end }}">{{ if $e.cfpOpen }}Open{{ else }}Not open yet{{ end }}</span></li>
+    <li class="fact"><span class="fact__k">Closes</span><span class="fact__v fact__v--gold">{{ if $cd }}{{ (time.AsTime $cd).Format "2 Jan 2006" }}{{ else }}TBA{{ end }}</span></li>
     <li class="fact"><span class="fact__k">Format</span><span class="fact__v">Talks {{$e.talkFormat}}</span></li>
     <li class="fact"><span class="fact__k">Edition</span><span class="fact__v">Event #{{ $e.number }}</span></li>
   </ul>

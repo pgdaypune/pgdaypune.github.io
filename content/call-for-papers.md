@@ -25,7 +25,7 @@ topics:
   - "Postgres & AI"
 guidelines:
   - k: "Abstract"
-    v: "A concise 100–200 words summary of your talk."
+    v: "A concise 200–500 words summary of your talk."
   - k: "Speaker bio"
     v: "A short intro highlighting your PostgreSQL expertise."
 whySpeak:
