@@ -28,10 +28,23 @@ categories:
         url: "https://www.microsoft.com/"
         height: 50
 
-  # - name: "Gold"
-  #   class: "gold"
-  #   sponsors:
-  #     - name: "TBD"
+  - name: "Star Sponsors"
+    class: "star"
+    sponsors:
+      - name: "Supabase"
+        logo: "/images/sponsors/supabase.png"
+        logo-dark: "/images/sponsors/supabase-dark.png"
+        url: "https://supabase.com/"
+        height: 40
+
+  - name: "Gold Sponsors"
+    class: "gold"
+    sponsors:
+      - name: "Percona"
+        logo: "/images/sponsors/percona.svg"
+        logo-dark: "/images/sponsors/percona-dark.svg"
+        url: "https://www.percona.com/"
+        height: 35
 
   # Example of a custom category with per-logo sizing:
   # - name: "Community Partners"
