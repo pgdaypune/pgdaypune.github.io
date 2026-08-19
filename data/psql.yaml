@@ -21,7 +21,7 @@ aboutContributors: { q: "SELECT web_contributors FROM pgpune_community;" }
 aboutContact:      { q: "SELECT contact_email FROM pgpune_community;", c: "-- any query?" }
 
 # --- Call for papers ---
-cfpHero:   { q: "INSERT INTO talks (event, speaker_name, talk_title, abstract) VALUES (%d, 'you', 'your talk', 'abstract in 100~200 words');" }
+cfpHero:   { q: "INSERT INTO talks (event, speaker_name, talk_title, abstract) VALUES (%d, 'you', 'your talk', 'abstract in 200~500 words');" }
 cfpTopics: { q: "SELECT id, topic FROM topics_of_interest ORDER BY id;" }
 
 # --- Register ---

@@ -24,6 +24,7 @@ cfpOpen: true
 cfpURL: "https://confbase.io/pgpune/pgpune-event-6/cfp"  # replace with the real CFP URL when it opens
 talkFormat: "(~40 mins)"
 cfpDeadline: "2026-09-07"           # e.g. "2026-08-15"; empty -> "TBA"
+cfpNotification: "2026-09-14"  # e.g. "2026-09-14"; empty -> "TBA"
 cfpAlert: "The call for papers isn't open yet — check back soon. 🐘" # Visible when cfpOpen: false && cfpURL: "added"
 
 registerURL: "/register/"        # replace with the real form URL when it opens
