@@ -14,17 +14,19 @@ venue: "St Laurn - Koregaon Park"                 # empty -> "To be announced" (
 venueMapURL: "https://maps.app.goo.gl/F6uMfXfZ38TtkvZJ7"           # Google Maps link; a static map + link show once set
 venueIframeURL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3782.7858735612995!2d73.8859192!3d18.538576!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0fc2b2b56db%3A0x76b21edc396aa13!2sSt%20Laurn%20-%20Koregaon%20Park%2C%20Pune!5e0!3m2!1sen!2sin!4v1786431663529!5m2!1sen!2sin"
 
-registerURL: "/register/"        # replace with the real form URL when it opens
-cfpURL:      "/call-for-papers/"  # replace with the real CFP URL when it opens
-cfpDeadline: ""           # e.g. "2026-08-15"; empty -> "TBA"
-
 # Show the tentative schedule alongside community on the home page.
 # Set true once the agenda is ready to be showcased.
 showSchedule: false
 
 # CFP / registration status (drives the /call-for-papers/ and /register/ pages).
-cfpOpen: false
-cfpAlert: "The call for papers isn't open yet — check back soon. 🐘"
+
+cfpOpen: true
+cfpURL: "https://confbase.io/pgpune/pgpune-event-6/cfp"  # replace with the real CFP URL when it opens
+talkFormat: "(~40 mins)"
+cfpDeadline: "2026-09-07"           # e.g. "2026-08-15"; empty -> "TBA"
+cfpAlert: "The call for papers isn't open yet — check back soon. 🐘" # Visible when cfpOpen: false && cfpURL: "added"
+
+registerURL: "/register/"        # replace with the real form URL when it opens
 registrationOpen: false
 registrationAlert: "Registration isn't open yet — check back soon. 🐘"
 entryDetails: "" # Get Tickets →markdown entry fee block; empty -> "TBA"

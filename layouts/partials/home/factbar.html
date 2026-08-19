@@ -24,13 +24,13 @@
     {{ if $ne.venueMapURL }}</a>{{ end }}
   </li>
   <li class="fact fact--link{{ if not $cfpClosed }} fact--hl{{ end }}">
-    <a class="fact__link" href="{{ $ne.cfpURL | relURL }}">
+    <a class="fact__link" href="/call-for-papers/">
       <span class="fact__k">Call for papers</span>
       <span class="fact__v fact__v--link">Submit talk →</span>
     </a>
   </li>
   <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
-    <a class="fact__link" href="{{ $ne.registerURL | relURL }}">
+    <a class="fact__link" href="/register/">
       <span class="fact__k">Entry</span>
       <span class="fact__v fact__v--link">Register →</span>
     </a>
