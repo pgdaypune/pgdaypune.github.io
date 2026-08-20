@@ -3,7 +3,7 @@ title: "Call for Papers"
 layout: "cfp"
 summary: "Have a PostgreSQL story? We'd love to hear it."
 headNote: >-
- Heads up: PgPune has moved to ConfBase for event management. The CFP link now redirects to ConfBase.io, where you can sign up and submit your talk.
+ Heads up: PgPune has moved to ConfBase for event management. The CFP link now redirects to ConfBase.io, where you can sign up and submit your paper.
 
 intro: >-
   Are you passionate about PostgreSQL and eager to share your knowledge, experiences, and insights with fellow enthusiasts? We’re excited to announce the call for papers for the upcoming PostgreSQL Event in Pune. This is your opportunity to contribute to our vibrant community and showcase your expertise!
