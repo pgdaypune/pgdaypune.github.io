@@ -63,43 +63,43 @@
   bio: |
     Jessica Shelar is Database Developer at DataCloudGaze Consulting and a passionate PostgreSQL enthusiast, with hands-on experience in database development and performance tuning.
 - name: "Hrishikesh Gore"
-  image: ""
+  image: "/images/speakers/icons/hrishikesh-gore.jpeg"
   linkedin: "https://www.linkedin.com/in/hrishikesh-gore-1034b1b0/"
   events: [3]
   bio: |
     Hrishikesh Gore is a Database Engineer and PostgreSQL SME with Nutanixʼs NDB team. He has over 4 years of experience contributing to the development of PostgreSQL solutions, with a focus on upgrades, security, high availability, and performance tuning for enterprise-scale systems.
 - name: "Rahila Syed"
-  image: ""
+  image: "/images/speakers/icons/rahila-syed.jpg"
   linkedin: "https://www.linkedin.com/in/rahila-syed/"
   events: [3]
   bio: |
     Rahila Syed is a PostgreSQL developer with 13 years of experience. She has contributed to features like WAL compression, default partitioning, vacuum progress, parallel index scan, and logical replication. She also worked on a multi-master active-active replication solution and currently develops new PostgreSQL features at Microsoft.
 - name: "Yogesh Jain"
-  image: ""
+  image: "/images/speakers/icons/yogesh-jain.jpeg"
   linkedin: "https://www.linkedin.com/in/yogeshjain96/"
   events: [3]
   bio: |
     Yogesh Jain is a Staﬀ SDE at EnterpriseDB (EDB) with over 7+ years of experience in Kubernetes, cloud-native Postgres, observability, and distributed systems. He focuses on building a hybrid control plane for managing Postgres and enabling unified observability across platforms.
 - name: "Lalit Choudhary"
-  image: ""
+  image: "/images/speakers/icons/lalit-choudhary.png"
   linkedin: "https://www.linkedin.com/in/lalit-choudhary-8116ba77/"
   events: [3, 1]
   bio: |
     Lalit Choudhary is a database professional with experience in PostgreSQL and MySQL. His core interests include problem-solving, troubleshooting database issues, and testing for reliability and performance.
 - name: "Tarun Abichandani"
-  image: ""
+  image: "/images/speakers/icons/tarun-abichandani.png"
   linkedin: "https://www.linkedin.com/in/abistarun/"
   events: [2]
   bio: |
     Tarun is a Tech Lead in the Google AlloyDB team. He has over 10+ years of experience in the industry and has worked with multiple organizations, including Amazon and ThoughtWorks. Throughout his career, Tarun has leveraged his background as a Computer Engineer with a blend of statistical and technical knowledge. His experience includes building a tool to predict commodity demand using ML, developing an observability platform using big-data, and programming a Python server with pre-configured ML and statistical models for a BI tool. Tarun is skilled in various technologies including Java, Python, Big Data stacks, and Machine Learning, and is passionate about technology and innovation.
 - name: "Ujjwal Lanjewar"
-  image: ""
+  image: "/images/speakers/icons/ujjwal-lanjewar.png"
   linkedin: "https://www.linkedin.com/in/ujjwalpl/"
   events: [2]
   bio: |
     Ujjwal is leading the Google AlloyDB Team and has been with Google for ~2.5 years. Ujjwal is a veteran with 25+ years in the distributed storage systems having long association with IBM and Seagate for various private cloud storage products and storage for databases, for all the aspects of enterprise software ranging from high availability, data protection, replication, caching and migrations. During his career, Ujjwal has been active in research, technical conferences, academic relations, mentoring, etc.
 - name: "Sachin D. Kotwal"
-  image: ""
+  image: "/images/speakers/icons/sachin-d-kotwal.jpeg"
   linkedin: "https://www.linkedin.com/in/sachindkotwal88/"
   events: [2]
   bio: |
@@ -107,7 +107,7 @@
 
     Mr. Kotwal's extensive background encompasses a deep understanding of database architectures and a commitment to delivering innovative solutions that empower organizations to leverage the full potential of cloud computing. His dedication to excellence and passion for technology have made him a trusted advisor in the field.
 - name: "Rajkumar Raghuwanshi"
-  image: ""
+  image: "/images/speakers/icons/rajkumar-raghuwanshi.jpeg"
   linkedin: "https://www.linkedin.com/in/rajkumarraghuwanshi/"
   events: [2]
   bio: |
@@ -122,31 +122,31 @@
     trusted advisor to numerous enterprises undertaking cloud
     transformation journeys.
 - name: "Amul Sul"
-  image: ""
+  image: "/images/speakers/icons/amul-sul.jpeg"
   linkedin: "https://www.linkedin.com/in/sulamul/"
   events: [1]
   bio: |
     Amul Sul is a Principal Engineer at EnterpriseDB, contributing to the development of PostgreSQL features and EDB Postgres Advanced Server. With 12 years of experience in database development and a Master's degree in Computer Applications from Mumbai University.
 - name: "Pushkar Khadilkar"
-  image: ""
+  image: "/images/speakers/icons/pushkar-khadilkar.jpeg"
   linkedin: "https://www.linkedin.com/in/pushkarkhadilkar/"
   events: [1]
   bio: |
     Pushkar Khadilkar, software engineers in Google's AlloyDB team, specialise in advancing Al-database integration. Pushkar brings over 10 years of experience in database internals.
 - name: "Sachin Khanna"
-  image: ""
+  image: "/images/speakers/icons/sachin-khanna.jpeg"
   linkedin: "https://www.linkedin.com/in/sachinkhanna43/"
   events: [1]
   bio: |
     Sachin Khanna database solutions architect at AWS with passion for PostgreSQL and its flavours, including AWS Aurora PostgreSQL. With extensive experience in development, migration, implementation, and administration across databases like Oracle, DB2, PostgreSQL, and more, he is also passionate about open-source technologies like Yugabyte, Cassandra, and MongoDB.
 - name: "Tanvi Kamble"
-  image: ""
+  image: "/images/speakers/icons/tanvi-kamble.jpeg"
   linkedin: "https://www.linkedin.com/in/tanvi-kamble/"
   events: [1]
   bio: |
     Tanvi Kamble, software engineers in Google's AlloyDB team, specialise in advancing Al-database integration. Tanvi focuses on observability and performance insights.
 - name: "Yogi Rampuria"
-  image: ""
+  image: "/images/speakers/icons/yogi-rampuria.png"
   linkedin: "https://www.linkedin.com/in/yogi/"
   events: [1]
   bio: |
