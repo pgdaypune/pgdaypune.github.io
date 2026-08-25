@@ -4,7 +4,7 @@
        shortcode so both render identically. */ -}}
 {{- $e := hugo.Data.event }}
 <header class="sponsors__head">
-  <h2 class="sponsors__title" id="sponsors-h">Sponsors for Event #{{$e.number}}</h2>
+  <h2 class="sponsors__title" id="sponsors-h">Sponsors <span class="lockup__pune">@ Event #{{$e.number}}</span></h2>
   {{ partial "psql.html" (dict "key" "sponsors" "n" $e.number) }}
 </header>
 

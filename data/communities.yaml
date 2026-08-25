@@ -1,0 +1,15 @@
+name: Community Hub
+description: A shared home for Pune's tech-communities
+communities:
+- name: "React Pune Community"
+  url: "https://www.linkedin.com/company/react-pune-community"
+  logo: "/images/community-hub/react-pune.jpg"
+  height: 100
+- name: "OpenSearch User Group Pune"
+  url: "https://www.linkedin.com/company/opensearch-user-group-pune"
+  logo: "/images/community-hub/opensearch-user-group-pune.png"
+  height: 100
+- name: "AAIF Community Pune"
+  url: "https://luma.com/aaif-pune"
+  logo: "/images/community-hub/aaif.png"
+  height: 100
