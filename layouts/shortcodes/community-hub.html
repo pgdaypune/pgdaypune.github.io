@@ -1,0 +1,7 @@
+{{- /* Renders the same tiered sponsors design as the homepage, broken out of the
+       prose column to full content width (see .sponsors-embed in main.css). */ -}}
+{{- with hugo.Data.communities }}
+<section class="communities-embed" aria-labelledby="communities-h">
+  {{ partial "community-hub-inner.html" . }}
+</section>
+{{- end }}
