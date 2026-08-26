@@ -27,11 +27,12 @@ cfpDeadline: "2026-09-07"           # e.g. "2026-08-15"; empty -> "TBA"
 cfpNotification: "2026-09-14"  # e.g. "2026-09-14"; empty -> "TBA"
 cfpAlert: "The call for papers isn't open yet — check back soon. 🐘" # Visible when cfpOpen: false && cfpURL: "added"
 
-registerURL: "/register/"        # replace with the real form URL when it opens
 registrationOpen: false
+registerURL: "/register/"
 registrationAlert: "Registration isn't open yet — check back soon. 🐘"
 entryDetails: "" # Get Tickets →markdown entry fee block; empty -> "TBA"
-entryURL: "" # if set, the Entry value links here (e.g. a ticketing page)
+entryURL: "https://confbase.io/embed/pgpune/pgpune-event-6/tickets" # if set, the Entry value links here (e.g. a ticketing page)
+ticketsIframe: <iframe src="https://confbase.io/embed/pgpune/pgpune-event-6/tickets?theme=dark" width="100%" height="900" frameborder="0" style="border:0;border-radius:8px;" allow="payment *" loading="lazy" title="PgPune Event 6 - tickets"></iframe>
 
 stats:
   editions: 5
