@@ -18,7 +18,7 @@
       <span class="fact__v{{ if not $e.venue }} fact__v--tba{{ end }} fact__v--highlight">{{ $e.venue | default "To be announced" }}</span>
       {{ if $e.venueMapURL }}</a>{{ end }}
     </li>
-    <li class="fact"><span class="fact__k">Entry</span><span class="fact__v{{ with $e.entryURL }} fact__v--link{{ end }}">{{ if and $e.registrationOpen $e.entryURL }}<a href="{{ $e.entryURL }}" target="_blank" rel="noopener">{{ $e.entryDetails | default "Get tickets →" }}</a>{{ else }}{{ $e.entryDetails | default "TBA" }}{{ end }}</span></li>
+    <li class="fact"><span class="fact__k">Entry</span><span class="fact__v fact__v--link"><a href="#tickets">Get tickets ↓</a></span></li>
   </ul>
   <div class="status">
     {{- if not $e.registrationOpen}}
@@ -32,9 +32,13 @@
 {{- end }}
 
 {{- if and $e.registrationOpen $e.ticketsIframe }}
-<section class="block"><div class="wrap">
+<section class="block" id="tickets"><div class="wrap">
   {{ $e.ticketsIframe | markdownify }}
-</div></section>
+  <p class="cfp-note">
+  {{ $e.ticketsNote | markdownify }}
+  </p>
+</div>
+</section>
 {{- end }}
 
 {{- with .Params.whyAttend }}
