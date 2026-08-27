@@ -32,11 +32,13 @@
 {{- end }}
 
 {{- if and $e.registrationOpen $e.ticketsIframe }}
-<section class="block" id="tickets"><div class="wrap">
-  {{ $e.ticketsIframe | markdownify }}
-  <p class="cfp-note">
-  {{ $e.ticketsNote | markdownify }}
-  </p>
+<section class="block" id="tickets">
+  <div class="coupon-block">
+    <p class="coupon">{{ $e.ticketsCoupon | markdownify }}</p>
+  </div>
+  <div class="wrap">
+    {{ $e.ticketsIframe | markdownify }}
+  <p class="cfp-note">{{ $e.ticketsNote | markdownify }}</p>
 </div>
 </section>
 {{- end }}

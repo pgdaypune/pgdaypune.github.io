@@ -787,6 +787,8 @@ html[data-theme="light"] .logo__img--light { display: block; }
 .prose details { border: 1px solid var(--line); padding: 12px 14px; background: var(--bg-3); }
 .prose summary { cursor: pointer; font-family: var(--mono); font-size: 13px; color: var(--pg-light); }
 .notice, .tba { font-family: var(--mono); font-size: 14px; color: var(--gold); }
+.coupon-block { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--pad); margin-bottom: 20px;}
+.coupon {font-family: var(--mono); font-size: 20px; color: var(--gold);}
 .kv { font-family: var(--mono); font-size: 14px; border: 1px solid var(--line); }
 .kv__row { display: flex; gap: 14px; padding: 10px 14px; border-bottom: 1px solid var(--line-soft); }
 .kv__row:last-child { border-bottom: 0; }
