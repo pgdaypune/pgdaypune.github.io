@@ -28,6 +28,7 @@ cfpNotification: "2026-09-14"  # e.g. "2026-09-14"; empty -> "TBA"
 cfpAlert: "The call for papers isn't open yet — check back soon. 🐘" # Visible when cfpOpen: false && cfpURL: "added"
 
 registrationOpen: true
+registrationOpenDate: 2026-08-31
 registerURL: "/register/"
 registrationAlert: "Registration isn't open yet — check back soon. 🐘"
 entryURL: "https://confbase.io/embed/pgpune/pgpune-event-6/tickets" # if set, the Entry value links here (e.g. a ticketing page)

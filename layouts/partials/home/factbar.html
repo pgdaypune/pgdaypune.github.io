@@ -1,6 +1,7 @@
 {{- $ne := hugo.Data.event -}}
 {{- $start := time.AsTime $ne.startTime -}}
 {{- $end := time.AsTime $ne.endTime -}}
+{{- $registerationStart := time.AsTime $ne.registrationOpenDate -}}
 {{- /* Once the CFP closes (deadline passed), shift the highlight from the
        Call-for-papers cell to the Entry/Register cell. */ -}}
 {{- $cfpClosed := false -}}
@@ -27,12 +28,14 @@
     <a class="fact__link" href="/call-for-papers/">
       <span class="fact__k">Call for papers</span>
       <span class="fact__v fact__v--link">Submit Paper →</span>
+      {{ if $ne.cfpOpen}}<span class="fact__sub--gold pulse">🟢 CFP Open Now</span>{{ end }}
     </a>
   </li>
   <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
     <a class="fact__link" href="/register/">
       <span class="fact__k">Entry</span>
       <span class="fact__v fact__v--link">Register →</span>
+      <span class="fact__sub--gold">Opens: <time>{{ $registerationStart.Format "02 Jan" }}</time></span>
     </a>
   </li>
 </ul>
