@@ -35,7 +35,7 @@
     <a class="fact__link" href="/register/">
       <span class="fact__k">Entry</span>
       <span class="fact__v fact__v--link">Register →</span>
-      <span class="fact__sub--gold">Opens: <time>{{ $registerationStart.Format "02 Jan" }}</time></span>
+      <span class="fact__sub--gold pulse">{{ if ge now $registerationStart }}🟢 Open Now{{ else }}Opens: <time>{{ $registerationStart.Format "02 Jan" }}</time>{{ end }}</span>
     </a>
   </li>
 </ul>
