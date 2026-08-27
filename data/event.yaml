@@ -36,7 +36,7 @@ ticketsIframe: <iframe src="https://confbase.io/embed/pgpune/pgpune-event-6/tick
 ticketsNote: |
   Note: Tickets are managed via <a href="https://confbase.io/" target="_blank" class="fact__v--link">Confbase.io</a>. If you face any issues booking above ^, try booking directly from <a href="https://confbase.io/pgpune/pgpune-event-6/tickets" target="_blank" class="fact__v--link">Confbase here →</a>
 ticketsCoupon: |
-  Hurry, apply coupon **`EARLYBIRD20`** and save 20% before it's gone!
+  Hurry, apply coupon <span class="pulse">**`EARLYBIRD20`**</span> and <span class="pulse">save 20%</span> before it's gone!
 stats:
   editions: 5
   talks: "28+"

@@ -2,6 +2,7 @@
 {{- $e := hugo.Data.event }}
 {{- $start := time.AsTime $e.startTime }}
 {{- $end := time.AsTime $e.endTime }}
+{{- $registerationStart := time.AsTime $e.registrationOpenDate -}}
 <section class="hero hero--sub" aria-labelledby="reg-h">
   <div class="wrap">
     <h1 id="reg-h" class="lockup lockup--sub">Register</h1>
@@ -18,6 +19,7 @@
       <span class="fact__v{{ if not $e.venue }} fact__v--tba{{ end }} fact__v--highlight">{{ $e.venue | default "To be announced" }}</span>
       {{ if $e.venueMapURL }}</a>{{ end }}
     </li>
+    <li class="fact"><span class="fact__k">Registartion Opens</span><span class="fact__v"><time>{{ $registerationStart.Format "02 Jan 2006" }}</span></li>
     <li class="fact"><span class="fact__k">Entry</span><span class="fact__v fact__v--link"><a href="#tickets">Get tickets ↓</a></span></li>
   </ul>
   <div class="status">
