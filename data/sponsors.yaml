@@ -45,6 +45,11 @@ categories:
         logo-dark: "/images/sponsors/percona-dark.svg"
         url: "https://www.percona.com/"
         height: 35
+      - name: "Yugabyte"
+        logo: "/images/sponsors/yugabyte.png"
+        logo-dark: "/images/sponsors/yugabyte-dark.png"
+        url: "https://www.yugabyte.com/"
+        height: 30
 
   # Example of a custom category with per-logo sizing:
   # - name: "Community Partners"

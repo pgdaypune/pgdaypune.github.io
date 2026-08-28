@@ -13,3 +13,7 @@ communities:
   url: "https://luma.com/aaif-pune"
   logo: "/images/community-hub/aaif.png"
   height: 100
+- name: "Cloud Native Pune"
+  url: "https://www.linkedin.com/company/cncg-pune"
+  logo: "/images/community-hub/cncg-pune.png"
+  height: 50
