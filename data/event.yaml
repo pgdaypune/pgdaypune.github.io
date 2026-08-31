@@ -37,6 +37,15 @@ ticketsNote: |
   Note: Tickets are managed via <a href="https://confbase.io/" target="_blank" class="fact__v--link">Confbase.io</a>. If you face any issues booking above ^, try booking directly from <a href="https://confbase.io/pgpune/pgpune-event-6/tickets" target="_blank" class="fact__v--link">Confbase here →</a>
 ticketsCoupon: |
   Hurry, apply coupon <span class="pulse">**`EARLYBIRD20`**</span> and <span class="pulse">save 20%</span> before it's gone!
+  <button class="btn" onclick="navigator.clipboard.writeText('EARLYBIRD20');
+  const label = this.querySelector('.btn-text');
+  label.innerText = 'Copied!';
+  setTimeout(() => label.innerText = 'Copy Coupon', 2000);">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--fg)">
+    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+  </svg>
+  <span class="btn-text">Copy Coupon</span>
+  </button>
 stats:
   editions: 5
   talks: "28+"
