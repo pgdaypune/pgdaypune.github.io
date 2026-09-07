@@ -63,7 +63,8 @@
   <h3 class="spk-hs">Speakers</h3>
   {{ partial "psql.html" (dict "key" "eventSpeakers" "class" "spk-q" "n" $n) }}
   <p class="spk-empty">{{ if $ev.cfpOpen }}The call for papers is open — the lineup lands once talks are accepted.{{ else }}Speaker lineup to be announced.{{ end }}</p>
-  <a class="btn" href="/call-for-papers/">{{ if $ev.cfpOpen }}Submit Paper{{ else }}Call for Papers{{ end }} →</a>
+  {{ if $ev.cfpOpen }}<a class="btn" href="/call-for-papers/">Submit Paper →</a>{{ end }}
+  {{ if $ev.registrationOpen }}<a class="btn pulse" href="/register/">🟢 Register Now →</a>{{ end }}
 </div></section>
 {{- end }}
 

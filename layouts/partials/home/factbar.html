@@ -27,8 +27,11 @@
   <li class="fact fact--link{{ if not $cfpClosed }} fact--hl{{ end }}">
     <a class="fact__link" href="/call-for-papers/">
       <span class="fact__k">Call for papers</span>
+      {{ if not $ne.cfpOpen}}<span class="fact__v fact__v--link">Closed</span>{{ end }}
+      {{ if $ne.cfpOpen}}
       <span class="fact__v fact__v--link">Submit Paper →</span>
-      {{ if $ne.cfpOpen}}<span class="fact__sub--gold pulse">🟢 CFP Open Now</span>{{ end }}
+      <span class="fact__sub--gold pulse">🟢 CFP Open Now</span>
+      {{ end }}
     </a>
   </li>
   <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
