@@ -41,6 +41,7 @@
   --pg-lighter: #9ecbe8;
   --gold: #e8b339;
   --green: #57ab5a;
+  --orange:#D46A43;
 
   /* Semantic tokens for values that must flip but weren't tokens before. */
   --lead: #c8ced6;                 /* lead paragraph body text */
@@ -564,6 +565,7 @@ html[data-theme="light"] .psql { color: #45505d; }
 .tier { --accent: var(--pg-light); }
 .tier--diamond { --accent: var(--pg-lighter); }
 .tier--gold    { --accent: var(--gold); }
+.tier--dinner  { --accent: var(--orange); }
 
 .tier__head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
 .tier__gem {

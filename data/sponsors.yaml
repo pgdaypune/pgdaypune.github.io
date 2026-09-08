@@ -50,13 +50,16 @@ categories:
         logo-dark: "/images/sponsors/yugabyte-dark.png"
         url: "https://www.yugabyte.com/"
         height: 30
+      - name: "Newt Global"
+        logo: "/images/sponsors/newtglobal.jpg"
+        url: "https://newtglobal.com/"
+        height: 60
 
-  # Example of a custom category with per-logo sizing:
-  # - name: "Community Partners"
-  #   class: "community"
-  #   sponsors:
-  #     - name: "Example"
-  #       logo: "/images/sponsors/example.svg"
-  #       logo-dark: "/images/sponsors/example-dark.svg"
-  #       url: "https://example.com/"
-  #       height: 40
+  - name: "Evening Dinner Sponsor"
+    class: "dinner"
+    sponsors:
+      - name: "CortexRidge"
+        logo: "/images/sponsors/cortextridge.png"
+        logo-dark: "/images/sponsors/cortextridge-dark.png"
+        url: "https://cortexridge.com/"
+        height: 35
