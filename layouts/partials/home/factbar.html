@@ -17,6 +17,7 @@
   <li class="fact">
     <span class="fact__k">Hours</span>
     <span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span>
+    <span class="fact__sub">Followed by Dinner</span>
   </li>
   <li class="fact{{ if $ne.venueMapURL }} fact--link{{ end }}">
     {{ if $ne.venueMapURL }}<a class="fact__link" href="{{ $ne.venueMapURL | relURL }}" target="_blank">{{ end }}
@@ -24,7 +25,12 @@
     <span class="fact__v{{ if not $ne.venue }} fact__v--tba{{ end }} fact__v--highlight">{{ $ne.venue | default "To be announced" }}</span>
     {{ if $ne.venueMapURL }}</a>{{ end }}
   </li>
-  <li class="fact fact--link{{ if not $cfpClosed }} fact--hl{{ end }}">
+   <li class="fact fact--link fact--hl">
+    <a class="fact__link" href="/events/6/"><span class="fact__k">Know More</span>
+    <span class="fact__v fact__v--link">About <br>Event #6</span>
+    </a>
+  </li>
+  <!-- <li class="fact fact--link{{ if not $cfpClosed }} fact--hl{{ end }}">
     <a class="fact__link" href="/call-for-papers/">
       <span class="fact__k">Call for papers</span>
       {{ if not $ne.cfpOpen}}<span class="fact__v fact__v--link">Closed</span>{{ end }}
@@ -33,7 +39,7 @@
       <span class="fact__sub--gold pulse">🟢 CFP Open Now</span>
       {{ end }}
     </a>
-  </li>
+  </li> -->
   <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
     <a class="fact__link" href="/register/">
       <span class="fact__k">Entry</span>

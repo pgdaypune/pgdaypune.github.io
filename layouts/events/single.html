@@ -1,7 +1,12 @@
 {{ define "main" }}
 {{- $n := int .File.ContentBaseName }}
 {{- $ev := hugo.Data.event }}
+{{- $start := time.AsTime $ev.startTime }}
+{{- $end := time.AsTime $ev.endTime }}
 {{- $isCurrent := eq $n $ev.number }}
+{{- $registerationStart := time.AsTime $ev.registrationOpenDate -}}
+{{- $cfpClosed := false -}}
+{{- with $ev.cfpDeadline }}{{ if now.After (time.AsTime .) }}{{ $cfpClosed = true }}{{ end }}{{ end -}}
 {{- $speakers := where hugo.Data.speakers "events" "intersect" (slice $n) }}
 {{- /* Edition facts live in this event page's own frontmatter (host/date/photo).
        For the current/upcoming edition, prefer the live details in data/event.yaml. */ -}}
@@ -18,14 +23,21 @@
 
 <section class="block"><div class="wrap">
   <ul class="facts facts--page" aria-label="Event facts">
-    <li class="fact"><span class="fact__k">Date</span><span class="fact__v">{{ $date | default "TBA" }}</span></li>
+    <li class="fact"><span class="fact__k">Date</span><span class="fact__v">{{ $date | default "TBA" }}</span><span class="fact__sub">{{ $start.Format "Monday" }}</span></li>
+    <li class="fact"><span class="fact__k">Event Timings</span><span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span><span class="fact__sub">Followed by Dinner</span></li>
     <li class="fact"><span class="fact__k">Venue</span>
       {{ if $ev.venueMapURL }}<a class="fact--link" href="{{ $ev.venueMapURL | relURL }}" target="_blank">{{ end }}
       <span class="fact__v fact__v--highlight {{ if not $venue }} fact__v--tba{{ end }}">{{ $venue | default "To be announced" }}</span>
       {{ if $ev.venueMapURL }}</a>{{ end }}
     </li>
     <li class="fact"><span class="fact__k">Speakers</span>{{ $ns := len $speakers }}{{ if and (eq $ns 0) $isCurrent }}<span class="fact__v fact__v--tba">TBA</span>{{ else }}<span class="fact__v">{{ $ns }}</span>{{ end }}</li>
-    <li class="fact"><span class="fact__k">Edition</span><span class="fact__v{{ if $isCurrent }} fact__v--gold{{ end }}">#{{ $n }}{{ if $isCurrent }} · upcoming{{ end }}</span></li>
+      <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
+    <a class="fact__link" href="/register/">
+      <span class="fact__k">Entry</span>
+      <span class="fact__v fact__v--link">Register →</span>
+      <span class="fact__sub--gold pulse">{{ if ge now $registerationStart }}🟢 Open Now{{ else }}Opens: <time>{{ $registerationStart.Format "02 Jan" }}</time>{{ end }}</span>
+    </a>
+  </li>
   </ul>
 </div></section>
 
@@ -64,7 +76,7 @@
   {{ partial "psql.html" (dict "key" "eventSpeakers" "class" "spk-q" "n" $n) }}
   <p class="spk-empty">{{ if $ev.cfpOpen }}The call for papers is open — the lineup lands once talks are accepted.{{ else }}Speaker lineup to be announced.{{ end }}</p>
   {{ if $ev.cfpOpen }}<a class="btn" href="/call-for-papers/">Submit Paper →</a>{{ end }}
-  {{ if $ev.registrationOpen }}<a class="btn pulse" href="/register/">🟢 Register Now →</a>{{ end }}
+  <!-- {{ if $ev.registrationOpen }}<a class="btn pulse" href="/register/">🟢 Register Now →</a>{{ end }} -->
 </div></section>
 {{- end }}
 

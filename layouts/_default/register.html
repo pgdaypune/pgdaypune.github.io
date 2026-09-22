@@ -13,7 +13,7 @@
 <section class="block"><div class="wrap">
   <ul class="facts facts--page" aria-label="Event facts">
     <li class="fact"><span class="fact__k">Event Date</span><span class="fact__vgroup"><span class="fact__v fact__v--gold"><time datetime="{{ $start.Format "2006-01-02" }}">{{ $start.Format "02 Jan 2006" }}</time></span><span class="fact__sub">{{ $start.Format "Monday" }}</span></span></li>
-    <li class="fact"><span class="fact__k">Event Timings</span><span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span></li>
+    <li class="fact"><span class="fact__k">Event Timings</span><span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span><span class="fact__sub">Followed by Dinner</span></li>
     <li class="fact"><span class="fact__k">Venue</span>
       {{ if $e.venueMapURL }}<a class="fact--link" href="{{ $e.venueMapURL | relURL }}" target="_blank">{{ end }}
       <span class="fact__v{{ if not $e.venue }} fact__v--tba{{ end }} fact__v--highlight">{{ $e.venue | default "To be announced" }}</span>
