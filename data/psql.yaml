@@ -17,7 +17,6 @@ communityHub:  { q: "SELECT * FROM tech-community WHERE city=pune;" }
 # --- About ---
 aboutHero:         { q: '\d pgpune_community' }
 aboutOrganizers:   { q: "SELECT organizers FROM pgpune_community;" }
-talkSelectionCommittee: { q: "SELECT talk_selection_committe FROM pgpune_community WHERE event=%d;" }
 aboutSpeakerCount: { q: "SELECT count(speakers) FROM pgpune_community;" }
 aboutContributors: { q: "SELECT web_contributors FROM pgpune_community;" }
 aboutContact:      { q: "SELECT contact_email FROM pgpune_community;", c: "-- any query?" }
@@ -36,3 +35,6 @@ eventsListHero: { q: "SELECT event FROM pgpune_community;" }
 eventHero:      { q: "SELECT event FROM pgpune_community WHERE event=%d;" }
 eventSpeakers:  { q: "SELECT speakers FROM pgpune_community WHERE event=%d;" }
 searchHero:     { q: "SELECT * FROM site WHERE …" }
+
+# --- Event ---
+talkSelectionCommittee: { q: "SELECT talk_selection_committe FROM pgpune_community WHERE event=%d;" }

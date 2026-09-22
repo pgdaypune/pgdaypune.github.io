@@ -38,3 +38,13 @@ ticketsNote: |
 stats:
   editions: 5
   talks: "28+"
+talk_selection:
+  - name: "Nikhil Sontakke"
+    linkedin: https://www.linkedin.com/in/nikhilsontakke/
+    photo: "/images/talk_selection/nikhil-sontakke.jpeg"
+  - name: "Beena Emerson"
+    linkedin: https://www.linkedin.com/in/mbeenaemerson/
+    photo: "/images/talk_selection/beena-emerson.jpeg"
+  - name: "Jay Sudrik"
+    linkedin: https://www.linkedin.com/in/jay-sudrik-6b35962/
+    photo: "/images/talk_selection/jay-sudrik.png"

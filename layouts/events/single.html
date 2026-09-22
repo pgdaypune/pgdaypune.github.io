@@ -68,6 +68,25 @@
 </div></section>
 {{- end }}
 
+<section class="block" id="Talk Selection Committee"><div class="wrap">
+    <h2 class="spk-h">Talk Selection Committee</h2>
+{{ partial "psql.html" (dict "key" "talkSelectionCommittee" "n" $ev.number) }}
+<ul class="egrid orgs-grid">
+  {{- range $ev.talk_selection }}
+  {{- $n := .name }}
+  <li class="card">
+    <a href="{{ .linkedin | default "#" }}"{{ with .linkedin }} target="_blank" rel="noopener" aria-label="{{ $n }} on LinkedIn"{{ end }}>
+      <div class="scard__ph">
+        {{- if .photo }}<img class="scard__avatar" src="{{ .photo | relURL }}" alt="{{ $n }}" width="120" height="120" loading="lazy" decoding="async">
+        {{- else }}<span class="scard__ini" aria-hidden="true">{{ substr $n 0 1 }}</span>{{ end }}
+      </div>
+      <div class="card__meta"><span class="card__t">{{ $n }}</span></div>
+    </a>
+  </li>
+  {{- end }}
+</ul>
+</div></section>
+
 {{- with .Content }}
 <section class="block"><div class="wrap"><div class="prose">{{ . }}</div></div></section>
 {{- end }}

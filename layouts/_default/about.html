@@ -29,23 +29,6 @@
   {{ partial "orglist.html" . }}
 </div></section>
 
-<section class="block" id="organizers2">
-  <div  class="wrap">
-    <h3 class="spk-hs">Talk Selection Committee</h3>
-    {{- $head := "talk_selection_committe" }}
-    {{- $w := len $head }}
-    {{- range $a.talk_selection }}{{ $l := len .name }}{{ if gt $l $w }}{{ $w = $l }}{{ end }}{{ end }}
-    {{- $sep := strings.Repeat (add $w 2) "-" }}
-    {{- $padL := int (math.Floor (div (sub $w (len $head)) 2)) }}
-    {{- $hpad := strings.Repeat (add $padL 1) " " }}
-    {{ partial "psql.html" (dict "key" "talkSelectionCommittee" "n" $e.number) }}
-    <pre class="pg-result">{{ $hpad }}{{ $head }}
-{{ $sep }}
-{{ range $a.talk_selection }} <a class="pg-result__v" href="{{ .linkedin }}" target="_blank" rel="noopener">{{ .name }}</a>
-{{ end }}({{ len $a.talk_selection }} row{{ if ne (len $a.talk_selection) 1 }}s{{ end }})</pre>
-  </div>
-</section>
-
 <section class="block"><div class="wrap">
   <h3 class="spk-hs">Speakers</h3>
   <div>
