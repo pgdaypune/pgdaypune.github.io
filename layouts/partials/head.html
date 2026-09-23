@@ -45,14 +45,17 @@
 <link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | absURL }}">
 <meta name="theme-color" content="#0e1116">
 
-{{- /* OG image: for the home page, generate a 1200×630 card (white landmark on
-       the dark bg) through the image pipeline; else fall back to the site image. */ -}}
+{{- /* OG image: generate a 1200×630 card (white landmark on the dark bg) through
+       the image pipeline for every page; fall back to the site image if missing. */ -}}
 {{- $ogimg := (index site.Params.images 0) | absURL }}
-{{- if .IsHome }}
-  {{- with resources.Get "images/pgpune-logo.png" }}
-    {{- $card := (.Resize "560x").Filter (images.Padding 171 320 172 320 "#0e1116") }}
-    {{- $ogimg = $card.Permalink }}
-  {{- end }}
+{{- with resources.Get "images/pgpune-logo.png" }}
+  {{- $card := (.Resize "560x").Filter (images.Padding 171 320 172 320 "#0e1116") }}
+  {{- $label := images.Text "Postgres Pune User Group" (dict
+      "color" "#ffffff" "size" 40
+      "alignx" "center" "aligny" "center"
+      "x" (int (mul $card.Width 0.5)) "y" (int (mul $card.Height 0.93))) }}
+  {{- $card = $card.Filter $label }}
+  {{- $ogimg = $card.Permalink }}
 {{- end }}
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
