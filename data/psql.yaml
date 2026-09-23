@@ -30,7 +30,7 @@ registerHero: { q: "INSERT INTO attendees (event, name) VALUES (%d, 'you');" }
 registerWhy:  { q: "SELECT reason FROM why_attend;" }
 
 # --- Schedule / events / search ---
-scheduleHero:   { q: "SELECT schedule FROM pgpune_community WHERE event=%d;" }
+scheduleHero:   { q: "SELECT talk_title, speakers, abstract FROM schedule WHERE event=%d;", c: "-- tenetaive"  }
 eventsListHero: { q: "SELECT event FROM pgpune_community;" }
 eventHero:      { q: "SELECT event FROM pgpune_community WHERE event=%d;" }
 eventSpeakers:  { q: "SELECT speakers FROM pgpune_community WHERE event=%d;" }

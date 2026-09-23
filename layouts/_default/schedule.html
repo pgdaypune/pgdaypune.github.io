@@ -25,7 +25,7 @@
           </a>
           {{- end }}
           {{- end }}
-          {{- with .abstract }}<p class="sfrow__abs">{{ . }}</p>{{ end }}
+          {{- with .abstract }}<div class="sfrow__abs">{{ . | markdownify}}</div>{{ end }}
         </div>
       </li>
       {{- end }}

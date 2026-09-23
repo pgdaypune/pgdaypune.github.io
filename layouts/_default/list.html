@@ -36,9 +36,15 @@
       {{- $date := or .Params.date (cond $isCurrent $e.startTime "") }}
       <li class="card card--next">
         <a href="{{ .RelPermalink }}">
+          {{- if $cover}}
+          <div class="card__ph">
+            {{ partial "img.html" (dict "src" $cover "fill" "320x190" "sizes" "(max-width:640px) 90vw, 320px" "class" "card__img" "alt" (printf "Postgres Pune Event #%v at %s" .Params.number .Params.host)) }}
+          </div>
+          {{- else }}
           <div class="card__ph card__ph--next">
             <span class="card__no">#{{ .Params.number }}</span><span class="card__soon">Upcoming</span>
           </div>
+          {{- end }}
           <div class="card__meta">
             <span class="card__t">#{{ .Params.number }} · {{ with $venue }}{{ . }}{{ else }}Venue TBA{{ end }}</span>
             <span class="card__s">{{ with $date }}{{ (time.AsTime .).Format "2 Jan 2006" }}{{ end }}</span>
