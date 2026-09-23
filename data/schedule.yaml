@@ -14,167 +14,75 @@
 #   type: break
 #   title: "Welcome & Word from Sponsors"
 
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "🎙️ Keynote: Postgres 30 Years In: How We Got Here and Where We Are Going"
+- title: "Keynote: Postgres 30 Years In: How We Got Here and Where We Are Going"
   speaker: "Tom Kincaid"
   abstract: >-
-    Tom will trace Postgres's evolution from a niche database to the gold standard for modern application development — the early technical decisions, key milestones, and community shifts that drove its adoption. He'll then look ahead to how Postgres 19 is expanding the database's capabilities for mission-critical deployments and developer productivity, why Postgres has become the platform of choice for AI and LLM application development, and the challenges the project must tackle to stay there.
+    In this talk, the speaker will look back at how Postgres grew from a small
+    project into a top choice for building apps today. He will then look ahead at
+    what Postgres 19 brings, why it is becoming popular for AI work, and what
+    challenges lie ahead.
 
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "Postgres as the System of Record for AI Agents: Memory, State, and Tool Outputs"
+- title: "Postgres as the System of Record for AI Agents: Memory, State, and Tool Outputs"
   speaker: "Abhishek Oberoi, Nadeem Khan"
   abstract: >-
-    AI agents need durable memory, transactional state, and an audit trail for tool calls. Most agent frameworks do not start there. They keep conversation history in JSON files, scratch state in Redis, and embeddings in a separate vector store, while PostgreSQL holds only the business data. That split is easy to ship as a prototype. It becomes hard to operate when a tool call fails halfway through a workflow: there is no single place to see what ran, what is still pending, and what is safe to retry.
+    In this talk, the speakers will explain why PostgreSQL, not a mix of Redis, JSON
+    files, and separate vector stores, should hold an AI agent's memory and state.
+    They will show how JSONB, pgvector, row level security, and transactions can work
+    together in one schema, and discuss where a database still is not the right fit.
 
-
-    This talk makes the case for PostgreSQL as the backbone of an agentic system. If an agent is going to remember, act, and be reviewed later, those records belong in a database that can store mixed shapes, retrieve similar memories, isolate tenants, and commit or roll back as a unit.
-    We will cover four PostgreSQL capabilities in that role. JSONB holds tool arguments and results when each tool has a different payload. pgvector sits on the same memory rows so semantic recall is a query next to structured state, not a call to a second product. Row-level security isolates tenants and agents the way application data is already isolated. Transactions keep agent state consistent when a tool call does not finish, so a failed step does not leave half-written history behind.
-
-
-    The session walks through a reference architecture and the schema behind it. Conversations, tool calls, and long-term memory are first-class tables. We will look at how those tables relate: what belongs in a real column, what can stay in JSONB, and how semantic memory can live beside status, timestamps, and tenant keys in one database.
-
-
-    We close with the trade-offs in that design: where PostgreSQL is the right system of record, and where a cache or object store still makes sense. Attendees should leave knowing why a vector store alone is not enough, and how PostgreSQL can hold memory, state, and tool outputs together.
-
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "Logical Failover Slots: Keeping Replication Alive Through a Failover"
+- title: "Logical Failover Slots: Keeping Replication Alive Through a Failover"
   speaker: "Ashutosh Sharma"
-  abstract: |
-    PostgreSQL 17 introduces Logical Failover Slots, a feature that lets physical standbys synchronize logical replication slots from the primary so when a failover happens, the newly promoted primary already has the logical slots intact, and downstream subscribers can pick up right where they left off instead of requiring a full resync.
+  abstract: >-
+    In this talk, the speaker will cover a Postgres 17 feature that keeps logical
+    replication slots in sync on standby servers, so subscribers can keep going after
+    a failover without needing a full resync. He will also show the setup steps and
+    how to check that it works.
 
-    This talk starts with a quick refresher on logical replication and logical slots, then dives into the new feature: how slot synchronization works under the hood, which parameters need to be tuned to enable it, and how to verify that a slot is synced and will actually survive a failover. It's a short, practical session touching on all the pieces you need to put this feature to work.
+- title: "A Benchmarking Case Study of PostgreSQL Locks, Partitions, and Peak Load"
+  speaker: "Vishal Sawale"
+  abstract: >-
+    In this talk, the speaker will show how a certain type of lock can silently limit
+    performance under heavy write traffic, based on real benchmark tests. He will
+    explain how to spot this problem and how table partitioning can fix it, along with
+    tips on choosing the right amount of partitioning.
+
+- title: "Surviving ALTER EXTENSION UPDATE"
+  speaker: "Mukund Maheshavri, Pushkar Khadilkar"
+  abstract: >-
+    In this talk, the speakers will look at what really happens when a Postgres
+    extension is upgraded, and why upgrade scripts often fail in production. They
+    will cover common mistakes, how Postgres picks an upgrade path internally, and
+    share a checklist for building extensions that upgrade safely.
+
+- title: "Bi Directional CDC for Oracle to PostgreSQL Migration"
+  speaker: "Debendra Saha, Anuj Sharma"
+  abstract: >-
+    In this talk, the speakers will describe how a large eCommerce company moved from
+    Oracle to PostgreSQL across 16 countries while keeping Oracle as a safe backup
+    using two way data replication. They will cover how conflicts were avoided, how
+    failures were handled, and how both databases were kept in sync.
+
+- title: "From Insight 1.0 to 2.0: Solution Engineering PostgreSQL in a Regulated, Nation Scale Tax Platform"
+  speaker: "Hari Kiran"
+  abstract: >-
+    In this talk, the speaker will share a first hand account of moving a national
+    tax system to PostgreSQL. He will cover checking against government rules,
+    studying the old system, planning the new setup for reliability, and balancing
+    performance and security with AI features still being worked on.
+
+- title: "Know Your PL/pgSQL: What Happens Between BEGIN and END"
+  speaker: "Deepak Mahato, Sneha Gohil"
+  abstract: >-
+    In this talk, the speakers will explain how PL/pgSQL actually runs behind the
+    scenes, which helps explain why code that seems fine can turn slow or buggy
+    later. They will cover loops, settings that affect performance, caching issues,
+    common mistakes with exceptions, and other traps, shown through real code
+    examples.
 
 # - start: "🕘 TBD"
 #   end: "TBD"
 #   type: break
 #   title: "Break"
-
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "A Benchmarking Case Study of PostgreSQL Locks, Partitions, and Peak Load: Finding (and Fixing) a Silent Throughput Ceiling"
-  speaker: "Vishal Sawale"
-  abstract: |
-    Under heavy write concurrency, PostgreSQL uses an internal lock extension to manage table file growth on disk. On busy, write-intensive tables, this lock can quietly create a hard performance ceiling - right when your application faces peak traffic.
-
-    This talk shares practical lessons from a real-world benchmarking exercise using a HammerDB TPC-C workload on vanilla, community PostgreSQL. I will walk step-by-step through:
-
-    -- Diagnosing the Hidden Concurrency Ceiling. A high-level look at the Relation-Extension Lock Contention in PostgreSQL and how to recognise when your throughput plateau is a locking problem, not a resource problem.
-    
-    -- How Partitioning Solves the Problem: An overview of how table partitioning removes file extension locks at the storage layer, converting multi-second queueing back into smooth, parallel execution.
-    
-    -- Key Takeaways & Best Practices: Practical guidelines for identifying lock contention risks in your environment and selecting the right partitioning strategy to match your concurrency targets.
-    
-    Attendees will leave with a concrete way to detect this risk before it finds them in production, and a tested method for deciding how much partitioning is actually enough — not just partitioning for its own sake.
-    
-    This proposal presents a fully reproducible performance case study on stock, community PostgreSQL (v16/v17/v18), sharing actionable lessons on how the engine's page allocation behaves under heavy write concurrency. The session provides practical `HammerDB` benchmarking setups, lock-analysis monitoring techniques, and an architectural look at how proper table partitioning removes storage-level lock contention to sustain high peak throughput.
-
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "Surviving ALTER EXTENSION UPDATE"
-  speaker: "Mukund Maheshavri, Pushkar Khadilkar"
-  abstract: |
-    The Hidden Gotchas, Graph Solvers, and Hard-Won Lessons of Extension Lifecycles
-
-    Writing a PostgreSQL extension that works on day one is relatively straightforward: you compile your C code, package your SQL scripts into a .control file, run CREATE EXTENSION, and watch your tests pass.
-
-    Day two is when things get dangerous.
-
-    In long-lived production environments, extensions cannot simply be dropped and recreated. They must evolve through dozens of versions alongside active workloads, user-created generated columns, and concurrent queries without a second of downtime. What actually happens under the hood when a user executes ALTER EXTENSION UPDATE—and why do upgrade scripts so frequently fail in production?
-
-    This talk pulls back the curtain on the PostgreSQL extension lifecycle, dissecting the engine's internal mechanics and sharing hard-won lessons from maintaining production extensions at scale:
-
-    1 . The Engine's Internal Graph Solver: How src/backend/commands/extension.c scans your files, builds an adjacency matrix of version hops, and uses shortest-path graph traversal to resolve multi-version upgrades.
-
-    2 . Full Versions vs. Incremental Hops: Why infinite upgrade chains become brittle, when to mint a standalone full version (ext--2.0.sql), and how to guarantee that a fresh install produces the exact same database state as an upgraded one using automated catalog parity diffing (pg_depend, pg_proc, pg_class).
-
-    3 . Fatal Upgrade Landmines:
-
-      -- The User Dependency Trap: Why innocent DROP FUNCTION statements in upgrade scripts catastrophically fail when user tables depend on them via stored generated columns or views.
-
-      -- The Privilege Stripping Anomaly: How wrapping C-function declarations in anonymous DO blocks strips the delegated superuser privileges granted during updates, triggering permission denied for language c.
-
-    4 . Hot-Patching with Minor Versions: Real-world examples of how minor patch scripts (1.2--1.2.1.sql) can hot-fix engine invariants—such as repairing parallel query safety in PL/pgSQL routines and updating catalog volatility markers with zero downtime.
-    Attendees will leave with an end-to-end architectural checklist and testing methodology to build extensions that upgrade reliably, predictably, and safely in any environment.
-
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "Bi-Directional CDC for Oracle to PostgreSQL Migration: Country-Wise Rollout for a Business-Critical eCommerce Application"
-  speaker: "Debendra Saha, Anuj Sharma"
-  abstract: |
-    How can Oracle remain a usable production fallback after PostgreSQL begins accepting live writes—without creating replication loops, conflicting updates, or inconsistent data?
-
-    This was the central engineering challenge in a phased Oracle-to-PostgreSQL migration for a business-critical eCommerce application spanning 16 countries. Each country had its own data and schema boundaries, business rules, ordering flows, rollout schedule, and downtime constraints. The target platform was PostgreSQL on Google Cloud, while Oracle had to remain operational throughout the transition and sufficiently current to support controlled rollback and legacy reporting after individual countries moved to PostgreSQL.
-
-    The migration used bi-directional change data capture (CDC) as a production risk-control mechanism. Before each country cutover, forward CDC continuously replicated committed Oracle changes to PostgreSQL, keeping the target synchronized while production traffic continued on Oracle. After a country moved to PostgreSQL, reverse CDC propagated selected PostgreSQL changes back to Oracle, allowing the legacy database to remain viable during the transition.
-
-    The session focuses on the engineering decisions that made this approach workable.
-
-    -- First, how was consistency maintained without creating replication loops? A naïve active-active design was avoided by controlling write ownership during each rollout stage, tracking transaction origin, defining replication direction at the table level, and establishing explicit conflict policies. Primary-key availability, sequence ownership, commit ordering, NULL handling, datatype differences, and LOB behavior were validated before tables entered the CDC scope.
-
-    -- Second, how was CDC made restartable during a prolonged production migration? The design had to tolerate network interruptions, application restarts, country cutovers, and replication-process failures without losing or duplicating committed transactions. Durable CDC checkpoints and transaction positions were used to resume processing rather than restart table-level migration. Replication lag and database health were continuously monitored, and controlled failure scenarios were used to validate restart behavior.
-
-    -- Third, how was consistency proven while both databases were changing? Final row counts alone were insufficient. Continuous validation included row counts, primary and business keys, aggregates, changed-row reconciliation, NULL-sensitive comparisons, sequence values, and selected transaction-level checks. Differences were classified as expected replication lag, intentional transformation, or actual data divergence. Country cutovers proceeded only when replication and reconciliation results met predefined acceptance criteria.
-    The bi-directional CDC design operated for approximately two months while production traffic was progressively moved across all 16 countries. Controlled rollback exercises were also performed to verify that Oracle remained a viable fallback rather than simply retaining a recent copy of the data.
-
-    This session is intended for PostgreSQL DBAs, migration engineers, CDC specialists, and application architects. Attendees will learn how to design a controlled bi-directional CDC model, prevent replication loops, establish restart and recovery procedures, continuously validate consistency, and manage rollback risk during a prolonged, country-by-country production migration.
-
-
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "From Insight 1.0 to 2.0: Solution Engineering PostgreSQL in a Regulated, Nation-Scale Tax Platform"
-  speaker: "Hari Kiran"
-  abstract: |
-    This talk is a practitioner's account of that journey from the Solution Architecture seat, not a vendor pitch, and not marketing collateral, but the real decisions, trade-offs, and constraints that come with solution engineering PostgreSQL for a regulated, nation-scale government system.
-
-    I'll walk through:
-
-    -- Why conformance came first, how we approached a formal conformance assessment against government/regulatory requirements before any deployment design began, and what that process revealed about gaps between "textbook Postgres" and what a system like this actually demands
-
-    -- What an initial audit surfaces, auditing an existing production estate (Insight 1.0) to understand data volumes, access patterns, and technical debt, and how that shaped what we could and couldn't carry forward
-
-    -- Blueprinting the deployment architecture, the whiteboard-to-design process for the PostgreSQL deployment topology: high availability, DR posture, and the early data-flow and data-modelling decisions for migrating and reconciling data between Insight 1.0 and 2.0
-
-    -- Where solution engineering earns its keep, the specific moments where architecture decisions had to balance performance, auditability, security posture, and operational realism against the ambitions of an AI-driven platform layered on top
-
-
-    This is an in-progress engagement, not a retrospective, so the talk is deliberately honest about what's still being worked through: open questions in the data model transition, and the tension between AI/analytics ambitions and the discipline a tax system's data layer demands.
-
-
-    Attendees will leave with a grounded view of what "Solution Engineering PostgreSQL" looks like on a project of national scale and regulatory weight, the parts that never make it into the press release.
-
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "Know Your PL/pgSQL - What Happens Between BEGIN and END"
-  speaker: "Deepak Mahato, Sneha Gohil"
-  abstract: |
-    Most of us learn PL/pgSQL the same way. We need a function, we write one, it works, we move on.
-
-
-    Six months later it is suddenly slow. Or it returns something odd for one input. Someone adds an index, things improve for a week, then the same problem shows up in another function.
-
-
-    Most of these cases come back to one assumption: that PL/pgSQL is glue around SQL. It isn't. It has its own execution model. Every expression inside a block, including your IF conditions and assignments, gets turned into a query and planned. Once you know that, a lot of the "why is this slow" questions answer themselves.
-
-
-    What I will cover, all from code I have had to debug:
-
-
-    -- How PL/pgSQL executes what you wrote, and why loops and assignments are not free
-
-    -- Volatility as an instruction to the planner, not a comment. Wrong setting and you lose partition pruning
-
-    -- Plan caching. Fast in dev, slow in production, same code
-
-    -- Exception blocks are subtransactions. Put one in a loop and you have built an XID generator
-
-    -- OUT parameters, variable shadowing a column name, search_path with SECURITY DEFINER
-
-
-    Runnable examples and execution plans on screen, not slides of syntax.
-
 
 # - start: "🕘 TBD"
 #   end: "TBD"

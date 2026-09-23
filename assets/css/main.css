@@ -812,7 +812,7 @@ html[data-theme="light"] .logo__img--light { display: block; }
 .sfrow__title { font-size: 1.1rem; font-weight: 700; color: var(--fg-strong); line-height: 1.25; max-width: 80ch; }
 .sfrow--meta .sfrow__title { color: var(--muted); font-weight: 500; font-size: 1rem; }
 .sfrow__spk { font-family: var(--mono); font-size: 13px; color: var(--pg-light); margin-top: 6px; margin-right: 1rem; }
-.sfrow__abs { color: var(--muted); font-size: 14px; margin-top: 10px; text-align: justify;  }
+.sfrow__abs { color: var(--muted); font-size: 14px; margin-top: 10px; text-align: justify;  max-width: 80ch; }
 @media (max-width: 640px) { .sfrow { grid-template-columns: 1fr; gap: 6px; } }
 
 /* Content gallery (slider shortcode) — uniform-height filmstrip, no cropping */
