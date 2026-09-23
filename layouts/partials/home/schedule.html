@@ -7,7 +7,6 @@
     {{- range hugo.Data.schedule }}
     {{- $talk := or (not .type) (eq .type "talk") }}
     <li class="sched-row{{ if not $talk }} sched-row--meta{{ end }}">
-      <time class="sched-time" datetime="{{ .start }}">{{ .start }}</time>
       <span class="sched-title">{{ .title }}</span>
     </li>
     {{- end }}

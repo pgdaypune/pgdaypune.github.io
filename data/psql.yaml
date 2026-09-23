@@ -8,7 +8,7 @@
 
 # --- Home ---
 communityAbout: { q: "SELECT about FROM pgpune_community;" }
-homeSchedule:   { q: '\d schedule', c: "--tentative" }
+homeSchedule:   { q: '\d schedule', c: "--talks" }
 countdown:      { q: '\watch countdown' }
 homeEvents:     { q: "SELECT event FROM pgpune_community ORDER BY n DESC;" }
 sponsors:       { q: "SELECT org, tier FROM sponsors WHERE event=%d ORDER BY tier;" }

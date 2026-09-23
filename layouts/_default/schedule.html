@@ -9,8 +9,10 @@
     <ol class="sched-full">
       {{- range hugo.Data.schedule }}
       {{- $talk := or (not .type) (eq .type "talk") }}
-      <li class="sfrow{{ if not $talk }} sfrow--meta{{ end }}">
+      <li class="{{ if not $talk }} sfrow--meta{{ end }} {{- if $e.hideTime }}sfrow {{else}}sfrow__time {{- end }}">
+        {{- if not $e.hideTime }}
         <time class="sfrow__t" datetime="{{ .start }}">{{ .start }} – {{ .end }}</time>
+        {{- end }}
         <div class="sfrow__body">
           <h2 class="sfrow__title">{{ .title }}</h2>
           {{- with .speaker }}

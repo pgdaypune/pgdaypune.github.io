@@ -471,7 +471,7 @@ html[data-theme="light"] .psql { color: #45505d; }
 }
 .sched-list { font-family: var(--mono); font-size: 14px; }
 .sched-row {
-  display: grid; grid-template-columns: 58px 1fr; gap: 14px;
+  /* display: grid; grid-template-columns: 58px 1fr; gap: 14px; */
   padding: 11px 0; align-items: baseline;
   border-bottom: 1px solid var(--line-soft);
 }
@@ -806,11 +806,12 @@ html[data-theme="light"] .logo__img--light { display: block; }
 
 /* Full schedule */
 .sched-full { border-top: 1px solid var(--line); }
-.sfrow { display: grid; grid-template-columns: 150px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line-soft); }
+.sfrow { padding: 20px 0; border-bottom: 1px solid var(--line-soft); }
+.sfrow__time { display: grid; grid-template-columns: 150px 1fr; gap: 20px;  padding: 20px 0; border-bottom: 1px solid var(--line-soft); }
 .sfrow__t { font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .sfrow__title { font-size: 1.1rem; font-weight: 700; color: var(--fg-strong); line-height: 1.25; }
 .sfrow--meta .sfrow__title { color: var(--muted); font-weight: 500; font-size: 1rem; }
-.sfrow__spk { font-family: var(--mono); font-size: 13px; color: var(--pg-light); margin-top: 6px; }
+.sfrow__spk { font-family: var(--mono); font-size: 13px; color: var(--pg-light); margin-top: 6px; margin-right: 1rem; }
 .sfrow__abs { color: var(--muted); font-size: 14px; margin-top: 10px; max-width: 70ch; }
 @media (max-width: 640px) { .sfrow { grid-template-columns: 1fr; gap: 6px; } }
 

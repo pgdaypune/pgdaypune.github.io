@@ -4,15 +4,15 @@
 # Talks carry a speaker (slug inferred as urlize(name) -> /speakers/<slug>/).
 # /images/speakers/<slug>.jpeg) and an optional abstract.
 # =============================================================================
-- start: "08:30"
-  end: "09:00"
-  type: registration
-  title: "Registration at Venue"
+# - start: "08:30"
+#   end: "09:00"
+#   type: registration
+#   title: "Registration at Venue"
 
-- start: "🕘 TBD"
-  end: "TBD"
-  type: break
-  title: "Welcome & Word from Sponsors"
+# - start: "🕘 TBD"
+#   end: "TBD"
+#   type: break
+#   title: "Welcome & Word from Sponsors"
 
 - start: "🕘 TBD"
   end: "TBD"
@@ -88,12 +88,12 @@
 #   abstract: >-
 #     Abstract (in 100~200 words)
 
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "Closing & Networking"
-  type: break
+# - start: "🕘 TBD"
+#   end: "TBD"
+#   title: "Closing & Networking"
+#   type: break
 
-- start: "🕘 TBD"
-  end: "TBD"
-  title: "Followed by Dinner"
-  type: break
+# - start: "🕘 TBD"
+#   end: "TBD"
+#   title: "Followed by Dinner"
+#   type: break
