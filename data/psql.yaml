@@ -10,7 +10,7 @@
 communityAbout: { q: "SELECT about FROM pgpune_community;" }
 homeSchedule:   { q: '\d schedule', c: "--talks" }
 countdown:      { q: '\watch countdown' }
-homeEvents:     { q: "SELECT event FROM pgpune_community ORDER BY n DESC;" }
+homeEvents:     { q: "SELECT * FROM events ORDER BY date DESC;" }
 sponsors:       { q: "SELECT org, tier FROM sponsors WHERE event=%d ORDER BY tier;" }
 communityHub:  { q: "SELECT * FROM tech-community WHERE city=pune;" }
 

@@ -15,7 +15,7 @@
       <li class="card">
         <a href="{{ .RelPermalink }}">
           <div class="card__ph">
-            {{- if resources.Get $cover }}
+            {{- if $cover }}
               {{ partial "img.html" (dict "src" $cover "fill" "300x180" "sizes" "300px" "class" "card__img"
                  "alt" (printf "Postgres Pune Event #%v at %s" .Params.number .Params.host)) }}
             {{- else }}
@@ -24,7 +24,7 @@
           </div>
           <div class="card__meta">
             <span class="card__t">#{{ .Params.number }} · {{ .Params.host }}</span>
-            <span class="card__s">{{ (time.AsTime .Params.date).Format "Jan 2006" }}</span>
+            <span class="card__s">{{ (time.AsTime .Params.date).Format "2 Jan 2006" }}</span>
           </div>
         </a>
       </li>
