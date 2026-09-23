@@ -905,6 +905,15 @@ html[data-theme="light"] .logo__img--light { display: block; }
 .pcard__ini { font-family: var(--mono); font-size: 30px; font-weight: 700; color: var(--pg-light); }
 .pcard__n { font-family: var(--mono); font-size: 13px; color: var(--fg); }
 
+/* --- Home-Speakers grid -------------------------------------------------------- */
+.speakers-marquee { overflow: hidden; }
+.speakers-track { display: flex; flex-wrap: nowrap; gap: 1rem; width: max-content; margin: 0; padding: 0; animation: speakers-scroll 30s linear infinite; }
+.speakers-track .card { flex: 0 0 180px; width: 200px; text-align: center; }
+.speakers-marquee:hover .speakers-track,
+.speakers-marquee:focus-within .speakers-track { animation-play-state: paused; }
+@keyframes speakers-scroll { to { transform: translateX(calc(-50% - .5rem)); } }
+@media (prefers-reduced-motion: reduce) { .speakers-track { animation: none; } }
+
 /* --- Organizers (avatars in a row) --------------------------------------- */
 .orgs { display: flex; flex-wrap: wrap; gap: 22px 26px; margin: 18px 0 8px; }
 .org { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 96px; text-align: center; }

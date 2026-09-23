@@ -3,6 +3,7 @@
          hero · countdown · community+schedule · events slider ·
          elephant band · CFP band · sponsor strip. */ -}}
   {{ partial "home/hero.html" . }}
+  {{ partial "home/speakers.html" . }}
   <section class="section" aria-label="Community{{ if hugo.Data.event.showSchedule }} and schedule{{ end }}">
     <div class="wrap">
       {{- if hugo.Data.event.showSchedule }}

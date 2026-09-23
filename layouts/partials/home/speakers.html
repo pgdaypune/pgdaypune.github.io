@@ -1,0 +1,25 @@
+{{- $ev := hugo.Data.event }}
+{{- $speakers := where hugo.Data.speakers "events" "intersect" (slice $ev.number) }}
+<section class="block"><div class="wrap">
+  <h3 class="spk-hs">Meet the Speakers</h3>
+  {{ partial "psql.html" (dict "key" "eventSpeakers" "class" "spk-q" "n" $ev.number) }}
+  <div class="speakers-marquee" aria-label="Speakers">
+    <ul class="speakers-track">
+      {{- range $copy := (slice $speakers $speakers) }}
+      {{- range $copy }}
+      {{- $slug := urlize .name }}{{ with .image }}{{ $slug = path.BaseName . }}{{ end }}
+      <li class="card">
+        <a href="{{ printf "/speakers/%s/" $slug | relURL }}">
+          <div class="scard__ph">
+            {{- if .image }}<img class="scard__avatar" src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy" decoding="async">
+            {{- else }}<span class="scard__ini" aria-hidden="true">{{ substr .name 0 1 }}</span>{{ end }}
+          </div>
+          <div class="card__meta"><span class="card__t">{{ .name }}</span></div>
+        </a>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+</div>
+</section>
