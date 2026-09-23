@@ -6,7 +6,8 @@
   image: "/images/speakers/icons/tom-kincaid.jpeg"
   linkedin: "https://www.linkedin.com/in/tokincaid"
   events: [6]
-  bio:
+  bio: |
+    Tom is Senior Vice President of Engineering for Database Server Products at EDB, with over 25 years of experience building, running, and scaling database systems. Over his career at EDB, he's led engineering, global services, and professional services teams, and has been a driving force behind Postgres innovation and community growth for over a decade.
 - name: "Abhishek Oberoi"
   image: "/images/speakers/icons/abhishek-oberoi.jpeg"
   linkedin: "https://www.linkedin.com/in/iabhishekoberoi"
@@ -21,7 +22,7 @@
     I am a Senior Solution Architect at YugabyteDB, with over 14 years of IT experience specializing in modern distributed databases, cloud-native data platforms, and legacy relational systems. My primary focus is designing scalable, highly available database architectures and helping organizations through complex migrations—from monolithic systems to distributed SQL platforms across cloud platforms.
 - name: "Ashutosh Sharma"
   image: "/images/speakers/icons/ashutosh-sharma.jpeg"
-  linkedin: ""
+  linkedin: "https://www.linkedin.com/in/ashutosh-sharma-a40897155"
   events: [6]
   bio: |
     Ashutosh Sharma is a PostgreSQL developer with almost a decade of experience building and operating Postgres-database systems, and a longtime Postgres enthusiast.

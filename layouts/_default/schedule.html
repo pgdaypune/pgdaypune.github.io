@@ -14,12 +14,14 @@
         <div class="sfrow__body">
           <h2 class="sfrow__title">{{ .title }}</h2>
           {{- with .speaker }}
-          {{- $n := . }}{{ $slug := urlize $n }}
-          {{- $img := "" }}{{ range (slice "jpeg" "jpg" "png") }}{{ if os.FileExists (printf "static/images/speakers/%s.%s" $slug .) }}{{ $img = printf "/images/speakers/%s.%s" $slug . }}{{ end }}{{ end }}
+          {{- range (split . ",") }}
+          {{- $n := trim . " " }}{{ $slug := urlize $n }}
+          {{- $img := "" }}{{ range (slice "jpeg" "jpg" "png") }}{{ if os.FileExists (printf "static/images/speakers/icons/%s.%s" $slug .) }}{{ $img = printf "/images/speakers/icons/%s.%s" $slug . }}{{ end }}{{ end }}
           <a class="sfrow__spk" href="{{ printf "/speakers/%s/" $slug | relURL }}">
             <span class="sfrow__av">{{ if $img }}<img src="{{ $img | relURL }}" alt="{{ $n }}" loading="lazy" decoding="async">{{ else }}<span aria-hidden="true">{{ substr $n 0 1 }}</span>{{ end }}</span>
             <span>{{ $n }}</span>
           </a>
+          {{- end }}
           {{- end }}
           {{- with .abstract }}<p class="sfrow__abs">{{ . }}</p>{{ end }}
         </div>

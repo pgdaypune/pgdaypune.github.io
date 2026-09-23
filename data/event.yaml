@@ -16,7 +16,7 @@ venueIframeURL: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3782.78587
 
 # Show the tentative schedule alongside community on the home page.
 # Set true once the agenda is ready to be showcased.
-showSchedule: false
+showSchedule: true
 
 # CFP / registration status (drives the /call-for-papers/ and /register/ pages).
 

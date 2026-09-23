@@ -31,7 +31,12 @@
       {{ if $ev.venueMapURL }}</a>{{ end }}
     </li>
     <li class="fact"><span class="fact__k">Speakers</span>{{ $ns := len $speakers }}{{ if and (eq $ns 0) $isCurrent }}<span class="fact__v fact__v--tba">TBA</span>{{ else }}<span class="fact__v">{{ $ns }}</span>{{ end }}</li>
-      <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
+    <li class="fact  fact--link"><a class="fact__link" href="/schedule">
+      <span class="fact__k">View talks</span>
+      <span class="fact__v fact__v--highlight">Schedule →</span>
+      <span class="fact__sub">Tentative</span>
+    </a></li>
+    <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
     <a class="fact__link" href="/register/">
       <span class="fact__k">Entry</span>
       <span class="fact__v fact__v--link">Register →</span>
@@ -52,7 +57,7 @@
 
 {{- if $speakers }}
 <section class="block"><div class="wrap">
-  <h3 class="spk-hs">Meet the Speakers</h3>
+  <h2 class="spk-h">Meet the Speakers</h2>
   {{ partial "psql.html" (dict "key" "eventSpeakers" "class" "spk-q" "n" $n) }}
   <ul class="egrid orgs-grid">
     {{- range $speakers }}

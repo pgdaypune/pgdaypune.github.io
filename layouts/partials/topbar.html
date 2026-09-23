@@ -10,6 +10,7 @@
         {{- range (slice
             (dict "url" "/events/" "label" "Events")
             (dict "url" "/speakers/" "label" "Speakers")
+            (dict "url" "/schedule/" "label" "Schedule")
             (dict "url" "/call-for-papers/" "label" "CFP")
             (dict "url" "/about/" "label" "About")) }}
         {{- $u := .url | relURL }}

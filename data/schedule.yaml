@@ -9,50 +9,91 @@
   type: registration
   title: "Registration at Venue"
 
-- start: "09:00"
-  end: "10:00"
+- start: "🕘 TBD"
+  end: "TBD"
   type: break
   title: "Welcome & Word from Sponsors"
 
-- start: "10:00"
-  end: "12:30"
-  title: "Talks - TBA"
-  speaker: "Speaker Name - TBA"
+- start: "🕘 TBD"
+  end: "TBD"
+  title: "🎙️ Keynote: Postgres 30 Years In: How We Got Here and Where We Are Going"
+  speaker: "Tom Kincaid"
   abstract: >-
-    Abstract (in 100~200 words)
+    Tom will trace Postgres's evolution from a niche database to the gold standard for modern application development — the early technical decisions, key milestones, and community shifts that drove its adoption. He'll then look ahead to how Postgres 19 is expanding the database's capabilities for mission-critical deployments and developer productivity, why Postgres has become the platform of choice for AI and LLM application development, and the challenges the project must tackle to stay there.
 
-- start: "12:30"
-  end: "13:30"
-  type: break
-  title: "Lunch Break"
+- start: "🕘 TBD"
+  end: "TBD"
+  title: "Postgres as the System of Record for AI Agents: Memory, State, and Tool Outputs"
+  speaker: "Abhishek Oberoi, Nadeem Khan"
+  abstract:
 
-- start: "13:30"
-  end: "14:00"
-  title: "Lightinig Talks"
-  speaker: "Multiple Speakers"
-  abstract: >-
-    Lightinig Talk (~5 mins each) will be given by multiple speakers
+- start: "🕘 TBD"
+  end: "TBD"
+  title: "Logical Failover Slots: Keeping Replication Alive Through a Failover"
+  speaker: "Ashutosh Sharma"
+  abstract:
 
-- start: "14:00"
-  end: "16:00"
-  title: "Talks - TBA"
-  speaker: "Speaker Name - TBA"
-  abstract: >-
-    Abstract (in 100~200 words)
+# - start: "🕘 TBD"
+#   end: "TBD"
+#   type: break
+#   title: "Break"
 
-- start: "16:00"
-  end: "16:15"
-  type: break
-  title: "Tea Break"
+- start: "🕘 TBD"
+  end: "TBD"
+  title: "A Benchmarking Case Study of PostgreSQL Locks, Partitions, and Peak Load: Finding (and Fixing) a Silent Throughput Ceiling"
+  speaker: "Vishal Sawale"
+  abstract:
 
-- start: "16:15"
-  end: "18:00"
-  title: "Talks - TBA"
-  speaker: "Speaker Name - TBA"
-  abstract: >-
-    Abstract (in 100~200 words)
+- start: "🕘 TBD"
+  end: "TBD"
+  title: "Surviving ALTER EXTENSION UPDATE"
+  speaker: "Mukund Maheshavri, Pushkar Khadilkar"
+  abstract:
 
-- start: "18:00"
-  end: "19:00"
+- start: "🕘 TBD"
+  end: "TBD"
+  title: "Bi-Directional CDC for Oracle to PostgreSQL Migration: Country-Wise Rollout for a Business-Critical eCommerce Application"
+  speaker: "Debendra Saha, Anuj Sharma"
+  abstract:
+
+- start: "🕘 TBD"
+  end: "TBD"
+  title: "From Insight 1.0 to 2.0: Solution Engineering PostgreSQL in a Regulated, Nation-Scale Tax Platform"
+  speaker: "Hari Kiran"
+  abstract:
+
+- start: "🕘 TBD"
+  end: "TBD"
+  title: "Know Your PL/pgSQL - What Happens Between BEGIN and END"
+  speaker: "Deepak Mahato, Sneha Gohil"
+  abstract:
+
+# - start: "🕘 TBD"
+#   end: "TBD"
+#   title: "Lightinig Talks"
+#   speaker: "Multiple Speakers"
+#   abstract: >-
+#     Lightinig Talk (~5 mins each) will be given by multiple speakers
+
+
+# - start: "🕘 TBD"
+#   end: "TBD"
+#   type: break
+#   title: "Tea Break"
+
+# - start: "🕘 TBD"
+#   end: "TBD"
+#   title: "Talks - TBA"
+#   speaker: "Speaker Name - TBA"
+#   abstract: >-
+#     Abstract (in 100~200 words)
+
+- start: "🕘 TBD"
+  end: "TBD"
   title: "Closing & Networking"
+  type: break
+
+- start: "🕘 TBD"
+  end: "TBD"
+  title: "Followed by Dinner"
   type: break
