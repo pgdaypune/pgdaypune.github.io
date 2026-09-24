@@ -3,60 +3,70 @@
 # content/speakers/_content.gotmpl (slug = image filename, else urlized name).
 # image: path under static/ ("" -> initials avatar). events: editions spoken at.
 - name: "Tom Kincaid"
+  org: EnterpriseDB
   image: "/images/speakers/icons/tom-kincaid.jpeg"
   linkedin: "https://www.linkedin.com/in/tokincaid"
   events: [6]
   bio: |
     Tom is Senior Vice President of Engineering for Database Server Products at EDB, with over 25 years of experience building, running, and scaling database systems. Over his career at EDB, he's led engineering, global services, and professional services teams, and has been a driving force behind Postgres innovation and community growth for over a decade.
 - name: "Abhishek Oberoi"
+  org: YugabyteDB
   image: "/images/speakers/icons/abhishek-oberoi.jpeg"
   linkedin: "https://www.linkedin.com/in/iabhishekoberoi"
   events: [6]
   bio: |
     I am a Senior Solutions Architect at YugabyteDB, specializing in distributed databases, cloud-native data platforms, and modern DevOps practices. My focus is on helping organizations design scalable, highly available database architectures and navigate complex modernization and migration journeys from traditional relational systems to distributed SQL platforms. I bring experience across Kubernetes, multi-cloud infrastructure, observability, and production-scale systems, focusing on building reliable and operationally efficient platforms.
 - name: "Nadeem Khan"
+  org: YugabyteDB
   image: "/images/speakers/icons/nadeem-khan.jpg"
   linkedin: "https://www.linkedin.com/in/nadeem-khan-cloudengineer"
   events: [6]
   bio: |
     I am a Senior Solution Architect at YugabyteDB, with over 14 years of IT experience specializing in modern distributed databases, cloud-native data platforms, and legacy relational systems. My primary focus is designing scalable, highly available database architectures and helping organizations through complex migrations—from monolithic systems to distributed SQL platforms across cloud platforms.
 - name: "Ashutosh Sharma"
+  org: Microsoft
   image: "/images/speakers/icons/ashutosh-sharma.jpeg"
   linkedin: "https://www.linkedin.com/in/ashutosh-sharma-a40897155"
   events: [6]
   bio: |
     Ashutosh Sharma is a PostgreSQL developer with almost a decade of experience building and operating Postgres-database systems, and a longtime Postgres enthusiast.
 - name: "Vishal Sawale"
+  org: EnterpriseDB
   image: "/images/speakers/icons/vishal-sawale.png"
   linkedin: "https://www.linkedin.com/in/vishal-sawale-aa0a5925"
   events: [6]
   bio: |
     A Senior Software Development Engineer specialising in PostgreSQL and open-source database technologies. With over a decade of experience in database systems such as PostgreSQL and Oracle, as well as cloud-native architectures, Kubernetes Platform and modern database engineering tools.
-- name: "Mukund Maheshavri"
-  image: "/images/speakers/icons/mukund-maheshavri.jpeg"
-  linkedin: https://www.linkedin.com/in/mmukund"
+- name: "Mukund Maheshwari"
+  org: Google
+  image: "/images/speakers/icons/mukund-maheshwari.jpeg"
+  linkedin: "https://www.linkedin.com/in/mmukund"
   events: [6]
   bio: |
     Mukund Maheshwari is a software engineer working on AlloyDB at Google Cloud. He has 3 years of experience working with database internals, with his present area of focus centered on the intersection of AI and databases.
 - name: "Pushkar Khadilkar"
+  org: Google
   image: "/images/speakers/icons/pushkar-khadilkar.jpeg"
   linkedin: "https://www.linkedin.com/in/pushkarkhadilkar/"
   events: [1, 6]
   bio: |
     I’m a software engineer working on AlloyDB Database at Google Cloud. My present area of focus involves the intersection of AI and databases - particularly making LLMs easy / accessible / performant from databases.. I have 10+ years of experience working with database internals. Some of the topics I have worked on in the past are database storage formats, in-memory processing, paging, k8s operators for databases.
 - name: "Debendra Saha"
+  org: Newt Global
   image: "/images/speakers/icons/debendra-saha.png"
   linkedin: "https://www.linkedin.com/in/debendra-saha-60773715"
   events: [6]
   bio: |
     Debendra Saha is a seasoned technology and delivery leader with over 32 years of experience in application and product development across Manufacturing, FMCG/CPG, Travel, and Telecom, serving customers across the US, UK, Europe, the Middle East, APAC, Africa, and India. Over the past 18+ years in the telecom domain, he has held senior roles including Program Director, Program Manager, and Delivery Head, owning end-to-end program and delivery management, governance, and P&L. A key focus of his recent work is database modernization, where he has led several Oracle and SQL Server to PostgreSQL migration programs in close collaboration with leading hyperscalers including AWS, Microsoft Azure, and Google Cloud. Bringing deep expertise across Oracle databases, Java/J2EE, DevOps, and cloud technologies, grounded in CMMi, PMI, and Prince practices, Debendra was also selected as a Global Leader in Tech Mahindra's 1000 Leaders Program.
 - name: "Anuj Sharma"
+  org: Newt Global
   image: "/images/speakers/icons/anuj-sharma.png"
   linkedin: "https://www.linkedin.com/in/anuj-sharma-61779757"
   events: [6]
   bio: |
     Anuj Sharma is a Senior Database Architect with over 22 years of experience designing, deploying, and managing enterprise-scale data ecosystems. He has led large-scale database migrations and modernization efforts, including a shift from proprietary Oracle systems to open-source PostgreSQL and cloud platforms, while ensuring scalability for millions of concurrent users. A Google Cloud Certified Professional Cloud Database Engineer, Anuj brings deep expertise across the PostgreSQL ecosystem, NoSQL, and Big Data platforms, along with a strong focus on data governance, performance optimization, and cross-functional technical leadership.
 - name: "Hari Kiran"
+  org: OpenSource DB
   image: "/images/speakers/icons/hari-kiran.jpeg"
   linkedin: "https://www.linkedin.com/in/hari-kiran-pg/"
   events: [5, 6]
@@ -67,12 +77,14 @@
     Prior to founding OpenSource DB, Hari held leadership and database SME roles at global organizations including GE, Oracle, Optum, 2ndQuadrant, and EDB. His unique blend of enterprise experience, community leadership, and entrepreneurial mindset enables him to bridge the gap between technology, business outcomes, and open-source innovation.
 
 - name: "Deepak Mahato"
+  org: DataCloudGaze
   image: "/images/speakers/icons/deepak-mahato.png"
   linkedin: "https://www.linkedin.com/in/mahtodeepak/"
   events: [6]
   bio: |
     I am Deepak Mahto, with 17+ years of experience enjoying the challenge of solving complex database problems. I like to call myself your "Database Guy" with expertise in PostgreSQL and Migration from Oracle or SQL Server. Currently, I am the Founder of DataCloudGaze Consulting, where I help customers and partners succeed with migration to PostgreSQL.
 - name: "Sneha Gohil"
+  org: DataCloudGaze
   image: "/images/speakers/icons/sneha-gohil.jpeg"
   linkedin: "https://www.linkedin.com/in/sneha-gohil-031058269"
   events: [6]

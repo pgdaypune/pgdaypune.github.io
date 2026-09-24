@@ -47,7 +47,7 @@
     tips on choosing the right amount of partitioning.
 
 - title: "Surviving ALTER EXTENSION UPDATE"
-  speaker: "Mukund Maheshavri, Pushkar Khadilkar"
+  speaker: "Mukund Maheshwari, Pushkar Khadilkar"
   abstract: >-
     In this talk, the speakers will look at what really happens when a Postgres
     extension is upgraded, and why upgrade scripts often fail in production. They
