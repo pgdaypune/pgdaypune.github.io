@@ -32,8 +32,8 @@ registrationOpen: false
 registrationOpenDate: 2026-08-31
 registerURL: "/register/"
 registrationAlert: |
-  Thank you to everyone who registered, we are now FULLY BOOKED! 🎉<br>
-  If you didn't grab a ticket in time, drop us an email at pgdaypune@gmail.com and we’ll notify you if we re-open registrations. 🐘
+  Thank you to everyone who registered — pgPune Event #6 is now fully booked!<br><br>
+  If you missed grabbing a ticket, drop us a line at **pgdaypune@gmail.com** and we'll let you know if a spot opens up. 🐘
 ticketsIframe:
 ticketsNote: |
   Note: Tickets are managed via <a href="https://confbase.io/" target="_blank" class="fact__v--link">Confbase.io</a>. If you face any issues booking above ^, try booking directly from <a href="https://confbase.io/pgpune/pgpune-event-6/tickets" target="_blank" class="fact__v--link">Confbase here →</a>
