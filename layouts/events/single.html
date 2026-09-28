@@ -31,6 +31,8 @@
       {{ if $ev.venueMapURL }}</a>{{ end }}
     </li>
     <li class="fact"><span class="fact__k">Speakers</span>{{ $ns := len $speakers }}{{ if and (eq $ns 0) $isCurrent }}<span class="fact__v fact__v--tba">TBA</span>{{ else }}<span class="fact__v">{{ $ns }}</span>{{ end }}</li>
+
+    {{- if $isCurrent }}
     <li class="fact  fact--link"><a class="fact__link" href="/schedule">
       <span class="fact__k">View talks</span>
       <span class="fact__v fact__v--highlight">Schedule →</span>
@@ -44,6 +46,11 @@
       <span class="fact__sub--gold pulse">{{ if ge now $registerationStart }}🟢 Open Now{{ else }}Opens: <time>{{ $registerationStart.Format "02 Jan" }}</time>{{ end }}</span>
     </a>
   </li>
+  {{- else }}
+  <li class="fact"><span class="fact__k">Registartion</span>
+    <span class="fact__v">Closed</span>
+  </li>
+  {{- end }}
   {{- end }}
   </ul>
 </div></section>
@@ -87,6 +94,7 @@
 </div></section>
 {{- end }}
 
+{{- if $isCurrent }}
 <section class="block" id="Talk Selection Committee"><div class="wrap">
     <h2 class="spk-h">Talk Selection Committee</h2>
 {{ partial "psql.html" (dict "key" "talkSelectionCommittee" "n" $ev.number) }}
@@ -105,6 +113,7 @@
   {{- end }}
 </ul>
 </div></section>
+{{- end }}
 
 {{- with .Content }}
 <section class="block"><div class="wrap"><div class="prose">{{ . }}</div></div></section>
