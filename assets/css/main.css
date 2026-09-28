@@ -469,16 +469,23 @@ html[data-theme="light"] .psql { color: #45505d; }
   display: flex; align-items: center; justify-content: space-between;
   gap: 16px; margin-bottom: 20px;
 }
-.sched-list { font-family: var(--mono); font-size: 14px; }
+.sched-list { font-family: var(--mono); font-size: 14px; border: 1px solid var(--ph-bg);}
 .sched-row {
   /* display: grid; grid-template-columns: 58px 1fr; gap: 14px; */
-  padding: 11px 0; align-items: baseline;
+  padding: 11px 8px; align-items: baseline;
   border-bottom: 1px solid var(--line-soft);
 }
 .sched-row:last-child { border-bottom: 0; }
 .sched-time { color: var(--muted); font-variant-numeric: tabular-nums; }
 .sched-title { color: var(--fg); line-height: 1.4; }
 .sched-row--meta .sched-title { color: var(--muted); }
+.sched-row--striped:nth-child(odd) {
+  background-color: color-mix(in srgb, var(--pg), transparent 80%);
+}
+.flipped-emoji {
+  display: inline-block;
+  transform: scaleX(-1);
+}
 
 @media (max-width: 900px) {
   .cs-grid { grid-template-columns: 1fr; }

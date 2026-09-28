@@ -14,7 +14,7 @@
         <time class="sfrow__t" datetime="{{ .start }}">{{ .start }} – {{ .end }}</time>
         {{- end }}
         <div class="sfrow__body">
-          <h2 class="sfrow__title">{{ .title }}</h2>
+          <h2 class="sfrow__title"><span class="flipped-emoji">🐘</span> {{ .title }}</h2>
           {{- with .speaker }}
           {{- range (split . ",") }}
           {{- $n := trim . " " }}{{ $slug := urlize $n }}
