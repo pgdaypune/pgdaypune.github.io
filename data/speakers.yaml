@@ -3,7 +3,7 @@
 # content/speakers/_content.gotmpl (slug = image filename, else urlized name).
 # image: path under static/ ("" -> initials avatar). events: editions spoken at.
 - name: "Tom Kincaid"
-  org: EnterpriseDB
+  org: EDB
   image: "/images/speakers/icons/tom-kincaid.jpeg"
   linkedin: "https://www.linkedin.com/in/tokincaid"
   events: [6]
@@ -31,21 +31,21 @@
   bio: |
     Ashutosh Sharma is a PostgreSQL developer with almost a decade of experience building and operating Postgres-database systems, and a longtime Postgres enthusiast.
 - name: "Vishal Sawale"
-  org: EnterpriseDB
+  org: EDB
   image: "/images/speakers/icons/vishal-sawale.png"
   linkedin: "https://www.linkedin.com/in/vishal-sawale-aa0a5925"
   events: [6]
   bio: |
     A Senior Software Development Engineer specialising in PostgreSQL and open-source database technologies. With over a decade of experience in database systems such as PostgreSQL and Oracle, as well as cloud-native architectures, Kubernetes Platform and modern database engineering tools.
 - name: "Mukund Maheshwari"
-  org: Google
+  org: Google Cloud
   image: "/images/speakers/icons/mukund-maheshwari.jpeg"
   linkedin: "https://www.linkedin.com/in/mmukund"
   events: [6]
   bio: |
     Mukund Maheshwari is a software engineer working on AlloyDB at Google Cloud. He has 3 years of experience working with database internals, with his present area of focus centered on the intersection of AI and databases.
 - name: "Pushkar Khadilkar"
-  org: Google
+  org: Google Cloud
   image: "/images/speakers/icons/pushkar-khadilkar.jpeg"
   linkedin: "https://www.linkedin.com/in/pushkarkhadilkar/"
   events: [1, 6]
