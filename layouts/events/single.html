@@ -36,6 +36,7 @@
       <span class="fact__v fact__v--highlight">Schedule →</span>
       <span class="fact__sub">Tentative</span>
     </a></li>
+    {{- if $ev.registrationOpen}}
     <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
     <a class="fact__link" href="/register/">
       <span class="fact__k">Entry</span>
@@ -43,6 +44,7 @@
       <span class="fact__sub--gold pulse">{{ if ge now $registerationStart }}🟢 Open Now{{ else }}Opens: <time>{{ $registerationStart.Format "02 Jan" }}</time>{{ end }}</span>
     </a>
   </li>
+  {{- end }}
   </ul>
 </div></section>
 

@@ -47,6 +47,7 @@
       {{ end }}
     </a>
   </li> -->
+  {{- if $ne.registrationOpen}}
   <li class="fact fact--link{{ if $cfpClosed }} fact--hl{{ end }}">
     <a class="fact__link" href="/register/">
       <span class="fact__k">Entry</span>
@@ -54,4 +55,5 @@
       <span class="fact__sub--gold pulse">{{ if ge now $registerationStart }}🟢 Open Now{{ else }}Opens: <time>{{ $registerationStart.Format "02 Jan" }}</time>{{ end }}</span>
     </a>
   </li>
+  {{ end }}
 </ul>
