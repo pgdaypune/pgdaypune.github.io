@@ -38,3 +38,4 @@ searchHero:     { q: "SELECT * FROM site WHERE …" }
 
 # --- Event ---
 talkSelectionCommittee: { q: "SELECT talk_selection_committe FROM pgpune_community WHERE event=%d;" }
+codeOfConductCommittee: { q: "SELECT code_of_conduct_committe FROM pgpune_community WHERE event=%d;" }

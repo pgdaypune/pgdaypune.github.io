@@ -50,3 +50,14 @@ talk_selection:
   - name: "Jay Sudrik"
     linkedin: https://www.linkedin.com/in/jay-sudrik-6b35962/
     photo: "/images/talk_selection/jay-sudrik.png"
+
+code_of_conduct:
+  - name: "Khushboo Vashi"
+    linkedin: https://www.linkedin.com/in/khushboo-vashi-b8303012/
+    photo: "/images/code_of_conduct/khushboo-vashi.jpeg"
+  - name: "Hari Kiran"
+    linkedin: https://www.linkedin.com/in/hari-kiran-pg/
+    photo: "/images/code_of_conduct/hari-kiran.png"
+  - name: "Piyush Newe"
+    linkedin: https://www.linkedin.com/in/piyush-newe-b56b9115/
+    photo: "/images/code_of_conduct/piyush-newe.jpeg"
