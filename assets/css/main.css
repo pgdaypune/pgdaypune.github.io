@@ -730,7 +730,16 @@ html[data-theme="light"] .logo__img--light { display: block; }
 :is(.communities, .communities-embed) .logo__link {
   flex-direction: column; gap: 14px; height: 100%; text-decoration: none;
 }
-:is(.communities, .communities-embed) .logo { min-height: 160px; }
+/* Fixed column widths (no flex-grow) so a partial last row keeps the same card
+   size as full rows and stays centered. */
+:is(.communities, .communities-embed) .logos { --cols: 5; }
+:is(.communities, .communities-embed) .logo {
+  min-height: 160px; max-width: none;
+  flex: 0 0 calc((100% - (var(--cols) - 1) * 16px) / var(--cols));
+}
+@media (max-width: 1000px) { :is(.communities, .communities-embed) .logos { --cols: 3; } }
+@media (max-width: 640px)  { :is(.communities, .communities-embed) .logos { --cols: 2; } }
+@media (max-width: 380px)  { :is(.communities, .communities-embed) .logos { --cols: 1; } }
 :is(.communities, .communities-embed) .logo:hover .communities__name { color: var(--pg-light); }
 
 /* Community-hub shortcode embed — same breakout treatment as .sponsors-embed. */
