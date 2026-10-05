@@ -4,17 +4,19 @@
 # Talks carry a speaker (slug inferred as urlize(name) -> /speakers/<slug>/).
 # /images/speakers/<slug>.jpeg) and an optional abstract.
 # =============================================================================
-# - start: "08:30"
-#   end: "09:00"
-#   type: registration
-#   title: "Registration at Venue"
+- start: "08:15"
+  end: "Onwards"
+  type: registration
+  title: "Registration at Venue"
 
-# - start: "🕘 TBD"
-#   end: "TBD"
-#   type: break
-#   title: "Welcome & Word from Sponsors"
+- start: "09:00"
+  end: "09:15"
+  type: sponsortalk
+  title: "Welcome Talk"
 
-- title: "Keynote: Postgres 30 Years In: How We Got Here and Where We Are Going"
+- start: "09:15"
+  end: "09:55"
+  title: "Keynote: Postgres 30 Years In: How We Got Here and Where We Are Going"
   speaker: "Tom Kincaid"
   abstract: >-
     In this talk, the speaker will look back at how Postgres grew from a small
@@ -22,7 +24,14 @@
     what Postgres 19 brings, why it is becoming popular for AI work, and what
     challenges lie ahead.
 
-- title: "Postgres as the System of Record for AI Agents: Memory, State, and Tool Outputs"
+- start: "10:00"
+  end: "10:10"
+  type: break
+  title: "Google Sponsor Talk (10 Min)"
+
+- start: "10:10"
+  end: "10:50"
+  title: "Postgres as the System of Record for AI Agents: Memory, State, and Tool Outputs"
   speaker: "Abhishek Oberoi, Nadeem Khan"
   abstract: >-
     In this talk, the speakers will explain why PostgreSQL, not a mix of Redis, JSON
@@ -30,47 +39,19 @@
     They will show how JSONB, pgvector, row level security, and transactions can work
     together in one schema, and discuss where a database still is not the right fit.
 
-- title: "Logical Failover Slots: Keeping Replication Alive Through a Failover"
-  speaker: "Ashutosh Sharma"
-  abstract: >-
-    In this talk, the speaker will cover a Postgres 17 feature that keeps logical
-    replication slots in sync on standby servers, so subscribers can keep going after
-    a failover without needing a full resync. He will also show the setup steps and
-    how to check that it works.
+- start: "10:50"
+  end: "11:20"
+  type: break
+  title: "Tea Break"
 
-- title: "A Benchmarking Case Study of PostgreSQL Locks, Partitions, and Peak Load"
-  speaker: "Vishal Sawale"
-  abstract: >-
-    In this talk, the speaker will show how a certain type of lock can silently limit
-    performance under heavy write traffic, based on real benchmark tests. He will
-    explain how to spot this problem and how table partitioning can fix it, along with
-    tips on choosing the right amount of partitioning.
+- start: "11:20"
+  end: "11:30"
+  type: break
+  title: "AWS Sponsor Talk (10 Min)"
 
-- title: "Surviving ALTER EXTENSION UPDATE"
-  speaker: "Mukund Maheshwari, Pushkar Khadilkar"
-  abstract: >-
-    In this talk, the speakers will look at what really happens when a Postgres
-    extension is upgraded, and why upgrade scripts often fail in production. They
-    will cover common mistakes, how Postgres picks an upgrade path internally, and
-    share a checklist for building extensions that upgrade safely.
-
-- title: "Bi Directional CDC for Oracle to PostgreSQL Migration"
-  speaker: "Debendra Saha, Anuj Sharma"
-  abstract: >-
-    In this talk, the speakers will describe how a large eCommerce company moved from
-    Oracle to PostgreSQL across 16 countries while keeping Oracle as a safe backup
-    using two way data replication. They will cover how conflicts were avoided, how
-    failures were handled, and how both databases were kept in sync.
-
-- title: "From Insight 1.0 to 2.0: Solution Engineering PostgreSQL in a Regulated, Nation Scale Tax Platform"
-  speaker: "Hari Kiran"
-  abstract: >-
-    In this talk, the speaker will share a first hand account of moving a national
-    tax system to PostgreSQL. He will cover checking against government rules,
-    studying the old system, planning the new setup for reliability, and balancing
-    performance and security with AI features still being worked on.
-
-- title: "Know Your PL/pgSQL: What Happens Between BEGIN and END"
+- start: "11:30"
+  end: "12:10"
+  title: "Know Your PL/pgSQL: What Happens Between BEGIN and END"
   speaker: "Deepak Mahato, Sneha Gohil"
   abstract: >-
     In this talk, the speakers will explain how PL/pgSQL actually runs behind the
@@ -79,37 +60,92 @@
     common mistakes with exceptions, and other traps, shown through real code
     examples.
 
-# - start: "🕘 TBD"
-#   end: "TBD"
-#   type: break
-#   title: "Break"
+- start: "12:15"
+  end: "12:25"
+  type: break
+  title: "EDB Sponsor Talk (10 min)"
 
-# - start: "🕘 TBD"
-#   end: "TBD"
-#   title: "Lightinig Talks"
-#   speaker: "Multiple Speakers"
-#   abstract: >-
-#     Lightinig Talk (~5 mins each) will be given by multiple speakers
+- start: "12:25"
+  end: "13:05"
+  title: "Logical Failover Slots: Keeping Replication Alive Through a Failover"
+  speaker: "Ashutosh Sharma"
+  abstract: >-
+    In this talk, the speaker will cover a Postgres 17 feature that keeps logical
+    replication slots in sync on standby servers, so subscribers can keep going after
+    a failover without needing a full resync. He will also show the setup steps and
+    how to check that it works.
 
+- start: "13:10"
+  end: "13:20"
+  type: break
+  title: "Supabase Sponsor Talk (10 Min)"
 
-# - start: "🕘 TBD"
-#   end: "TBD"
-#   type: break
-#   title: "Tea Break"
+- start: "13:20"
+  end: "14:20"
+  type: break
+  title: "Lunch Break"
 
-# - start: "🕘 TBD"
-#   end: "TBD"
-#   title: "Talks - TBA"
-#   speaker: "Speaker Name - TBA"
-#   abstract: >-
-#     Abstract (in 100~200 words)
+- start: "14:20"
+  end: "14:30"
+  type: break
+  title: "Microsoft Sponsor Talk (10 Min)"
 
-# - start: "🕘 TBD"
-#   end: "TBD"
-#   title: "Closing & Networking"
-#   type: break
+- start: "14:30"
+  end: "15:10"
+  title: "From Insight 1.0 to 2.0: Solution Engineering PostgreSQL in a Regulated, Nation Scale Tax Platform"
+  speaker: "Hari Kiran"
+  abstract: >-
+    In this talk, the speaker will share a first hand account of moving a national
+    tax system to PostgreSQL. He will cover checking against government rules,
+    studying the old system, planning the new setup for reliability, and balancing
+    performance and security with AI features still being worked on.
 
-# - start: "🕘 TBD"
-#   end: "TBD"
-#   title: "Followed by Dinner"
-#   type: break
+- start: "15:15"
+  end: "15:25"
+  type: break
+  title: "CortexRidge & Percona Sponsor Talk (5 min each)"
+
+- start: "15:25"
+  end: "16:05"
+  title: "A Benchmarking Case Study of PostgreSQL Locks, Partitions, and Peak Load"
+  speaker: "Vishal Sawale"
+  abstract: >-
+    In this talk, the speaker will show how a certain type of lock can silently limit
+    performance under heavy write traffic, based on real benchmark tests. He will
+    explain how to spot this problem and how table partitioning can fix it, along with
+    tips on choosing the right amount of partitioning.
+
+- start: "16:05"
+  end: "16:30"
+  type: break
+  title: "Hi Tea Break"
+
+- start: "16:30"
+  end: "17:10"
+  title: "Bi Directional CDC for Oracle to PostgreSQL Migration"
+  speaker: "Debendra Saha, Anuj Sharma"
+  abstract: >-
+    In this talk, the speakers will describe how a large eCommerce company moved from
+    Oracle to PostgreSQL across 16 countries while keeping Oracle as a safe backup
+    using two way data replication. They will cover how conflicts were avoided, how
+    failures were handled, and how both databases were kept in sync.
+
+- start: "17:10"
+  end: "17:20"
+  type: break
+  title: "NewT & Yugabyte Sponsor Talk (5 min each)"
+
+- start: "17:20"
+  end: "18:00"
+  title: "Surviving ALTER EXTENSION UPDATE"
+  speaker: "Mukund Maheshwari, Pushkar Khadilkar"
+  abstract: >-
+    In this talk, the speakers will look at what really happens when a Postgres
+    extension is upgraded, and why upgrade scripts often fail in production. They
+    will cover common mistakes, how Postgres picks an upgrade path internally, and
+    share a checklist for building extensions that upgrade safely.
+
+- start: "18:00"
+  end: ""
+  type: break
+  title: "Closing Note"
