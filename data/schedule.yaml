@@ -146,6 +146,11 @@
     share a checklist for building extensions that upgrade safely.
 
 - start: "18:00"
-  end: ""
+  end: "🐘"
   type: break
   title: "Closing Note"
+
+- start: "19:00"
+  end: "Onwards"
+  type: break
+  title: "Followed by Dinner"
