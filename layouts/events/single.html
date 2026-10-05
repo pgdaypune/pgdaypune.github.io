@@ -131,7 +131,23 @@
   </li>
   {{- end }}
 </ul>
-</div></section>
+</div>
+  <div style="margin-top:26px" class="wrap">
+    {{- $head := "team" }}
+    {{- $w := len $head }}
+    {{- range $ev.team }}{{ $l := len .name }}{{ if gt $l $w }}{{ $w = $l }}{{ end }}{{ end }}
+    {{- $sep := strings.Repeat (add $w 2) "-" }}
+    {{- $padL := int (math.Floor (div (sub $w (len $head)) 2)) }}
+    {{- $hpad := strings.Repeat (add $padL 1) " " }}
+    {{ partial "psql.html" (dict "key" "team" "n" $ev.number) }}
+    <pre class="pg-result">{{ $hpad }}{{ $head }}
+{{ $sep }}
+{{ range $ev.team }} <a class="pg-result__v" href="{{ .linkedin }}" target="_blank" rel="noopener">{{ .name }}</a>
+{{ end }}({{ len $ev.team }} row{{ if ne (len $ev.team) 1 }}s{{ end }})</pre>
+  </div>
+
+
+</section>
 {{- end }}
 
 {{- with .Content }}
