@@ -482,6 +482,17 @@ html[data-theme="light"] .psql { color: #45505d; }
 .sched-row--striped:nth-child(odd) {
   background-color: color-mix(in srgb, var(--pg), transparent 80%);
 }
+/* Desktop: the agenda is long, so keep it in a fixed-height scroll box rather
+   than stretching the about section. Mobile shows the full list (see below). */
+@media (min-width: 901px) {
+  .sched-list {
+    max-height: 420px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--pg) transparent;
+  }
+}
 .flipped-emoji {
   display: inline-block;
   transform: scaleX(-1);
