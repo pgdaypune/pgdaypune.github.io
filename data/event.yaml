@@ -64,18 +64,23 @@ code_of_conduct:
 
 team:
   - name: "Ashesh Vashi"
-    linkedin: ""
+    linkedin: https://www.linkedin.com/in/asheshvashi/
+    photo: "images/events/6/team/ashesh-vashi.jpeg"
   - name: "Khushboo Vashi"
-    linkedin: ""
-  - name: "Nivedita Rajesh Jha"
-    linkedin: ""
-  - name: "Aarti Nadekar"
-    linkedin: ""
+    linkedin: https://www.linkedin.com/in/khushboo-vashi-b8303012/
+    photo: "/images/code_of_conduct/khushboo-vashi.jpeg"
   - name: "Pavan Deolasee"
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/pavandeolasee/"
+    photo: "images/events/6/team/pavan-deolasee.jpeg"
+  - name: "Aarti Nadekar"
+    linkedin: https://www.linkedin.com/in/aarti-nr-pwi
+    photo: "images/events/6/team/arti-nadekar.jpeg"
+  - name: "Nivedita Jha"
+    linkedin: https://www.linkedin.com/in/nivedita-jha-950162429/
+    photo: "images/events/6/team/nivedita-jha.jpeg"
   - name: "Insheera Shaikh"
-    linkedin: ""
-  - name: "Piyush Newe"
-    linkedin: ""
-  - name: "Yogesh Agarawal"
-    linkedin: ""
+    linkedin: https://www.linkedin.com/in/insheera-shaikh-54a390428/
+    photo: "images/events/6/team/insheera-shaikh.jpeg"
+  - name: "Yogesh Jain"
+    linkedin: https://www.linkedin.com/in/yogeshjain96/
+    photo: "images/speakers/icons/yogesh-jain.jpeg"

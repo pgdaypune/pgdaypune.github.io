@@ -125,11 +125,9 @@
   title: "Bi Directional CDC for Oracle to PostgreSQL Migration"
   speaker: "Debendra Saha, Anuj Sharma"
   abstract: >-
-    In this talk, the speakers will describe how a large eCommerce company moved from
-    Oracle to PostgreSQL across 16 countries while keeping Oracle as a safe backup
-    using two way data replication. They will cover how conflicts were avoided, how
-    failures were handled, and how both databases were kept in sync.
-
+    In this talk, the speakers will describe how a large satellite and telecommunications company moved from
+    Oracle to PostgreSQL across 16 countries while keeping Oracle as a safe backup using two-way data replication.
+    They will cover how conflicts were avoided, how failures were handled, and how both databases were kept in sync.
 - start: "17:10"
   end: "17:20"
   type: break
