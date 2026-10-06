@@ -38,7 +38,7 @@ ticketsIframe:
 ticketsNote: |
   Note: Tickets are managed via <a href="https://confbase.io/" target="_blank" class="fact__v--link">Confbase.io</a>. If you face any issues booking above ^, try booking directly from <a href="https://confbase.io/pgpune/pgpune-event-6/tickets" target="_blank" class="fact__v--link">Confbase here →</a>
 stats:
-  editions: 5
+  editions: 6
   talks: "28+"
 talk_selection:
   - name: "Nikhil Sontakke"
