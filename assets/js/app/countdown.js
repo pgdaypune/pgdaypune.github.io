@@ -13,6 +13,9 @@
     s = document.querySelector("[data-sec]"),
     ele = document.querySelector(".days-to-go"),
     id;
+  // Banner counts IST calendar days (not 24h blocks), so the day before the
+  // event reads "1 day to go!" and "Event Today!" only appears on the day.
+  function istDay(ms) { return Math.floor((ms + 198e5) / 864e5); }
   function p(n) { return (n < 10 ? "0" : "") + n; }
   function tick() {
     var r = target - Date.now();
@@ -30,8 +33,9 @@
     if (h) h.textContent = p(Math.floor(r / 36e5) % 24);
     if (m) m.textContent = p(Math.floor(r / 6e4) % 60);
     if (s) s.textContent = p(Math.floor(r / 1e3) % 60);
-    if (ele) ele.innerHTML = days > 0
-      ? "<b>" + days + "</b> " + (days === 1 ? "day" : "days") + " to go!"
+    var cal = istDay(target) - istDay(Date.now());
+    if (ele) ele.innerHTML = cal > 0
+      ? "<b>" + cal + "</b> " + (cal === 1 ? "day" : "days") + " to go!"
       : "Event Today!";
   }
   tick();
