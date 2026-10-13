@@ -24,7 +24,7 @@
 <section class="block"><div class="wrap">
   <ul class="facts facts--page" aria-label="Event facts">
     <li class="fact"><span class="fact__k">Date</span><span class="fact__v">{{ $date | default "TBA" }}</span><span class="fact__sub">{{ $start.Format "Monday" }}</span></li>
-    <li class="fact"><span class="fact__k">Event Timings</span><span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span><span class="fact__sub">Followed by Dinner</span></li>
+    <li class="fact"><span class="fact__k">Event Timings</span><span class="fact__v">{{ $start.Format "15:04" }} — {{ $end.Format "15:04" }}</span></li>
     <li class="fact"><span class="fact__k">Venue</span>
       {{ if $ev.venueMapURL }}<a class="fact--link" href="{{ $ev.venueMapURL | relURL }}" target="_blank">{{ end }}
       <span class="fact__v fact__v--highlight {{ if not $venue }} fact__v--tba{{ end }}">{{ $venue | default "To be announced" }}</span>
@@ -55,14 +55,14 @@
   </ul>
 </div></section>
 
-{{- with (index .Params "cover-img") }}{{ if resources.Get . }}
+{{- with (index .Params "cover-img") }}
 <section class="block"><div class="wrap">
   <figure class="ev-group">
     {{ partial "img.html" (dict "src" . "sizes" "(max-width:1000px) 92vw, 1000px" "class" "ev-group__img"
        "alt" (printf "Postgres Pune Event #%v group photo — %s" $.Params.number $.Params.host)) }}
   </figure>
 </div></section>
-{{- end }}{{ end }}
+{{ end }}
 
 {{- if $speakers }}
 <section class="block"><div class="wrap">
