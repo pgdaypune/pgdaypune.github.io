@@ -1,0 +1,17 @@
+{{- /* CSS scroll-snap gallery (no JS library). Context: slice of {src, caption}.
+       Images are shown whole (never cropped) on a uniform-height filmstrip;
+       arrows nudge the rail. Self-scoped so several galleries can share a page. */ -}}
+<div class="gallery-wrap" data-gallery>
+  <div class="gallery__nav">
+    <button class="btn btn--sm" type="button" aria-label="Scroll gallery left" data-gallery-prev>←</button>
+    <button class="btn btn--sm" type="button" aria-label="Scroll gallery right" data-gallery-next>→</button>
+  </div>
+  <div class="gallery" role="region" aria-label="Image gallery (scrollable)" tabindex="0" data-gallery-rail>
+    {{- range . }}
+    <figure class="gslide">
+      <img src="{{ .src | relURL }}" alt="{{ .caption | default "PgPune photo" }}" loading="lazy" decoding="async">
+      {{- with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{- end }}
+  </div>
+</div>

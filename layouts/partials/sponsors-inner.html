@@ -1,15 +1,14 @@
 {{- /* Shared sponsors body: header, tiered logo cards, become-a-sponsor CTA.
-       Context (`.`) must be the categories slice, i.e. hugo.Data.sponsors.categories.
+       Context (`.`) is a dict: "categories" (tier slice) and "number" (event number).
        Used by the home section (home/sponsors.html) and the {{< sponsors >}}
        shortcode so both render identically. */ -}}
-{{- $e := hugo.Data.event }}
 <header class="sponsors__head">
-  <h2 class="sponsors__title" id="sponsors-h">Sponsors <span class="lockup__pune">@ Event #{{$e.number}}</span></h2>
-  {{ partial "psql.html" (dict "key" "sponsors" "n" $e.number) }}
+  <h2 class="sponsors__title" id="sponsors-h">Sponsors <span class="lockup__pune">@ Event #{{ .number }}</span></h2>
+  {{ partial "psql.html" (dict "key" "sponsors" "n" .number) }}
 </header>
 
 <div class="tiers">
-  {{- range . }}
+  {{- range .categories }}
   <section class="tier tier--{{ .class }}" aria-label="{{ .name }} sponsors">
     <div class="tier__head">
       <span class="tier__gem" aria-hidden="true"></span>

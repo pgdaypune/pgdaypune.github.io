@@ -655,35 +655,6 @@ html[data-theme="light"] .logo__img--light { display: block; }
 .btn-sponsor:hover { background: #3d76a3; transform: translateY(-2px); }
 @media (max-width: 480px) { .btn-sponsor { width: 100%; justify-content: center; } }
 
-/* Same tiered design embedded on content pages (via the {{< sponsors >}}
-   shortcode) — broken out of the 72ch prose column to full content width. */
-.sponsors-embed {
-  margin-block: 1.6em;
-  /* Darker band so the .logo cards (--bg) read as filled tiles, like on home. */
-  background: var(--bg-2);
-  border-block: 1px solid var(--line);
-  padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 44px);
-}
-.prose .sponsors-embed {
-  width: min(calc(100vw - 2 * var(--pad)), calc(var(--wrap) - 2 * var(--pad)));
-  max-width: min(calc(100vw - 2 * var(--pad)), calc(var(--wrap) - 2 * var(--pad)));
-}
-/* Isolate the shared component from .prose typography so it renders exactly like
-   the homepage — these re-assert the component's own values over prose's
-   higher-specificity descendant rules (h2/h3/a/ul/li). */
-.prose .sponsors-embed .sponsors__title {
-  margin: 0; font-size: clamp(1.9rem, 4vw, 2.75rem);
-  font-weight: 700; letter-spacing: -0.03em; line-height: 1;
-}
-.prose .sponsors-embed .tier__name {
-  margin: 0; font-size: 13px; font-weight: 600;
-  letter-spacing: 0.2em; line-height: 1.2; color: var(--accent);
-}
-.prose .sponsors-embed .logos { padding-left: 0; list-style: none; }
-.prose .sponsors-embed .logo + .logo { margin-top: 0; }
-.prose .sponsors-embed a { text-decoration: none; color: inherit; }
-.prose .sponsors-embed .btn-sponsor { color: #fff; }
-
 
 /* --- Community-Hub ------------------------------------------------------------- */
 .communities { background: var(--bg-2); }
@@ -738,43 +709,21 @@ html[data-theme="light"] .logo__img--light { display: block; }
   .communities__pillar:last-child { border-bottom: none; }
 }
 
-:is(.communities, .communities-embed) .logo__link {
+.communities .logo__link {
   flex-direction: column; gap: 14px; height: 100%; text-decoration: none;
 }
 /* Fixed column widths (no flex-grow) so a partial last row keeps the same card
    size as full rows and stays centered. */
-:is(.communities, .communities-embed) .logos { --cols: 5; }
-:is(.communities, .communities-embed) .logo {
+.communities .logos { --cols: 5; }
+.communities .logo {
   min-height: 160px; max-width: none;
   flex: 0 0 calc((100% - (var(--cols) - 1) * 16px) / var(--cols));
 }
-@media (max-width: 1000px) { :is(.communities, .communities-embed) .logos { --cols: 3; } }
-@media (max-width: 640px)  { :is(.communities, .communities-embed) .logos { --cols: 2; } }
-@media (max-width: 380px)  { :is(.communities, .communities-embed) .logos { --cols: 1; } }
-:is(.communities, .communities-embed) .logo:hover .communities__name { color: var(--pg-light); }
+@media (max-width: 1000px) { .communities .logos { --cols: 3; } }
+@media (max-width: 640px)  { .communities .logos { --cols: 2; } }
+@media (max-width: 380px)  { .communities .logos { --cols: 1; } }
+.communities .logo:hover .communities__name { color: var(--pg-light); }
 
-/* Community-hub shortcode embed — same breakout treatment as .sponsors-embed. */
-.communities-embed {
-  margin-block: 1.6em;
-  background: var(--bg-2);
-  border-block: 1px solid var(--line);
-  padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 44px);
-}
-.prose .communities-embed {
-  width: min(calc(100vw - 2 * var(--pad)), calc(var(--wrap) - 2 * var(--pad)));
-  max-width: min(calc(100vw - 2 * var(--pad)), calc(var(--wrap) - 2 * var(--pad)));
-}
-.prose .communities-embed .communities__title {
-  margin: 0; font-size: clamp(1.9rem, 4vw, 2.75rem);
-  font-weight: 700; letter-spacing: -0.03em; line-height: 1;
-}
-.prose .communities-embed .communities__desc { margin-bottom: 28px; }
-.prose .communities-embed .logos { padding-left: 0; list-style: none; }
-.prose .communities-embed .logo + .logo { margin-top: 0; }
-.prose .communities-embed a { text-decoration: none; color: inherit; }
-.prose .communities-embed .communities__name { color: var(--muted); }
-.prose .communities-embed .communities__pillars { padding-left: 0; list-style: none; }
-.prose .communities-embed .communities__pillar { margin-top: 0; }
 /* --- Subpages (single / list / schedule / search / 404) ------------------- */
 .page {
   padding: 40px 0 72px;

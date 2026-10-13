@@ -4,6 +4,13 @@
 {{- $start := time.AsTime $ev.startTime }}
 {{- $end := time.AsTime $ev.endTime }}
 {{- $isCurrent := eq $n $ev.number }}
+{{- /* Committees, team and sponsors come only from this event page's frontmatter. */ -}}
+{{- $talkSelection := .Params.talk_selection }}
+{{- $codeOfConduct := .Params.code_of_conduct }}
+{{- $team := .Params.team }}
+{{- $eventPics := .Params.event_pics }}
+{{- $sponsors := .Params.sponsors }}
+{{- $communityHub := .Params.community_hub }}
 {{- $registerationStart := time.AsTime $ev.registrationOpenDate -}}
 {{- $cfpClosed := false -}}
 {{- with $ev.cfpDeadline }}{{ if now.After (time.AsTime .) }}{{ $cfpClosed = true }}{{ end }}{{ end -}}
@@ -64,6 +71,13 @@
 </div></section>
 {{ end }}
 
+{{- with $eventPics }}
+<section class="block"><div class="wrap">
+  <h2 class="spk-h">Event Pics</h2>
+  {{ partial "gallery.html" . }}
+</div></section>
+{{- end }}
+
 {{- if $speakers }}
 <section class="block"><div class="wrap">
   <h2 class="spk-h">Meet the Speakers</h2>
@@ -94,12 +108,12 @@
 </div></section>
 {{- end }}
 
-{{- if $isCurrent }}
+{{- if $talkSelection }}
 <section class="block" id="Talk Selection Committee"><div class="wrap">
     <h2 class="spk-h">Talk Selection Committee</h2>
-{{ partial "psql.html" (dict "key" "talkSelectionCommittee" "n" $ev.number) }}
+{{ partial "psql.html" (dict "key" "talkSelectionCommittee" "n" $n) }}
 <ul class="egrid orgs-grid">
-  {{- range $ev.talk_selection }}
+  {{- range $talkSelection }}
   {{- $n := .name }}
   <li class="card">
     <a href="{{ .linkedin | default "#" }}"{{ with .linkedin }} target="_blank" rel="noopener" aria-label="{{ $n }} on LinkedIn"{{ end }}>
@@ -113,12 +127,14 @@
   {{- end }}
 </ul>
 </div></section>
+{{- end }}
 
+{{- if $codeOfConduct }}
 <section class="block" id="Code of Conduct Committee"><div class="wrap">
     <h2 class="spk-h">Code of Conduct Committee</h2>
-{{ partial "psql.html" (dict "key" "codeOfConductCommittee" "n" $ev.number) }}
+{{ partial "psql.html" (dict "key" "codeOfConductCommittee" "n" $n) }}
 <ul class="egrid orgs-grid">
-  {{- range $ev.code_of_conduct }}
+  {{- range $codeOfConduct }}
   {{- $n := .name }}
   <li class="card">
     <a href="{{ .linkedin | default "#" }}"{{ with .linkedin }} target="_blank" rel="noopener" aria-label="{{ $n }} on LinkedIn"{{ end }}>
@@ -131,13 +147,15 @@
   </li>
   {{- end }}
 </ul>
-</div>
+</div></section>
+{{- end }}
 
+{{- if $team }}
 <section class="block" id="Team"><div class="wrap">
-    <h2 class="spk-h">The Team <span class="lockup__pune">@ Event #{{$ev.number}}</span></h2>
-{{ partial "psql.html" (dict "key" "team" "n" $ev.number) }}
+    <h2 class="spk-h">The Team <span class="lockup__pune">@ Event #{{ $n }}</span></h2>
+{{ partial "psql.html" (dict "key" "team" "n" $n) }}
 <ul class="egrid orgs-grid team-grid">
-  {{- range $ev.team }}
+  {{- range $team }}
   {{- $n := .name }}
   <li class="card">
     <a href="{{ .linkedin | default "#" }}"{{ with .linkedin }} target="_blank" rel="noopener" aria-label="{{ $n }} on LinkedIn"{{ end }}>
@@ -150,13 +168,28 @@
   </li>
   {{- end }}
 </ul>
-</div>
-</section>
+</div></section>
 {{- end }}
 
 {{- with .Content }}
 <section class="block"><div class="wrap"><div class="prose">{{ . }}</div></div></section>
 {{- end }}
+
+{{- with $sponsors }}
+<section class="section sponsors" id="sponsors" aria-labelledby="sponsors-h">
+  <div class="wrap">
+    {{ partial "sponsors-inner.html" (dict "categories" . "number" $n) }}
+  </div>
+</section>
+{{- end }}
+
+{{- if $communityHub }}{{ with hugo.Data.communities }}
+<section class="section communities" id="communities" aria-labelledby="communities-h">
+  <div class="wrap">
+    {{ partial "community-hub-inner.html" . }}
+  </div>
+</section>
+{{- end }}{{ end }}
 
 {{- with (index .Params "schedule-img") }}{{ if resources.Get . }}
 <section class="block"><div class="wrap">

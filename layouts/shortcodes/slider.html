@@ -1,23 +1,10 @@
-{{- /* CSS scroll-snap gallery (no JS library). Inner lines: "path|caption".
-       Images are shown whole (never cropped) on a uniform-height filmstrip;
-       arrows nudge the rail. Self-scoped so several galleries can share a page. */ -}}
-<div class="gallery-wrap" data-gallery>
-  <div class="gallery__nav">
-    <button class="btn btn--sm" type="button" aria-label="Scroll gallery left" data-gallery-prev>←</button>
-    <button class="btn btn--sm" type="button" aria-label="Scroll gallery right" data-gallery-next>→</button>
-  </div>
-  <div class="gallery" role="region" aria-label="Image gallery (scrollable)" tabindex="0" data-gallery-rail>
-    {{- range split .Inner "\n" }}
-    {{- $line := trim . " \r\t" }}
-    {{- if ne $line "" }}
-    {{- $parts := split $line "|" }}
-    {{- $src := trim (index $parts 0) " " }}
-    {{- $cap := cond (gt (len $parts) 1) (trim (index $parts 1) " ") "" }}
-    <figure class="gslide">
-      <img src="{{ $src | relURL }}" alt="{{ $cap | default "PgPune photo" }}" loading="lazy" decoding="async">
-      {{- with $cap }}<figcaption>{{ . }}</figcaption>{{ end }}
-    </figure>
-    {{- end }}
-    {{- end }}
-  </div>
-</div>
+{{- /* Inner lines: "path|caption". Markup lives in partials/gallery.html. */ -}}
+{{- $pics := slice }}
+{{- range split .Inner "\n" }}
+{{- $line := trim . " \r\t" }}
+{{- if ne $line "" }}
+{{- $parts := split $line "|" }}
+{{- $pics = $pics | append (dict "src" (trim (index $parts 0) " ") "caption" (cond (gt (len $parts) 1) (trim (index $parts 1) " ") "")) }}
+{{- end }}
+{{- end }}
+{{ partial "gallery.html" $pics }}
