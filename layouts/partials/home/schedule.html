@@ -1,10 +1,12 @@
+{{- $page := site.GetPage (printf "/events/%d" hugo.Data.event.number) }}
+{{- $items := $page.Params.schedule }}
 <div class="schedule" id="schedule">
   <div class="sched-head">
     {{ partial "psql.html" (dict "key" "homeSchedule") }}
     <a class="btn btn--sm" href="{{ "/schedule/" | relURL }}">Full Schedule →</a>
   </div>
   <ol class="sched-list">
-    {{- range hugo.Data.schedule }}
+    {{- range $items }}
     {{- $talk := or (not .type) (eq .type "talk") }}
     <li class="sched-row sched-row--striped{{ if not $talk }} sched-row--meta{{ end }}">
       <span class="sched-title"><span class="flipped-emoji">🐘</span> {{ .title }}</span>

@@ -8,6 +8,7 @@
 {{- $talkSelection := .Params.talk_selection }}
 {{- $codeOfConduct := .Params.code_of_conduct }}
 {{- $team := .Params.team }}
+{{- $schedule := .Params.schedule }}
 {{- $eventPics := .Params.event_pics }}
 {{- $sponsors := .Params.sponsors }}
 {{- $communityHub := .Params.community_hub }}
@@ -105,6 +106,22 @@
   <p class="spk-empty">{{ if $ev.cfpOpen }}The call for papers is open — the lineup lands once talks are accepted.{{ else }}Speaker lineup to be announced.{{ end }}</p>
   {{ if $ev.cfpOpen }}<a class="btn" href="/call-for-papers/">Submit Paper →</a>{{ end }}
   <!-- {{ if $ev.registrationOpen }}<a class="btn pulse" href="/register/">🟢 Register Now →</a>{{ end }} -->
+</div></section>
+{{- end }}
+
+{{- with $schedule }}
+<section class="block" id="Schedule"><div class="wrap">
+  <details class="ev-collapse">
+    <summary class="ev-collapse__sum">
+      <h2 class="spk-h">Schedule</h2>
+      <span class="ev-collapse__hint">
+        <span class="ev-collapse__txt ev-collapse__txt--closed">Tap to expand</span>
+        <span class="ev-collapse__txt ev-collapse__txt--open">Tap to collapse</span>
+        <svg class="ev-collapse__chev" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </summary>
+    {{ partial "schedule-list.html" (dict "items" . "hideTime" $ev.hideTime) }}
+  </details>
 </div></section>
 {{- end }}
 
