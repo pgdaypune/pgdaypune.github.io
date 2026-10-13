@@ -2,6 +2,8 @@
 {{- $start := time.AsTime $ne.startTime -}}
 {{- $secs := int ($start.Sub now).Seconds -}}
 {{- if lt $secs 0 }}{{ $secs = 0 }}{{ end -}}
+{{- /* Hidden once the event has started (all zeros); countdown.js hides it live at 0. */ -}}
+{{- if gt $secs 0 }}
 <div class="countdown-block">
   {{ partial "psql.html" (dict "key" "countdown") }}
   {{- /* aria-live off: the live tick is decorative; the accessible source is the
@@ -14,3 +16,4 @@
   </div>
   <time class="visually-hidden" datetime="{{ $ne.startTime }}" data-countdown>{{ $start.Format "Monday, 2 January 2006, 15:04" }} IST — countdown to {{ $ne.name }} Event #{{ $ne.number }}</time>
 </div>
+{{- end }}

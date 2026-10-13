@@ -12,6 +12,7 @@
     m = document.querySelector("[data-min]"),
     s = document.querySelector("[data-sec]"),
     ele = document.querySelector(".days-to-go"),
+    block = document.querySelector(".countdown-block"),
     id;
   // Banner counts IST calendar days (not 24h blocks), so the day before the
   // event reads "1 day to go!" and "Event Today!" only appears on the day.
@@ -25,6 +26,7 @@
       if (m) m.textContent = "00";
       if (s) s.textContent = "00";
       if (ele) ele.textContent = "";
+      if (block) block.hidden = true;
       clearInterval(id);
       return;
     }
